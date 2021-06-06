@@ -26,7 +26,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         void hienthithongtinhocvan()
         {
             string tmp = maNV.Trim();
-            DataTable thongtinhocvan = da.CreateTable("SELECT HOCVAN.TrinhDo, HOCVANNHANVIEN.NoiDaoTao, HOCVANNHANVIEN.ChuyenNganh, HOCVANNHANVIEN.NamTotNghiep, HOCVANNHANVIEN.XepLoai FROM(( NHANVIEN LEFT JOIN HOCVANNHANVIEN ON NHANVIEN.MaNV = HOCVANNHANVIEN.MaNV) LEFT JOIN HOCVAN ON HOCVANNHANVIEN.MaHV = HOCVAN.MaHV) WHERE NHANVIEN.MaNV = '" +tmp+ "'");
+            DataTable thongtinhocvan = da.CreateTable("SELECT HOCVAN.TrinhDo, HOCVANNHANVIEN.MaNoiDaoTao, HOCVANNHANVIEN.ChuyenNganh, HOCVANNHANVIEN.NamTotNghiep, HOCVANNHANVIEN.XepLoai FROM(( NHANVIEN LEFT JOIN HOCVANNHANVIEN ON NHANVIEN.MaNV = HOCVANNHANVIEN.MaNV) LEFT JOIN HOCVAN ON HOCVANNHANVIEN.MaHV = HOCVAN.MaHV) WHERE NHANVIEN.MaNV = '" +tmp+ "'");
             gcHocVanNhanVien.DataSource = thongtinhocvan;
         }
         void hienthiquatrinhcongtac()
@@ -44,7 +44,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         void hienthithongtinchungchi()
         {
             string tmp = maNV.Trim();
-            DataTable thongtinchungchi = da.CreateTable("SELECT CHUNGCHI.TenChungChi, CHUNGCHINHANVIEN.DonViCap,CHUNGCHINHANVIEN.NgayCap FROM CHUNGCHINHANVIEN LEFT JOIN CHUNGCHI ON CHUNGCHINHANVIEN.MaCC = CHUNGCHI.MaCC WHERE CHUNGCHINHANVIEN.MaNV = '" + tmp + "'");
+            DataTable thongtinchungchi = da.CreateTable("SELECT CHUNGCHI.TenChungChi, CHUNGCHINHANVIEN.DonViCap,CHUNGCHINHANVIEN.NgayCap,CHUNGCHINHANVIEN.Loai FROM ((CHUNGCHINHANVIEN LEFT JOIN CHUNGCHI ON CHUNGCHINHANVIEN.MaCC = CHUNGCHI.MaCC) LEFT JOIN NHANVIEN ON CHUNGCHINHANVIEN.MaNV = NHANVIEN.MaNV) WHERE NHANVIEN.MaNV = '" + tmp + "'");
             gcChungChiNhanVien.DataSource = thongtinchungchi;
         }
         void hienthithongtinkyluat()
@@ -62,9 +62,9 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         void hienthithongtinphucapbaohiem()
         {
             string tmp = maNV.Trim();
-            DataTable thongtinphucap = da.CreateTable("SELECT PHUCAP.TenPC, PHUCAPNHANVIEN.NgayBatDau FROM PHUCAPNHANVIEN LEFT JOIN PHUCAP ON PHUCAPNHANVIEN.MaPC = PHUCAP.MaPC WHERE MaNV = '" + tmp + "'");
+            DataTable thongtinphucap = da.CreateTable("SELECT PHUCAP.TenPC, PHUCAPNHANVIEN.NgayBatDau FROM ((PHUCAPNHANVIEN LEFT JOIN PHUCAP ON PHUCAPNHANVIEN.MaPC = PHUCAP.MaPC) LEFT JOIN NHANVIEN ON PHUCAPNHANVIEN.MaNV = NHANVIEN.MaNV) WHERE NHANVIEN.MaNV = '" + tmp + "'");
             gcPhuCapNhanVien.DataSource = thongtinphucap;
-            DataTable thongtinbaohiem = da.CreateTable("SELECT BAOHIEM.TenBaoHiem, BAOHIEMNHANVIEN.NgayBatDauBH FROM BAOHIEMNHANVIEN LEFT JOIN BAOHIEM ON BAOHIEMNHANVIEN.MaBH = BAOHIEM.MaBH WHERE MaNV = '" + tmp + "'");
+            DataTable thongtinbaohiem = da.CreateTable("SELECT BAOHIEM.TenBaoHiem, BAOHIEMNHANVIEN.NgayBatDauBH FROM ((BAOHIEMNHANVIEN LEFT JOIN BAOHIEM ON BAOHIEMNHANVIEN.MaBH = BAOHIEM.MaBH) LEFT JOIN NHANVIEN ON BAOHIEMNHANVIEN.MaNV = NHANVIEN.MaNV) WHERE NHANVIEN.MaNV = '" + tmp + "'");
             gcBaoHiemNhanVien.DataSource = thongtinbaohiem;
         }
 

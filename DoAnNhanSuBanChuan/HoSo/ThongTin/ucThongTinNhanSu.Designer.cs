@@ -92,7 +92,7 @@
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.aa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.gcChungChiNhanVien = new DevExpress.XtraGrid.GridControl();
@@ -100,6 +100,7 @@
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.gridControl6 = new DevExpress.XtraGrid.GridControl();
             this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -798,7 +799,7 @@
             // 
             // clTrinhDo
             // 
-            this.clTrinhDo.Caption = "Trình độ";
+            this.clTrinhDo.Caption = "Trinh độ";
             this.clTrinhDo.FieldName = "TrinhDo";
             this.clTrinhDo.Name = "clTrinhDo";
             this.clTrinhDo.Visible = true;
@@ -806,8 +807,8 @@
             // 
             // clNoiDaoTao
             // 
-            this.clNoiDaoTao.Caption = "Nơi đào tạo";
-            this.clNoiDaoTao.FieldName = "NoiDaoTao";
+            this.clNoiDaoTao.Caption = "Mã trường đào tạo";
+            this.clNoiDaoTao.FieldName = "MaNoiDaoTao";
             this.clNoiDaoTao.Name = "clNoiDaoTao";
             this.clNoiDaoTao.Visible = true;
             this.clNoiDaoTao.VisibleIndex = 1;
@@ -862,7 +863,7 @@
             this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn14,
             this.gridColumn16,
-            this.gridColumn17,
+            this.aa,
             this.gridColumn18});
             this.gridView3.GridControl = this.gcQuaTrinhCongTac;
             this.gridView3.Name = "gridView3";
@@ -885,18 +886,18 @@
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 1;
             // 
-            // gridColumn17
+            // aa
             // 
-            this.gridColumn17.Caption = "Nơi công tác";
-            this.gridColumn17.FieldName = "NoiCongTac";
-            this.gridColumn17.Name = "gridColumn17";
-            this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 2;
+            this.aa.Caption = "Mã số thuế ";
+            this.aa.FieldName = "MaCT";
+            this.aa.Name = "aa";
+            this.aa.Visible = true;
+            this.aa.VisibleIndex = 2;
             // 
             // gridColumn18
             // 
-            this.gridColumn18.Caption = "Địa chỉ công tác";
-            this.gridColumn18.FieldName = "DiaChiCongTac";
+            this.gridColumn18.Caption = "Tên công ty";
+            this.gridColumn18.FieldName = "TenCongTy";
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.Visible = true;
             this.gridColumn18.VisibleIndex = 3;
@@ -927,7 +928,8 @@
             this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn19,
             this.gridColumn20,
-            this.gridColumn21});
+            this.gridColumn21,
+            this.gridColumn22});
             this.gridView4.GridControl = this.gcChungChiNhanVien;
             this.gridView4.Name = "gridView4";
             this.gridView4.OptionsBehavior.Editable = false;
@@ -956,6 +958,14 @@
             this.gridColumn21.Name = "gridColumn21";
             this.gridColumn21.Visible = true;
             this.gridColumn21.VisibleIndex = 2;
+            // 
+            // gridColumn22
+            // 
+            this.gridColumn22.Caption = "Loại";
+            this.gridColumn22.FieldName = "Loai";
+            this.gridColumn22.Name = "gridColumn22";
+            this.gridColumn22.Visible = true;
+            this.gridColumn22.VisibleIndex = 3;
             // 
             // tabPage7
             // 
@@ -1683,7 +1693,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
+        private DevExpress.XtraGrid.Columns.GridColumn aa;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
         private DevExpress.XtraGrid.GridControl gcChungChiNhanVien;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
@@ -1767,5 +1777,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn3;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
     }
 }

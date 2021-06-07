@@ -22,5 +22,16 @@ namespace DoAnNhanSuBanChuan.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-PC8NIRQ\\SQLEXPRESS01;Initial Catalog=QuanLyNhanSuBKT;Integrat" +
+            "ed Security=True")]
+        public string QuanLyNhanSuBKTConnectionString {
+            get {
+                return ((string)(this["QuanLyNhanSuBKTConnectionString"]));
+            }
+        }
     }
 }

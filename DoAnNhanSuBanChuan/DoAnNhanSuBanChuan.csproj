@@ -107,6 +107,11 @@
     <Compile Include="HoSo\ThongTin\ucThongTinNhanSu.Designer.cs">
       <DependentUpon>ucThongTinNhanSu.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyNhanSuBKTDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyNhanSuBKTDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TongQuan\ThietLap\TaoNguoiDungHeThong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +259,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QuanLyNhanSuBKTDataSet.xsc">
+      <DependentUpon>QuanLyNhanSuBKTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNhanSuBKTDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyNhanSuBKTDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyNhanSuBKTDataSet.xss">
+      <DependentUpon>QuanLyNhanSuBKTDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -68,7 +68,6 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
 
             DataTable thongtinbaohiem = tsx.CreateTable("SELECT * FROM BAOHIEMNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
             gcBaoHiemNhanVien.DataSource = thongtinbaohiem;
-
         }
 
         public fmThongTinNhanSu()
@@ -256,7 +255,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         private void BtnSuaCV_Click(object sender, EventArgs e)
         {
             thongtinnhap();
-            DataTable suacv = tsx.CreateTable("UPDATE PHONGBANCHUCVUNHANVIEN SET GhiChu =N'" + GhiChu + "',NgayNhamChuc = '" + NgayNhamChuc + "' WHERE MaNV = '" + MaNV + "' AND MaPB = '" + MaPB + "'AND MaCV = '" + MaCV + "'");
+            DataTable suacv = tsx.CreateTable("UPDATE PHONGBANCHUCVUNHANVIEN SET GhiChu =N'" + GhiChu + "',NgayNhamChuc = '" + NgayNhamChuc + "', MaPB = '" + MaPB + "', MaCV = '" + MaCV + "' WHERE MaNV = '" + MaNV + "' AND IdPBCVNV = '" + IdPBCVNV + "'");
             MessageBox.Show("Đã sửa thông tin chức vụ !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DataTable thongtinvitri = tsx.CreateTable("SELECT * FROM PHONGBANCHUCVUNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
             gcChucVuNhanVien.DataSource = thongtinvitri;
@@ -274,9 +273,9 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 thongtinnhap();
-                DataTable xoacv = tsx.CreateTable("DELETE FROM PHONGBANCHUCVUNHANVIEN WHERE MaNV = '" + MaNV + "' AND MaPB = '" + MaPB + "' AND MaCV = '" + MaCV + "'");
+                DataTable xoacv = tsx.CreateTable("DELETE FROM PHONGBANCHUCVUNHANVIEN WHERE MaNV = '" + MaNV + "' AND IdPBCVNV = '" + IdPBCVNV + "'");
                 MessageBox.Show("Đã xóa thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DataTable thongtinvitri = tsx.CreateTable("SELECT * PHONGBANCHUCVUNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
+                DataTable thongtinvitri = tsx.CreateTable("SELECT * FROM PHONGBANCHUCVUNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
                 gcChucVuNhanVien.DataSource = thongtinvitri;
             }
         }
@@ -285,7 +284,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         private void BtnSuaQTCT_Click(object sender, EventArgs e)
         {
             thongtinnhap();
-            DataTable suact = tsx.CreateTable("UPDATE QUATRINHCONGTAC SET TuNgay ='" + TuNgay + "',DenNgay ='" + DenNgay + "',TenCongTy ='" + TenCongTy + "'  WHERE MaNV = '" + MaNV + "' AND  MaCT ='" + MaCT + "'");
+            DataTable suact = tsx.CreateTable("UPDATE QUATRINHCONGTAC SET TuNgay ='" + TuNgay + "',DenNgay ='" + DenNgay + "',TenCongTy ='" + TenCongTy + "',MaCT = '" + MaCT + "'  WHERE MaNV = '" + MaNV + "' AND  IdQTCT ='" + IdQTCT + "'");
             MessageBox.Show("Đã sửa thông tin công tác !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DataTable thongtinquatrinhcongtac = tsx.CreateTable("SELECT * FROM QUATRINHCONGTAC WHERE MaNV = '" + txtMaNhanVien.Text + "'");
             gcQuaTrinhCongTac.DataSource = thongtinquatrinhcongtac;
@@ -303,7 +302,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 thongtinnhap();
-                DataTable xoact = tsx.CreateTable("DELETE FROM QUATRINHCONGTAC WHERE MaNV = '" + MaNV + "' AND  MaCT ='" + MaCT + "'");
+                DataTable xoact = tsx.CreateTable("DELETE FROM QUATRINHCONGTAC WHERE MaNV = '" + MaNV + "' AND  IdQTCT ='" + IdQTCT + "'");
                 MessageBox.Show("Đã xóa thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DataTable thongtinquatrinhcongtac = tsx.CreateTable("SELECT * FROM QUATRINHCONGTAC WHERE MaNV = '" + txtMaNhanVien.Text + "'");
                 gcQuaTrinhCongTac.DataSource = thongtinquatrinhcongtac;
@@ -314,7 +313,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         private void BtnSuaBH_Click(object sender, EventArgs e)
         {
             thongtinnhap();
-            DataTable suabh = tsx.CreateTable("UPDATE BAOHIEMNHANVIEN SET NgayBatDauBH ='" + NgayBatDauBH + "' WHERE MaNV = '" + MaNV + "' AND  MaBH ='" + MaBH + "'");
+            DataTable suabh = tsx.CreateTable("UPDATE BAOHIEMNHANVIEN SET NgayBatDauBH ='" + NgayBatDauBH + "',MaBH ='" + MaBH + "' WHERE MaNV = '" + MaNV + "' AND  IdBH ='" + IdBH + "'");
             MessageBox.Show("Đã sửa thông tin bảo hiểm !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DataTable thongtinbaohiem = tsx.CreateTable("SELECT * FROM BAOHIEMNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
             gcBaoHiemNhanVien.DataSource = thongtinbaohiem;
@@ -332,7 +331,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 thongtinnhap();
-                DataTable xoabh = tsx.CreateTable("DELETE FROM BAOHIEMNHANVIEN WHERE MaNV = '" + MaNV + "' AND  MaBH ='" + MaBH + "'");
+                DataTable xoabh = tsx.CreateTable("DELETE FROM BAOHIEMNHANVIEN WHERE MaNV = '" + MaNV + "' AND  IdBH ='" + IdBH + "'");
                 MessageBox.Show("Đã xóa thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DataTable thongtinbaohiem = tsx.CreateTable("SELECT * FROM BAOHIEMNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
                 gcBaoHiemNhanVien.DataSource = thongtinbaohiem;
@@ -343,7 +342,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         private void BtnSuaPC_Click(object sender, EventArgs e)
         {
             thongtinnhap();
-            DataTable suapc = tsx.CreateTable("UPDATE PHUCAPNHANVIEN SET NgayBatDau ='" + NgayBatDau + "' WHERE MaNV = '" + MaNV + "' AND  MaPC ='" + MaPC + "'");
+            DataTable suapc = tsx.CreateTable("UPDATE PHUCAPNHANVIEN SET NgayBatDau ='" + NgayBatDau + "',MaPC ='" + MaPC + "' WHERE MaNV = '" + MaNV + "' AND  IdPC ='" + IdPC + "'");
             MessageBox.Show("Đã sửa thông tin phụ cấp !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DataTable thongtinphucap = tsx.CreateTable("SELECT * FROM PHUCAPNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
             gcPhuCapNhanVien.DataSource = thongtinphucap;
@@ -361,7 +360,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 thongtinnhap();
-                DataTable xoapc = tsx.CreateTable("DELETE FROM PHUCAPNHANVIEN WHERE MaNV = '" + MaNV + "' AND  MaPC ='" + MaPC + "'");
+                DataTable xoapc = tsx.CreateTable("DELETE FROM PHUCAPNHANVIEN WHERE MaNV = '" + MaNV + "' AND  IdPC ='" + IdPC + "'");
                 MessageBox.Show("Đã xóa thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DataTable thongtinphucap = tsx.CreateTable("SELECT * FROM PHUCAPNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
                 gcPhuCapNhanVien.DataSource = thongtinphucap;
@@ -372,7 +371,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         private void BtnSuaCC_Click(object sender, EventArgs e)
         {
             thongtinnhap();
-            DataTable suacc = tsx.CreateTable("UPDATE CHUNGCHINHANVIEN SET NgayCap ='" + NgayCapCC + "', DonViCap = N'" + DonViCap + "',Loai = N'" + Loai + "' WHERE MaNV = '" + MaNV + "' AND  MaCC ='" + MaCC + "'");
+            DataTable suacc = tsx.CreateTable("UPDATE CHUNGCHINHANVIEN SET NgayCap ='" + NgayCapCC + "', DonViCap = N'" + DonViCap + "',Loai = N'" + Loai + "',MaCC ='" + MaCC + "' WHERE MaNV = '" + MaNV + "' AND  IdCC ='" + IdCC + "'");
             MessageBox.Show("Đã sửa thông tin chứng chỉ !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DataTable thongtinchungchi = tsx.CreateTable("SELECT * FROM CHUNGCHINHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
             gcChungChiNhanVien.DataSource = thongtinchungchi;
@@ -392,7 +391,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 thongtinnhap();
-                DataTable xoacc = tsx.CreateTable("DELETE FROM CHUNGCHINHANVIEN WHERE MaNV = '" + MaNV + "' AND  MaCC ='" + MaCC + "'");
+                DataTable xoacc = tsx.CreateTable("DELETE FROM CHUNGCHINHANVIEN WHERE MaNV = '" + MaNV + "' AND  IdCC ='" + IdCC + "'");
                 MessageBox.Show("Đã xóa thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DataTable thongtinchungchi = tsx.CreateTable("SELECT * FROM CHUNGCHINHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
                 gcChungChiNhanVien.DataSource = thongtinchungchi;
@@ -403,7 +402,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         private void BtnSuaHV_Click(object sender, EventArgs e)
         {
             thongtinnhap();
-            DataTable sua = tsx.CreateTable("UPDATE HOCVANNHANVIEN SET ChuyenNganh =N'" + ChuyenNganh + "', NamTotNghiep ='" + NamTotNghiep + "', XepLoai =N'" + XepLoai + "' WHERE MaNV = '" + MaNV + "' AND MaHV = '" + MaHV + "' AND NoiDaoTao = '" + MaNoiDaoTao + "'");
+            DataTable sua = tsx.CreateTable("UPDATE HOCVANNHANVIEN SET ChuyenNganh =N'" + ChuyenNganh + "', NamTotNghiep ='" + NamTotNghiep + "', XepLoai =N'" + XepLoai + "',MaHV = '" + MaHV + "', MaNoiDaoTao = '" + MaNoiDaoTao + "' WHERE MaNV = '" + MaNV + "' AND IdHV = '" + IdHV + "'");
             MessageBox.Show("Đã sửa thông tin học vấn !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DataTable hienthihocvan = tsx.CreateTable("SELECT * FROM HOCVANNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
             gcTrinhDoHocVan.DataSource = hienthihocvan;
@@ -421,9 +420,9 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 thongtinnhap();
-                DataTable xoa = tsx.CreateTable("DELETE FROM HOCVANNHANVIEN WHERE MaNV = '" + MaNV + "' AND MaHV = '" + MaHV + "' AND MaNoiDaoTao = '" + MaNoiDaoTao + "' ");
+                DataTable xoahv = tsx.CreateTable("DELETE FROM HOCVANNHANVIEN WHERE MaNV = '" + MaNV + "' AND IdHV = '" + IdHV + "'");
                 MessageBox.Show("Đã xóa thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DataTable hienthihocvan = tsx.CreateTable("SELECT * HOCVANNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
+                DataTable hienthihocvan = tsx.CreateTable("SELECT * FROM HOCVANNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
                 gcTrinhDoHocVan.DataSource = hienthihocvan;
             }
         }
@@ -451,7 +450,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             txtSoTaiKhoan.Clear();
         }
 
-        string MaHV, MaNoiDaoTao, ChuyenNganh, NamTotNghiep, XepLoai,MaPB,MaCV,GhiChu,NgayNhamChuc,MaCC,DonViCap,NgayCapCC,MaPC,NgayBatDau,MaBH,Loai, NgayBatDauBH,TuNgay,DenNgay, MaCT, TenCongTy;
+        string MaHV, MaNoiDaoTao, ChuyenNganh, NamTotNghiep, IdPBCVNV, IdHV, IdQTCT, IdCC, IdPC,IdBH, XepLoai,MaPB,MaCV,GhiChu,NgayNhamChuc,MaCC,DonViCap,NgayCapCC,MaPC,NgayBatDau,MaBH,Loai, NgayBatDauBH,TuNgay,DenNgay, MaCT, TenCongTy;
         public void thongtinnhap()
         {
             MaNV = txtMaNhanVien.Text.Trim();
@@ -497,7 +496,9 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             ChuyenNganh = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "ChuyenNganh").ToString();
             NamTotNghiep = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "NamTotNghiep").ToString();
             XepLoai = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "XepLoai").ToString();
+            IdHV = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "IdHV").ToString();
 
+            IdCC = gvChungChiNhanVien.GetRowCellValue(gvChungChiNhanVien.FocusedRowHandle, "IdCC").ToString();
             MaCC = gvChungChiNhanVien.GetRowCellValue(gvChungChiNhanVien.FocusedRowHandle, "MaCC").ToString();
             DonViCap = gvChungChiNhanVien.GetRowCellValue(gvChungChiNhanVien.FocusedRowHandle, "DonViCap").ToString();
             NgayCapCC = gvChungChiNhanVien.GetRowCellValue(gvChungChiNhanVien.FocusedRowHandle, "NgayCap").ToString();
@@ -507,17 +508,21 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             MaCV = gvChucVuNhanVien.GetRowCellValue(gvChucVuNhanVien.FocusedRowHandle, "MaCV").ToString();
             GhiChu = gvChucVuNhanVien.GetRowCellValue(gvChucVuNhanVien.FocusedRowHandle, "GhiChu").ToString();
             NgayNhamChuc = gvChucVuNhanVien.GetRowCellValue(gvChucVuNhanVien.FocusedRowHandle, "NgayNhamChuc").ToString();
+            IdPBCVNV = gvChucVuNhanVien.GetRowCellValue(gvChucVuNhanVien.FocusedRowHandle, "IdPBCVNV").ToString();
 
             MaPC = bgvPhuCapNhanVien.GetRowCellValue(bgvPhuCapNhanVien.FocusedRowHandle, "MaPC").ToString();
             NgayBatDau = bgvPhuCapNhanVien.GetRowCellValue(bgvPhuCapNhanVien.FocusedRowHandle, "NgayBatDau").ToString();
+            IdPC = bgvPhuCapNhanVien.GetRowCellValue(bgvPhuCapNhanVien.FocusedRowHandle, "IdPC").ToString();
 
             MaBH = bgvBaoHiemNhanVien.GetRowCellValue(bgvBaoHiemNhanVien.FocusedRowHandle, "MaBH").ToString();
             NgayBatDauBH = bgvBaoHiemNhanVien.GetRowCellValue(bgvBaoHiemNhanVien.FocusedRowHandle, "NgayBatDauBH").ToString();
+            IdBH = bgvBaoHiemNhanVien.GetRowCellValue(bgvBaoHiemNhanVien.FocusedRowHandle, "IdBH").ToString();
 
             TuNgay = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "TuNgay").ToString();
             DenNgay = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "DenNgay").ToString();
             MaCT = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "MaCT").ToString();
             TenCongTy = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "TenCongTy").ToString();
+            IdQTCT = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "IdQTCT").ToString();
         }
 
         public bool kiemtranhap2()

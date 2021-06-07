@@ -178,7 +178,9 @@
             this.gvNoiDaoTao = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gvNamTotNghiep = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cbNamTotNghiep = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.gvXepLoai = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cbXepLoai = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDongYHV = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -189,6 +191,7 @@
             this.btnDongY = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnxoaaaa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.cbSuaHV = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.iluMaHV = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.gcChungChiNhanVien = new DevExpress.XtraGrid.GridControl();
             this.gvChungChiNhanVien = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -270,6 +273,8 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcTrinhDoHocVan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvHocVanNhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbNamTotNghiep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbXepLoai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDongYHV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSuaHV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnXoaHocVan)).BeginInit();
@@ -277,6 +282,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDongY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnxoaaaa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbSuaHV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iluMaHV)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcChungChiNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvChungChiNhanVien)).BeginInit();
@@ -742,7 +748,10 @@
             this.btnXoaHocVan,
             this.btnDongYHV,
             this.cbSuaHV,
-            this.btnSuaHV});
+            this.btnSuaHV,
+            this.cbNamTotNghiep,
+            this.cbXepLoai,
+            this.iluMaHV});
             this.gcTrinhDoHocVan.Size = new System.Drawing.Size(749, 190);
             this.gcTrinhDoHocVan.TabIndex = 0;
             this.gcTrinhDoHocVan.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -793,18 +802,66 @@
             // gvNamTotNghiep
             // 
             this.gvNamTotNghiep.Caption = "Năm tốt nghiệp";
+            this.gvNamTotNghiep.ColumnEdit = this.cbNamTotNghiep;
             this.gvNamTotNghiep.FieldName = "NamTotNghiep";
             this.gvNamTotNghiep.Name = "gvNamTotNghiep";
             this.gvNamTotNghiep.Visible = true;
             this.gvNamTotNghiep.VisibleIndex = 3;
             // 
+            // cbNamTotNghiep
+            // 
+            this.cbNamTotNghiep.AutoHeight = false;
+            this.cbNamTotNghiep.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbNamTotNghiep.Items.AddRange(new object[] {
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025"});
+            this.cbNamTotNghiep.Name = "cbNamTotNghiep";
+            // 
             // gvXepLoai
             // 
             this.gvXepLoai.Caption = "Xếp loại";
+            this.gvXepLoai.ColumnEdit = this.cbXepLoai;
             this.gvXepLoai.FieldName = "XepLoai";
             this.gvXepLoai.Name = "gvXepLoai";
             this.gvXepLoai.Visible = true;
             this.gvXepLoai.VisibleIndex = 4;
+            // 
+            // cbXepLoai
+            // 
+            this.cbXepLoai.AutoHeight = false;
+            this.cbXepLoai.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbXepLoai.Items.AddRange(new object[] {
+            "Trung Bình",
+            "Khá",
+            "Giỏi",
+            "Xuất Sắc"});
+            this.cbXepLoai.Name = "cbXepLoai";
             // 
             // gridColumn16
             // 
@@ -892,6 +949,19 @@
             // 
             this.cbSuaHV.AutoHeight = false;
             this.cbSuaHV.Name = "cbSuaHV";
+            // 
+            // iluMaHV
+            // 
+            this.iluMaHV.AutoHeight = false;
+            this.iluMaHV.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.iluMaHV.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MaHV", "Mã học vấn", 53, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TrinhDo", "Trình độ", 50, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.iluMaHV.DisplayMember = "MaHV";
+            this.iluMaHV.Name = "iluMaHV";
+            this.iluMaHV.NullText = "Chọn";
+            this.iluMaHV.ValueMember = "TrinhDo";
             // 
             // tabPage5
             // 
@@ -1650,6 +1720,8 @@
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcTrinhDoHocVan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvHocVanNhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbNamTotNghiep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbXepLoai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDongYHV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSuaHV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnXoaHocVan)).EndInit();
@@ -1657,6 +1729,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDongY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnxoaaaa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbSuaHV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iluMaHV)).EndInit();
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcChungChiNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvChungChiNhanVien)).EndInit();
@@ -1834,5 +1907,8 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnThemCV;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSuaCV;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox cbNamTotNghiep;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox cbXepLoai;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit iluMaHV;
     }
 }

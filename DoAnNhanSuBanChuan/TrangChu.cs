@@ -114,6 +114,16 @@ namespace DoAnNhanSuBanChuan
             ucthongkenguoidunghethong.Dock = DockStyle.Fill;
             pnControl.Controls.Add(ucthongkenguoidunghethong);
         }
+
+        private void btnThongTinLienQuan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            pnControl.Dock = DockStyle.Fill;
+            grControl.Text = "Thiết lập các Thông Tin Liên Quan";
+            pnControl.Controls.Clear();
+            TongQuan.ThietLap.ucThietLapThongTinLienQuan ucthongtinlienquan = new TongQuan.ThietLap.ucThietLapThongTinLienQuan();
+            ucthongtinlienquan.Dock = DockStyle.Fill;
+            pnControl.Controls.Add(ucthongtinlienquan);
+        }
     }
 }
    

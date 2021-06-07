@@ -191,7 +191,6 @@
             this.btnDongY = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnxoaaaa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.cbSuaHV = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.iluMaHV = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.gcChungChiNhanVien = new DevExpress.XtraGrid.GridControl();
             this.gvChungChiNhanVien = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -282,7 +281,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDongY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnxoaaaa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbSuaHV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iluMaHV)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcChungChiNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvChungChiNhanVien)).BeginInit();
@@ -430,7 +428,7 @@
             // spbtnChapNhanThongTinNhanSu
             // 
             this.spbtnChapNhanThongTinNhanSu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnChapNhanThongTinNhanSu.ImageOptions.Image")));
-            this.spbtnChapNhanThongTinNhanSu.Location = new System.Drawing.Point(509, 500);
+            this.spbtnChapNhanThongTinNhanSu.Location = new System.Drawing.Point(505, 500);
             this.spbtnChapNhanThongTinNhanSu.Name = "spbtnChapNhanThongTinNhanSu";
             this.spbtnChapNhanThongTinNhanSu.Size = new System.Drawing.Size(79, 38);
             this.spbtnChapNhanThongTinNhanSu.TabIndex = 126;
@@ -440,7 +438,7 @@
             // smbtnHuyBoThongTinNhanSu
             // 
             this.smbtnHuyBoThongTinNhanSu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("smbtnHuyBoThongTinNhanSu.ImageOptions.Image")));
-            this.smbtnHuyBoThongTinNhanSu.Location = new System.Drawing.Point(594, 500);
+            this.smbtnHuyBoThongTinNhanSu.Location = new System.Drawing.Point(590, 500);
             this.smbtnHuyBoThongTinNhanSu.Name = "smbtnHuyBoThongTinNhanSu";
             this.smbtnHuyBoThongTinNhanSu.Size = new System.Drawing.Size(79, 38);
             this.smbtnHuyBoThongTinNhanSu.TabIndex = 127;
@@ -722,7 +720,7 @@
             this.gcThongTinCuThe.Location = new System.Drawing.Point(3, 16);
             this.gcThongTinCuThe.Name = "gcThongTinCuThe";
             this.gcThongTinCuThe.SelectedIndex = 0;
-            this.gcThongTinCuThe.Size = new System.Drawing.Size(757, 216);
+            this.gcThongTinCuThe.Size = new System.Drawing.Size(750, 216);
             this.gcThongTinCuThe.TabIndex = 16;
             // 
             // tabPage3
@@ -730,7 +728,7 @@
             this.tabPage3.Controls.Add(this.gcTrinhDoHocVan);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(749, 190);
+            this.tabPage3.Size = new System.Drawing.Size(742, 190);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "TRÌNH ĐỘ HỌC VẤN";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -750,9 +748,8 @@
             this.cbSuaHV,
             this.btnSuaHV,
             this.cbNamTotNghiep,
-            this.cbXepLoai,
-            this.iluMaHV});
-            this.gcTrinhDoHocVan.Size = new System.Drawing.Size(749, 190);
+            this.cbXepLoai});
+            this.gcTrinhDoHocVan.Size = new System.Drawing.Size(742, 190);
             this.gcTrinhDoHocVan.TabIndex = 0;
             this.gcTrinhDoHocVan.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvHocVanNhanVien});
@@ -950,25 +947,12 @@
             this.cbSuaHV.AutoHeight = false;
             this.cbSuaHV.Name = "cbSuaHV";
             // 
-            // iluMaHV
-            // 
-            this.iluMaHV.AutoHeight = false;
-            this.iluMaHV.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.iluMaHV.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MaHV", "Mã học vấn", 53, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TrinhDo", "Trình độ", 50, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-            this.iluMaHV.DisplayMember = "MaHV";
-            this.iluMaHV.Name = "iluMaHV";
-            this.iluMaHV.NullText = "Chọn";
-            this.iluMaHV.ValueMember = "TrinhDo";
-            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.gcChungChiNhanVien);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(749, 190);
+            this.tabPage5.Size = new System.Drawing.Size(742, 190);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "CHỨNG CHỈ";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -983,7 +967,7 @@
             this.btnXoaCC,
             this.btnThemCC,
             this.btnSuaCC});
-            this.gcChungChiNhanVien.Size = new System.Drawing.Size(749, 190);
+            this.gcChungChiNhanVien.Size = new System.Drawing.Size(742, 190);
             this.gcChungChiNhanVien.TabIndex = 2;
             this.gcChungChiNhanVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvChungChiNhanVien});
@@ -1098,7 +1082,7 @@
             this.tabPage6.Controls.Add(this.gcChucVuNhanVien);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(749, 190);
+            this.tabPage6.Size = new System.Drawing.Size(742, 190);
             this.tabPage6.TabIndex = 9;
             this.tabPage6.Text = "VỊ TRÍ CÔNG VIỆC";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1113,7 +1097,7 @@
             this.btnXoaCV,
             this.btnThemCV,
             this.btnSuaCV});
-            this.gcChucVuNhanVien.Size = new System.Drawing.Size(749, 190);
+            this.gcChucVuNhanVien.Size = new System.Drawing.Size(742, 190);
             this.gcChucVuNhanVien.TabIndex = 3;
             this.gcChucVuNhanVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvChucVuNhanVien});
@@ -1228,7 +1212,7 @@
             this.tabPage1.Controls.Add(this.layoutControl1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(749, 190);
+            this.tabPage1.Size = new System.Drawing.Size(742, 190);
             this.tabPage1.TabIndex = 10;
             this.tabPage1.Text = "PHỤ CẤP - BẢO HIỂM";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1241,20 +1225,20 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(749, 190);
+            this.layoutControl1.Size = new System.Drawing.Size(742, 190);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // gcBaoHiemNhanVien
             // 
-            this.gcBaoHiemNhanVien.Location = new System.Drawing.Point(376, 12);
+            this.gcBaoHiemNhanVien.Location = new System.Drawing.Point(373, 12);
             this.gcBaoHiemNhanVien.MainView = this.bgvBaoHiemNhanVien;
             this.gcBaoHiemNhanVien.Name = "gcBaoHiemNhanVien";
             this.gcBaoHiemNhanVien.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnXoaBH,
             this.btnThemBH,
             this.btnSuaBH});
-            this.gcBaoHiemNhanVien.Size = new System.Drawing.Size(361, 166);
+            this.gcBaoHiemNhanVien.Size = new System.Drawing.Size(357, 166);
             this.gcBaoHiemNhanVien.TabIndex = 2;
             this.gcBaoHiemNhanVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bgvBaoHiemNhanVien,
@@ -1374,7 +1358,7 @@
             this.btnXoaPC,
             this.btnSuaPC,
             this.btnThemPC});
-            this.gcPhuCapNhanVien.Size = new System.Drawing.Size(360, 166);
+            this.gcPhuCapNhanVien.Size = new System.Drawing.Size(357, 166);
             this.gcPhuCapNhanVien.TabIndex = 0;
             this.gcPhuCapNhanVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bgvPhuCapNhanVien,
@@ -1510,7 +1494,7 @@
             this.layoutControlItem1,
             this.layoutControlItem2});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(749, 190);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(742, 190);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -1518,16 +1502,16 @@
             this.layoutControlItem1.Control = this.gcPhuCapNhanVien;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(364, 170);
+            this.layoutControlItem1.Size = new System.Drawing.Size(361, 170);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gcBaoHiemNhanVien;
-            this.layoutControlItem2.Location = new System.Drawing.Point(364, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(361, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(365, 170);
+            this.layoutControlItem2.Size = new System.Drawing.Size(361, 170);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -1536,7 +1520,7 @@
             this.tabPage2.Controls.Add(this.gcQuaTrinhCongTac);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(749, 190);
+            this.tabPage2.Size = new System.Drawing.Size(742, 190);
             this.tabPage2.TabIndex = 11;
             this.tabPage2.Text = "QUÁ TRÌNH CÔNG TÁC";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1551,7 +1535,7 @@
             this.btnXoaQTCT,
             this.btnThemQTCT,
             this.btnSuaQTCT});
-            this.gcQuaTrinhCongTac.Size = new System.Drawing.Size(749, 190);
+            this.gcQuaTrinhCongTac.Size = new System.Drawing.Size(742, 190);
             this.gcQuaTrinhCongTac.TabIndex = 4;
             this.gcQuaTrinhCongTac.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvQuaTrinhCongTac});
@@ -1666,7 +1650,7 @@
             this.groupBox3.Controls.Add(this.gcThongTinCuThe);
             this.groupBox3.Location = new System.Drawing.Point(12, 259);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(763, 235);
+            this.groupBox3.Size = new System.Drawing.Size(756, 235);
             this.groupBox3.TabIndex = 234;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "THÔNG TIN LIÊN QUAN";
@@ -1682,7 +1666,7 @@
             // spbtnLamMoi
             // 
             this.spbtnLamMoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnLamMoi.ImageOptions.Image")));
-            this.spbtnLamMoi.Location = new System.Drawing.Point(679, 500);
+            this.spbtnLamMoi.Location = new System.Drawing.Point(675, 500);
             this.spbtnLamMoi.Name = "spbtnLamMoi";
             this.spbtnLamMoi.Size = new System.Drawing.Size(93, 38);
             this.spbtnLamMoi.TabIndex = 243;
@@ -1693,7 +1677,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 545);
+            this.ClientSize = new System.Drawing.Size(781, 545);
             this.Controls.Add(this.spbtnLamMoi);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dtpNgayCap);
@@ -1729,7 +1713,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDongY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnxoaaaa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbSuaHV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iluMaHV)).EndInit();
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcChungChiNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvChungChiNhanVien)).EndInit();
@@ -1909,6 +1892,5 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSuaCV;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox cbNamTotNghiep;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox cbXepLoai;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit iluMaHV;
     }
 }

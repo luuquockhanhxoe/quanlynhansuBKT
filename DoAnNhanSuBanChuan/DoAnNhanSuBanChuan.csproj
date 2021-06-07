@@ -124,6 +124,12 @@
     <Compile Include="TongQuan\ThietLap\ucThietLapNguoiDungHeThong.Designer.cs">
       <DependentUpon>ucThietLapNguoiDungHeThong.cs</DependentUpon>
     </Compile>
+    <Compile Include="TongQuan\ThietLap\ucThietLapThongTinLienQuan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TongQuan\ThietLap\ucThietLapThongTinLienQuan.Designer.cs">
+      <DependentUpon>ucThietLapThongTinLienQuan.cs</DependentUpon>
+    </Compile>
     <Compile Include="TongQuan\ThongKe\ucThongKeNhanSu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TongQuan\ThietLap\ucThietLapNguoiDungHeThong.resx">
       <DependentUpon>ucThietLapNguoiDungHeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TongQuan\ThietLap\ucThietLapThongTinLienQuan.resx">
+      <DependentUpon>ucThietLapThongTinLienQuan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TongQuan\ThongKe\ucThongKeNhanSu.resx">
       <DependentUpon>ucThongKeNhanSu.cs</DependentUpon>

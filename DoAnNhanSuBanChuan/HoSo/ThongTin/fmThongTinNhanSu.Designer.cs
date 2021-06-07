@@ -254,7 +254,6 @@
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnThemQTCT = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -1546,7 +1545,6 @@
             this.gridColumn14,
             this.gridColumn13,
             this.gridColumn12,
-            this.gridColumn11,
             this.gridColumn22,
             this.gridColumn21,
             this.gridColumn15});
@@ -1580,14 +1578,6 @@
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 2;
             // 
-            // gridColumn11
-            // 
-            this.gridColumn11.Caption = "Mã số thuế";
-            this.gridColumn11.FieldName = "MaCT";
-            this.gridColumn11.Name = "gridColumn11";
-            this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 3;
-            // 
             // gridColumn22
             // 
             this.gridColumn22.Caption = "Thêm";
@@ -1595,7 +1585,7 @@
             this.gridColumn22.MaxWidth = 50;
             this.gridColumn22.Name = "gridColumn22";
             this.gridColumn22.Visible = true;
-            this.gridColumn22.VisibleIndex = 4;
+            this.gridColumn22.VisibleIndex = 3;
             this.gridColumn22.Width = 50;
             // 
             // btnThemQTCT
@@ -1614,7 +1604,7 @@
             this.gridColumn21.MaxWidth = 50;
             this.gridColumn21.Name = "gridColumn21";
             this.gridColumn21.Visible = true;
-            this.gridColumn21.VisibleIndex = 5;
+            this.gridColumn21.VisibleIndex = 4;
             this.gridColumn21.Width = 50;
             // 
             // btnSuaQTCT
@@ -1633,7 +1623,7 @@
             this.gridColumn15.MaxWidth = 50;
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 6;
+            this.gridColumn15.VisibleIndex = 5;
             this.gridColumn15.Width = 50;
             // 
             // btnXoaQTCT
@@ -1858,7 +1848,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXoaQTCT;
         private DevExpress.XtraEditors.SimpleButton spbtnLamMoi;

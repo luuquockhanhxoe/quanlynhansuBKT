@@ -92,7 +92,6 @@
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.aa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.gcChungChiNhanVien = new DevExpress.XtraGrid.GridControl();
@@ -276,7 +275,7 @@
             this.gcttnhansu.Location = new System.Drawing.Point(12, 54);
             this.gcttnhansu.MainView = this.grdView;
             this.gcttnhansu.Name = "gcttnhansu";
-            this.gcttnhansu.Size = new System.Drawing.Size(896, 148);
+            this.gcttnhansu.Size = new System.Drawing.Size(896, 137);
             this.gcttnhansu.TabIndex = 16;
             this.gcttnhansu.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdView});
@@ -381,10 +380,10 @@
             this.tabControl1.Controls.Add(this.tabPage9);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(18, 206);
+            this.tabControl1.Location = new System.Drawing.Point(18, 195);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(890, 244);
+            this.tabControl1.Size = new System.Drawing.Size(890, 255);
             this.tabControl1.TabIndex = 15;
             // 
             // tabPage1
@@ -427,7 +426,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(882, 218);
+            this.tabPage1.Size = new System.Drawing.Size(882, 229);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "THÔNG TIN CHUNG";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -863,7 +862,6 @@
             this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn14,
             this.gridColumn16,
-            this.aa,
             this.gridColumn18});
             this.gridView3.GridControl = this.gcQuaTrinhCongTac;
             this.gridView3.Name = "gridView3";
@@ -886,21 +884,13 @@
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 1;
             // 
-            // aa
-            // 
-            this.aa.Caption = "Mã số thuế ";
-            this.aa.FieldName = "MaCT";
-            this.aa.Name = "aa";
-            this.aa.Visible = true;
-            this.aa.VisibleIndex = 2;
-            // 
             // gridColumn18
             // 
             this.gridColumn18.Caption = "Tên công ty";
             this.gridColumn18.FieldName = "TenCongTy";
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 3;
+            this.gridColumn18.VisibleIndex = 2;
             // 
             // tabPage5
             // 
@@ -1399,9 +1389,9 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.tabControl1;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 194);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 183);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(900, 248);
+            this.layoutControlItem7.Size = new System.Drawing.Size(900, 259);
             this.layoutControlItem7.Text = " ";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(3, 13);
             // 
@@ -1410,7 +1400,7 @@
             this.layoutControlItem8.Control = this.gcttnhansu;
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 42);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(900, 152);
+            this.layoutControlItem8.Size = new System.Drawing.Size(900, 141);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
@@ -1693,7 +1683,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
-        private DevExpress.XtraGrid.Columns.GridColumn aa;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
         private DevExpress.XtraGrid.GridControl gcChungChiNhanVien;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;

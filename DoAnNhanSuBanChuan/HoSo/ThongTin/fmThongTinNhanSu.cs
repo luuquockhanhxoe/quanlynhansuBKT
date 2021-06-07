@@ -296,7 +296,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         {
             thongtinnhaptextbox();
             thongtinnhapgridcontrol();
-            DataTable suact = tsx.CreateTable("UPDATE QUATRINHCONGTAC SET TuNgay ='" + TuNgay + "',DenNgay ='" + DenNgay + "',TenCongTy ='" + TenCongTy + "',MaCT = '" + MaCT + "'  WHERE MaNV = '" + MaNV + "' AND  IdQTCT ='" + IdQTCT + "'");
+            DataTable suact = tsx.CreateTable("UPDATE QUATRINHCONGTAC SET TuNgay ='" + TuNgay + "',DenNgay ='" + DenNgay + "',TenCongTy ='" + TenCongTy + "', WHERE MaNV = '" + MaNV + "' AND  IdQTCT ='" + IdQTCT + "'");
             MessageBox.Show("Đã sửa thông tin công tác !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DataTable thongtinquatrinhcongtac = tsx.CreateTable("SELECT * FROM QUATRINHCONGTAC WHERE MaNV = '" + txtMaNhanVien.Text + "'");
             gcQuaTrinhCongTac.DataSource = thongtinquatrinhcongtac;
@@ -307,7 +307,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             thongtinnhapgridcontrol();
             if (kiemtraqtct() == true)
             {
-                DataTable themct = tsx.CreateTable("INSERT INTO QUATRINHCONGTAC VALUES ('" + MaNV + "','" + TuNgay + "','" + DenNgay + "','" + MaCT + "',N'" + TenCongTy + "')");
+                DataTable themct = tsx.CreateTable("INSERT INTO QUATRINHCONGTAC VALUES ('" + MaNV + "','" + TuNgay + "','" + DenNgay + "',N'" + TenCongTy + "')");
                 MessageBox.Show("Đã thêm thông tin công tác!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DataTable thongtinquatrinhcongtac = tsx.CreateTable("SELECT * FROM QUATRINHCONGTAC WHERE MaNV = '" + txtMaNhanVien.Text + "'");
                 gcQuaTrinhCongTac.DataSource = thongtinquatrinhcongtac;
@@ -509,7 +509,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             txtSoTaiKhoan.Clear();
         }
 
-        string MaHV, MaNoiDaoTao, ChuyenNganh, NamTotNghiep, IdPBCVNV, IdHV, IdQTCT, IdCC, IdPC,IdBH, XepLoai,MaPB,MaCV,GhiChu,NgayNhamChuc,MaCC,DonViCap,NgayCapCC,MaPC,NgayBatDau,MaBH,Loai, NgayBatDauBH,TuNgay,DenNgay, MaCT, TenCongTy;
+        string MaHV, MaNoiDaoTao, ChuyenNganh, NamTotNghiep, IdPBCVNV, IdHV, IdQTCT, IdCC, IdPC,IdBH, XepLoai,MaPB,MaCV,GhiChu,NgayNhamChuc,MaCC,DonViCap,NgayCapCC,MaPC,NgayBatDau,MaBH,Loai, NgayBatDauBH,TuNgay,DenNgay, TenCongTy;
         public void thongtinnhapgridcontrol()
         {
             MaHV = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "MaHV").ToString();
@@ -541,7 +541,6 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
 
             TuNgay = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "TuNgay").ToString();
             DenNgay = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "DenNgay").ToString();
-            MaCT = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "MaCT").ToString();
             TenCongTy = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "TenCongTy").ToString();
             IdQTCT = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "IdQTCT").ToString();
         }
@@ -741,7 +740,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             thongtinnhapgridcontrol();
             DataTable kiemtraqtct = tsx.CreateTable("SELECT * FROM QUATRINHCONGTAC WHERE MaNV = '" + MaNV + "'");
             for (int i = 0; i < kiemtraqtct.Rows.Count; i++)
-                if (MaCT == kiemtraqtct.Rows[i]["MaCT"].ToString())
+                if (TuNgay == kiemtraqtct.Rows[i]["TuNgay"].ToString())
                 {
                     return false;
                 }

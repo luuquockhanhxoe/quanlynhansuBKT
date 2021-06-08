@@ -20,7 +20,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         void hienthithongtincoban()
         {
             DataTable thongtincoban = da.CreateTable("SELECT MaNV,HoTen,GioiTinh,FORMAT (getdate(), 'dd/MM/yyyy ') AS NgaySinh,SoCCCD,FORMAT (getdate(), 'dd/MM/yyyy ') AS NgayCap,NoiCap,TrangThai,SoDienThoai,Gmail,QueQuan,NoiO,NguoiLienHe,SoDienThoaiNLH, NganHang, SoTaiKhoan, AnhChanDung FROM NHANVIEN");
-            gcttnhansu.DataSource = thongtincoban;
+            gcHienThiThongTin.DataSource = thongtincoban;
             ganketdulieu();
         }
         void hienthithongtinhocvan()
@@ -76,37 +76,37 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         public void ganketdulieu()
         {
             lbMaNV.DataBindings.Clear();
-            lbMaNV.DataBindings.Add("text", gcttnhansu.DataSource, "MaNV"); 
+            lbMaNV.DataBindings.Add("text", gcHienThiThongTin.DataSource, "MaNV"); 
             lbHoTen.DataBindings.Clear();
-            lbHoTen.DataBindings.Add("text", gcttnhansu.DataSource, "HoTen");
+            lbHoTen.DataBindings.Add("text", gcHienThiThongTin.DataSource, "HoTen");
             lbGioiTinh.DataBindings.Clear();
-            lbGioiTinh.DataBindings.Add("text", gcttnhansu.DataSource, "GioiTinh");
+            lbGioiTinh.DataBindings.Add("text", gcHienThiThongTin.DataSource, "GioiTinh");
             lbNgaySinh.DataBindings.Clear();
-            lbNgaySinh.DataBindings.Add("text", gcttnhansu.DataSource, "NgaySinh");
+            lbNgaySinh.DataBindings.Add("text", gcHienThiThongTin.DataSource, "NgaySinh");
             lbSoCCCD.DataBindings.Clear();
-            lbSoCCCD.DataBindings.Add("text", gcttnhansu.DataSource, "SoCCCD");
+            lbSoCCCD.DataBindings.Add("text", gcHienThiThongTin.DataSource, "SoCCCD");
             lbNgayCap.DataBindings.Clear();
-            lbNgayCap.DataBindings.Add("text", gcttnhansu.DataSource, "NgayCap");
+            lbNgayCap.DataBindings.Add("text", gcHienThiThongTin.DataSource, "NgayCap");
             lbNoiCap.DataBindings.Clear();
-            lbNoiCap.DataBindings.Add("text", gcttnhansu.DataSource, "NoiCap");
+            lbNoiCap.DataBindings.Add("text", gcHienThiThongTin.DataSource, "NoiCap");
             lbTrangThai.DataBindings.Clear();
-            lbTrangThai.DataBindings.Add("text", gcttnhansu.DataSource, "TrangThai");
+            lbTrangThai.DataBindings.Add("text", gcHienThiThongTin.DataSource, "TrangThai");
             lbSoDienThoai.DataBindings.Clear();
-            lbSoDienThoai.DataBindings.Add("text", gcttnhansu.DataSource, "SoDienThoai");
+            lbSoDienThoai.DataBindings.Add("text", gcHienThiThongTin.DataSource, "SoDienThoai");
             lbGmail.DataBindings.Clear();
-            lbGmail.DataBindings.Add("text", gcttnhansu.DataSource, "Gmail");
+            lbGmail.DataBindings.Add("text", gcHienThiThongTin.DataSource, "Gmail");
             lbQueQuan.DataBindings.Clear();
-            lbQueQuan.DataBindings.Add("text", gcttnhansu.DataSource, "QueQuan");
+            lbQueQuan.DataBindings.Add("text", gcHienThiThongTin.DataSource, "QueQuan");
             lbNoiO.DataBindings.Clear();
-            lbNoiO.DataBindings.Add("text", gcttnhansu.DataSource, "NoiO");
+            lbNoiO.DataBindings.Add("text", gcHienThiThongTin.DataSource, "NoiO");
             lbNguoiLienHe.DataBindings.Clear();
-            lbNguoiLienHe.DataBindings.Add("text", gcttnhansu.DataSource, "NguoiLienHe");
+            lbNguoiLienHe.DataBindings.Add("text", gcHienThiThongTin.DataSource, "NguoiLienHe");
             lbSoDienThoaiNLH.DataBindings.Clear();
-            lbSoDienThoaiNLH.DataBindings.Add("text", gcttnhansu.DataSource, "SoDienThoaiNLH");
+            lbSoDienThoaiNLH.DataBindings.Add("text", gcHienThiThongTin.DataSource, "SoDienThoaiNLH");
             lbNganHang.DataBindings.Clear();
-            lbNganHang.DataBindings.Add("text", gcttnhansu.DataSource, "NganHang");
+            lbNganHang.DataBindings.Add("text", gcHienThiThongTin.DataSource, "NganHang");
             lbSoTaiKhoan.DataBindings.Clear();
-            lbSoTaiKhoan.DataBindings.Add("text", gcttnhansu.DataSource, "SoTaiKhoan");
+            lbSoTaiKhoan.DataBindings.Add("text", gcHienThiThongTin.DataSource, "SoTaiKhoan");
         }
         string maNV;
         Image img;
@@ -182,7 +182,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             }
             else
             {
-                gcttnhansu.DataSource = thongtincoban;
+                gcHienThiThongTin.DataSource = thongtincoban;
                 ganketdulieu();
             }
         }
@@ -199,6 +199,15 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         {
             hienthithongtincoban();
             txtTimKiem.Clear();
+        }
+
+        private void btnGmail_Click(object sender, EventArgs e)
+        {
+            string gmail = lbGmail.Text;
+            fmGuiGmail guimail = new fmGuiGmail(gmail);
+            guimail.Text = "Gửi Gmail";
+            guimail.ShowDialog();
+            hienthithongtincoban();
         }
     }
 }

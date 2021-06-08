@@ -127,6 +127,7 @@
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(189, 20);
             this.txtMatKhau.TabIndex = 134;
+            this.txtMatKhau.UseSystemPasswordChar = true;
             // 
             // txtXacNhanMatKhau
             // 
@@ -134,6 +135,7 @@
             this.txtXacNhanMatKhau.Name = "txtXacNhanMatKhau";
             this.txtXacNhanMatKhau.Size = new System.Drawing.Size(189, 20);
             this.txtXacNhanMatKhau.TabIndex = 136;
+            this.txtXacNhanMatKhau.UseSystemPasswordChar = true;
             // 
             // label6
             // 
@@ -177,9 +179,9 @@
             this.cbHien.AutoSize = true;
             this.cbHien.Location = new System.Drawing.Point(301, 142);
             this.cbHien.Name = "cbHien";
-            this.cbHien.Size = new System.Drawing.Size(39, 17);
+            this.cbHien.Size = new System.Drawing.Size(48, 17);
             this.cbHien.TabIndex = 144;
-            this.cbHien.Text = "Ẩn";
+            this.cbHien.Text = "Hiện";
             this.cbHien.UseVisualStyleBackColor = true;
             this.cbHien.CheckedChanged += new System.EventHandler(this.cbHien_CheckedChanged);
             // 

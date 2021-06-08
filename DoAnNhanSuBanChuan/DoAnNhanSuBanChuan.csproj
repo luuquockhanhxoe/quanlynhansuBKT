@@ -83,6 +83,12 @@
       <DependentUpon>ucNhapThongTinChamCong.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\Data_Access.cs" />
+    <Compile Include="HoSo\ThongTin\fmGuiGmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoSo\ThongTin\fmGuiGmail.Designer.cs">
+      <DependentUpon>fmGuiGmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="HoSo\ThongTin\fmThongTinHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,9 @@
     </Compile>
     <EmbeddedResource Include="ChamCong\NhapThongTin\ucNhapThongTinChamCong.resx">
       <DependentUpon>ucNhapThongTinChamCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoSo\ThongTin\fmGuiGmail.resx">
+      <DependentUpon>fmGuiGmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HoSo\ThongTin\fmThongTinHopDong.resx">
       <DependentUpon>fmThongTinHopDong.cs</DependentUpon>

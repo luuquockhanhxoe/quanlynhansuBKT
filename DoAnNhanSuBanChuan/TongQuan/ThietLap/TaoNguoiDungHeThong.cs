@@ -107,13 +107,13 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         {
             if(cbHien.Checked == false)
             {
-                txtMatKhau.UseSystemPasswordChar = false;
-                txtXacNhanMatKhau.UseSystemPasswordChar = false;
+                txtMatKhau.UseSystemPasswordChar = true;
+                txtXacNhanMatKhau.UseSystemPasswordChar = true;
             }
             else
             {
-                txtMatKhau.UseSystemPasswordChar = true;
-                txtXacNhanMatKhau.UseSystemPasswordChar = true;
+                txtMatKhau.UseSystemPasswordChar = false;
+                txtXacNhanMatKhau.UseSystemPasswordChar = false;
             }
         }
 

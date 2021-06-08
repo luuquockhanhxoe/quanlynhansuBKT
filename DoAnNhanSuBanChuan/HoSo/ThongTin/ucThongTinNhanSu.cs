@@ -172,5 +172,33 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
                 hienthithongtincoban();
             }
         }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            DataTable thongtincoban = da.CreateTable("SELECT * FROM NHANVIEN WHERE MaNV LIKE '%"+txtTimKiem.Text+ "%' OR HoTen LIKE N'%" + txtTimKiem.Text + "%' OR GioiTinh LIKE N'%" + txtTimKiem.Text + "%' OR NgaySinh LIKE '%" + txtTimKiem.Text + "%' OR TrangThai LIKE N'%" + txtTimKiem.Text + "%' OR SoDienThoai LIKE '%" + txtTimKiem.Text + "%' OR Gmail LIKE '%" + txtTimKiem.Text + "%'");
+            if(thongtincoban.Rows.Count == 0)
+            {
+                DialogResult ThongBao = MessageBox.Show("Không tìm thấy dữ liệu!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            }
+            else
+            {
+                gcttnhansu.DataSource = thongtincoban;
+                ganketdulieu();
+            }
+        }
+
+        private void txtTimKiem_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnTim.PerformClick();
+            }
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            hienthithongtincoban();
+            txtTimKiem.Clear();
+        }
     }
 }

@@ -109,10 +109,18 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         private void BtnThemLuong_Click(object sender, EventArgs e)
         {
             thongtinnhapgridcontrol();
-            DataTable themluong = ttlq.CreateTable("INSERT INTO LUONG VALUES('" + BacLuong + "','" + LuongCoBan + "')");
-            MessageBox.Show("Đã thêm thông tin lương !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            DataTable hienthiluong = ttlq.CreateTable("SELECT * FROM LUONG ");
-            gcLuong.DataSource = hienthiluong;
+            DataTable kiemtral = ttlq.CreateTable("SELECT * FROM LUONG ");
+            if (kiemtral.Select("BacLuong ='" + BacLuong + "'").Length == 1 || kiemtral.Select("LuongCoBan = '" + LuongCoBan + "'").Length == 1 )
+            {
+                MessageBox.Show("Trùng thông tin lương!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DataTable themluong = ttlq.CreateTable("INSERT INTO LUONG VALUES('" + BacLuong + "','" + LuongCoBan + "')");
+                MessageBox.Show("Đã thêm thông tin lương !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataTable hienthiluong = ttlq.CreateTable("SELECT * FROM LUONG ");
+                gcLuong.DataSource = hienthiluong;
+            }
         }
 
         private void BtnXoaBH_Click(object sender, EventArgs e)
@@ -139,10 +147,18 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         private void BtnThemBH_Click(object sender, EventArgs e)
         {
             thongtinnhapgridcontrol();
-            DataTable thembaohiem = ttlq.CreateTable("INSERT INTO BAOHIEM VALUES('" + MaBH + "',N'" + TenBaoHiem + "','" + SoTienBH + "')");
-            MessageBox.Show("Đã thêm thông tin bảo hiểm !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            DataTable hienthibaohiem = ttlq.CreateTable("SELECT * FROM BAOHIEM ");
-            gcBaoHiem.DataSource = hienthibaohiem;
+            DataTable kiemtrabh = ttlq.CreateTable("SELECT * FROM BAOHIEM ");
+            if (kiemtrabh.Select("MaBH ='" + MaBH + "'").Length == 1 || kiemtrabh.Select("TenBaoHiem = '" + TenBaoHiem + "'").Length == 1 || kiemtrabh.Select("SoTien= = '" + SoTienBH + "'").Length == 1)
+            {
+                MessageBox.Show("Trùng thông tin bảo hiểm!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DataTable thembaohiem = ttlq.CreateTable("INSERT INTO BAOHIEM VALUES('" + MaBH + "',N'" + TenBaoHiem + "','" + SoTienBH + "')");
+                MessageBox.Show("Đã thêm thông tin bảo hiểm !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataTable hienthibaohiem = ttlq.CreateTable("SELECT * FROM BAOHIEM ");
+                gcBaoHiem.DataSource = hienthibaohiem;
+            }
         }
 
         private void BtnXoaCV_Click(object sender, EventArgs e)
@@ -169,16 +185,24 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         private void BtnThemCV_Click(object sender, EventArgs e)
         {
             thongtinnhapgridcontrol();
-            DataTable themchucvu = ttlq.CreateTable("INSERT INTO CHUCVU VALUES('" + MaCV + "',N'" + TenCV + "')");
-            MessageBox.Show("Đã thêm thông tin chức vụ !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            DataTable hienthichucvu = ttlq.CreateTable("SELECT * FROM CHUCVU ");
-            gcChucVu.DataSource = hienthichucvu;
+            DataTable kiemtracv = ttlq.CreateTable("SELECT * FROM CHUCVU ");
+            if (kiemtracv.Select("MaCV ='" + MaCV + "'").Length == 1 || kiemtracv.Select("TenCV = '" + TenCV + "'").Length == 1)
+            {
+                MessageBox.Show("Trùng thông tin chức vụ!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DataTable themchucvu = ttlq.CreateTable("INSERT INTO CHUCVU VALUES('" + MaCV + "',N'" + TenCV + "')");
+                MessageBox.Show("Đã thêm thông tin chức vụ !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataTable hienthichucvu = ttlq.CreateTable("SELECT * FROM CHUCVU ");
+                gcChucVu.DataSource = hienthichucvu;
+            }
         }
 
         private void BtnSuaPB_Click(object sender, EventArgs e)
         {
             thongtinnhapgridcontrol();
-            DataTable suapb = ttlq.CreateTable("UPDATE PHONGBAN SET MaPB = '" + MaPB + "',TenPB = '" + TenPB + "' WHERE IDPB = '" + IDPB + "' ");
+            DataTable suapb = ttlq.CreateTable("UPDATE PHONGBAN SET MaPB = '" + MaPB + "',TenPB = N'" + TenPB + "' WHERE IDPB = '" + IDPB + "' ");
             MessageBox.Show("Đã sửa thông tin phòng ban !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DataTable hienthiphongban = ttlq.CreateTable("SELECT * FROM PHONGBAN ");
             gcPhongBan.DataSource = hienthiphongban;
@@ -199,10 +223,18 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         private void BtnThemPB_Click(object sender, EventArgs e)
         {
             thongtinnhapgridcontrol();
-            DataTable themphongban = ttlq.CreateTable("INSERT INTO PHONGBAN VALUES('" + MaPB + "',N'" + TenPB + "')");
-            MessageBox.Show("Đã thêm thông tin phòng ban !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            DataTable hienthiphongban = ttlq.CreateTable("SELECT * FROM PHONGBAN ");
-            gcPhongBan.DataSource = hienthiphongban;
+            DataTable kiemtrapb = ttlq.CreateTable("SELECT * FROM PHONGBAN ");
+            if (kiemtrapb.Select("MaPB ='" + MaPB + "'").Length == 1 || kiemtrapb.Select("TenPB = '" + TenPB + "'").Length == 1 )
+            {
+                MessageBox.Show("Trùng thông tin phòng ban!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DataTable themphongban = ttlq.CreateTable("INSERT INTO PHONGBAN VALUES('" + MaPB + "',N'" + TenPB + "')");
+                MessageBox.Show("Đã thêm thông tin phòng ban !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataTable hienthiphongban = ttlq.CreateTable("SELECT * FROM PHONGBAN ");
+                gcPhongBan.DataSource = hienthiphongban;
+            }
         }
 
         private void BtnXoaKyLuat_Click(object sender, EventArgs e)
@@ -220,7 +252,7 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         private void BtnSuaKyLuat_Click(object sender, EventArgs e)
         {
             thongtinnhapgridcontrol();
-            DataTable suakl = ttlq.CreateTable("UPDATE KYLUAT SET MaKyLuat = '" + MaKyLuat + "',TenKyLuat = '" + TenKyLuat + "',SoTienKyLuat = '" + SoTienKyLuat + "' WHERE IDKL = '" + IDKL + "' ");
+            DataTable suakl = ttlq.CreateTable("UPDATE KYLUAT SET MaKyLuat = '" + MaKyLuat + "',TenKyLuat = N'" + TenKyLuat + "',SoTienKyLuat = '" + SoTienKyLuat + "' WHERE IDKL = '" + IDKL + "' ");
             MessageBox.Show("Đã sửa thông tin kỷ luật !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DataTable hienthikyluat = ttlq.CreateTable("SELECT * FROM KYLUAT ");
             gcKyLuat.DataSource = hienthikyluat;
@@ -229,10 +261,18 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         private void BtnThemKyLuat_Click(object sender, EventArgs e)
         {
             thongtinnhapgridcontrol();
-            DataTable themkyluat = ttlq.CreateTable("INSERT INTO KYLUAT VALUES('" + MaKyLuat + "',N'" + TenKyLuat + "','" + SoTienKyLuat + "')");
-            MessageBox.Show("Đã thêm thông tin kỷ luật !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            DataTable hienthikyluat = ttlq.CreateTable("SELECT * FROM KYLUAT ");
-            gcKyLuat.DataSource = hienthikyluat;
+            DataTable kiemtrakl = ttlq.CreateTable("SELECT * FROM KYLUAT ");
+            if (kiemtrakl.Select("MaKyLuat ='" + MaKyLuat + "'").Length == 1 || kiemtrakl.Select("TenKyLuat = '" + TenKyLuat + "'").Length == 1 || kiemtrakl.Select("SoTienKyLuat = '" + SoTienKyLuat + "'").Length == 1)
+            {
+                MessageBox.Show("Trùng thông tin kỷ luật!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DataTable themkyluat = ttlq.CreateTable("INSERT INTO KYLUAT VALUES('" + MaKyLuat + "',N'" + TenKyLuat + "','" + SoTienKyLuat + "')");
+                MessageBox.Show("Đã thêm thông tin kỷ luật !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataTable hienthikyluat = ttlq.CreateTable("SELECT * FROM KYLUAT ");
+                gcKyLuat.DataSource = hienthikyluat;
+            }
         }
 
         private void BtnXoaKhenThuong_Click(object sender, EventArgs e)
@@ -250,7 +290,7 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         private void BtnSuaKhenThuong_Click(object sender, EventArgs e)
         {
             thongtinnhapgridcontrol();
-            DataTable suakt = ttlq.CreateTable("UPDATE KHENTHUONG SET MaKhenThuong = '" + MaKhenThuong + "',TenKhenThuong = '" + TenKhenThuong + "',GiaTriKhenThuong = '" + GiaTriKhenThuong + "' WHERE IDKT = '" + IDKT + "' ");
+            DataTable suakt = ttlq.CreateTable("UPDATE KHENTHUONG SET MaKhenThuong = '" + MaKhenThuong + "',TenKhenThuong = N'" + TenKhenThuong + "',GiaTriKhenThuong = '" + GiaTriKhenThuong + "' WHERE IDKT = '" + IDKT + "' ");
             MessageBox.Show("Đã sửa thông tin khen thưởng !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DataTable hienthikhenthuong = ttlq.CreateTable("SELECT * FROM KHENTHUONG ");
             gcKhenThuong.DataSource = hienthikhenthuong;
@@ -259,10 +299,18 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         private void BtnThemKhenThuong_Click(object sender, EventArgs e)
         {
             thongtinnhapgridcontrol();
-            DataTable themkhenthuong = ttlq.CreateTable("INSERT INTO KHENTHUONG VALUES('" + MaKhenThuong + "',N'" + TenKhenThuong + "','" + GiaTriKhenThuong + "')");
-            MessageBox.Show("Đã thêm thông tin khen thưởng !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            DataTable hienthikhenthuong = ttlq.CreateTable("SELECT * FROM KHENTHUONG ");
-            gcKhenThuong.DataSource = hienthikhenthuong;
+            DataTable kiemtrakt = ttlq.CreateTable("SELECT * FROM KHENTHUONG ");
+            if (kiemtrakt.Select("MaKhenThuong ='" + MaKhenThuong + "'").Length == 1 || kiemtrakt.Select("TenKhenThuong = '" + TenKhenThuong + "'").Length == 1 || kiemtrakt.Select("GiaTriKhenThuong = '" + GiaTriKhenThuong + "'").Length == 1)
+            {
+                MessageBox.Show("Trùng thông tin khen thưởng!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DataTable themkhenthuong = ttlq.CreateTable("INSERT INTO KHENTHUONG VALUES('" + MaKhenThuong + "',N'" + TenKhenThuong + "','" + GiaTriKhenThuong + "')");
+                MessageBox.Show("Đã thêm thông tin khen thưởng !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataTable hienthikhenthuong = ttlq.CreateTable("SELECT * FROM KHENTHUONG ");
+                gcKhenThuong.DataSource = hienthikhenthuong;
+            }
         }
 
         private void BtnXoaPC_Click(object sender, EventArgs e)
@@ -289,10 +337,18 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         private void BtnThemPC_Click(object sender, EventArgs e)
         {
             thongtinnhapgridcontrol();
-            DataTable themphucap = ttlq.CreateTable("INSERT INTO PHUCAP VALUES('" + MaPC + "',N'" + TenPC + "','" + SoTien + "')");
-            MessageBox.Show("Đã thêm thông tin phụ cấp !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            DataTable hienthiphucap = ttlq.CreateTable("SELECT * FROM PHUCAP ");
-            gcPhuCap.DataSource = hienthiphucap;
+            DataTable kiemtrapc = ttlq.CreateTable("SELECT * FROM PHUCAP ");
+            if (kiemtrapc.Select("TenPC ='" + TenPC + "'").Length == 1 || kiemtrapc.Select("MaPC = '" + MaPC + "'").Length == 1 || kiemtrapc.Select("SoTien = '" + SoTien + "'").Length == 1)
+            {
+                MessageBox.Show("Trùng thông tin phụ cấp!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DataTable themphucap = ttlq.CreateTable("INSERT INTO PHUCAP VALUES('" + MaPC + "',N'" + TenPC + "','" + SoTien + "')");
+                MessageBox.Show("Đã thêm thông tin phụ cấp !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataTable hienthiphucap = ttlq.CreateTable("SELECT * FROM PHUCAP ");
+                gcPhuCap.DataSource = hienthiphucap;
+            }
         }
 
         private void BtnXoaCC_Click(object sender, EventArgs e)
@@ -310,7 +366,7 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         private void BtnSuaCC_Click(object sender, EventArgs e)
         {
             thongtinnhapgridcontrol();
-            DataTable suacc = ttlq.CreateTable("UPDATE CHUNGCHI SET MaCC = '" + MaCC + "',TenChungChi = '" + TenChungChi + "' WHERE IDCC = '" + IDCC + "' ");
+            DataTable suacc = ttlq.CreateTable("UPDATE CHUNGCHI SET MaCC = '" + MaCC + "',TenChungChi = N'" + TenChungChi + "' WHERE IDCC = '" + IDCC + "' ");
             MessageBox.Show("Đã sửa thông tin chứng chỉ !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DataTable hienthichungchi = ttlq.CreateTable("SELECT * FROM CHUNGCHI ");
             gcChungChi.DataSource = hienthichungchi;
@@ -319,10 +375,19 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         private void BtnThemCC_Click(object sender, EventArgs e)
         {
             thongtinnhapgridcontrol();
-            DataTable themchungchi = ttlq.CreateTable("INSERT INTO CHUNGCHI VALUES('" + MaCC + "',N'" + TenChungChi + "')");
-            MessageBox.Show("Đã thêm thông tin chứng chỉ !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            DataTable hienthichungchi = ttlq.CreateTable("SELECT * FROM CHUNGCHI ");
-            gcChungChi.DataSource = hienthichungchi;
+            DataTable kiemtracc = ttlq.CreateTable("SELECT * FROM CHUNGCHI ");
+            if (kiemtracc.Select("MaCC ='" + MaCC + "'").Length == 1 || kiemtracc.Select("TenChungChi = '" + TenChungChi + "'").Length == 1)
+            {
+                MessageBox.Show("Trùng thông tin chứng chỉ!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                thongtinnhapgridcontrol();
+                DataTable themchungchi = ttlq.CreateTable("INSERT INTO CHUNGCHI VALUES('" + MaCC + "',N'" + TenChungChi + "')");
+                MessageBox.Show("Đã thêm thông tin chứng chỉ !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataTable hienthichungchi = ttlq.CreateTable("SELECT * FROM CHUNGCHI ");
+                gcChungChi.DataSource = hienthichungchi;
+            }
         }
 
         private void BtnXoaHV_Click(object sender, EventArgs e)
@@ -339,21 +404,27 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
 
         private void BtnSuaHV_Click(object sender, EventArgs e)
         {
-            thongtinnhapgridcontrol();
-            DataTable suahv = ttlq.CreateTable("UPDATE HOCVAN SET MaHV = '" + MaHV + "',TrinhDo = '" + TrinhDo + "' WHERE IDHV = '" + IDHV + "' ");
+            DataTable suahv = ttlq.CreateTable("UPDATE HOCVAN SET MaHV = '" + MaHV + "',TrinhDo = N'" + TrinhDo + "' WHERE IDHV = '" + IDHV + "' ");
             MessageBox.Show("Đã sửa thông tin học vấn !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DataTable hienthihocvan = ttlq.CreateTable("SELECT * FROM HOCVAN ");
             gcHocVan.DataSource = hienthihocvan;
-
         }
 
         private void BtnThemHV_Click(object sender, EventArgs e)
         {
             thongtinnhapgridcontrol();
-            DataTable themhocvan = ttlq.CreateTable("INSERT INTO HOCVAN VALUES('" + MaHV + "',N'" + TrinhDo + "')");
-            MessageBox.Show("Đã thêm thông tin học vấn !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            DataTable hienthihocvan = ttlq.CreateTable("SELECT * FROM HOCVAN ");
-            gcHocVan.DataSource = hienthihocvan;
+            DataTable kiemtrahv = ttlq.CreateTable("SELECT * FROM HOCVAN ");
+            if (kiemtrahv.Select("TrinhDo ='" + TrinhDo + "'").Length == 1 || kiemtrahv.Select("MaHV = '" + MaHV + "'").Length == 1)
+            {
+                MessageBox.Show("Trùng thông tin học vấn!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }          
+            else
+            {
+                DataTable themhocvan = ttlq.CreateTable("INSERT INTO HOCVAN VALUES('" + MaHV + "',N'" + TrinhDo + "')");
+                MessageBox.Show("Đã thêm thông tin học vấn !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataTable hienthihocvan = ttlq.CreateTable("SELECT * FROM HOCVAN ");
+                gcHocVan.DataSource = hienthihocvan;
+            }
         }
 
         string MaHV, IDHV, IDCC, TrinhDo, IDPC, IDL, IDBH, IDCV, IDPB, IDKT, IDKL, MaCC, MaCV, TenCV, TenChungChi, LuongCoBan, MaBH, TenBaoHiem, SoTienBH, BacLuong, MaPC, TenPC, SoTien, MaKhenThuong, TenKhenThuong, GiaTriKhenThuong, MaKyLuat, TenKyLuat, SoTienKyLuat, MaPB, TenPB;
@@ -401,6 +472,6 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
             IDBH = gvBaoHiem.GetRowCellValue(gvBaoHiem.FocusedRowHandle, "IDBH").ToString();
 
         }
-
     }   
+
 }

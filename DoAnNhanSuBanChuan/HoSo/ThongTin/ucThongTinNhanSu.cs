@@ -128,51 +128,6 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             pbAnhChanDung.Image = img;
 
         }
-
-        private void spbtnThemNhanSu_Click_1(object sender, EventArgs e)
-        {          
-            fmThongTinNhanSu themnhansu = new fmThongTinNhanSu();
-            themnhansu.Text = "Thêm Thông Tin Nhân Sự";
-            themnhansu.ShowDialog(); 
-            hienthithongtincoban();
-            
-        }
-
-        private void spbtnXemVaSuaNhanSu_Click_1(object sender, EventArgs e)
-        {
-            string manhanvien = lbMaNV.Text;
-            string tennhanvien = lbHoTen.Text;
-            string gioitinh = lbGioiTinh.Text;
-            string ngaysinh = lbNgaySinh.Text;
-            string socccd = lbSoCCCD.Text;
-            string ngaycap = lbNgayCap.Text;
-            string noicap = lbNoiCap.Text;
-            string trangthai = lbTrangThai.Text;
-            string sodienthoai = lbSoDienThoai.Text;
-            string gmail = lbGmail.Text;
-            string quequan = lbQueQuan.Text;
-            string Noio = lbNoiO.Text;
-            string nguoilienhe = lbNoiO.Text;
-            string sodienthoainlh = lbSoDienThoaiNLH.Text;
-            string nganhang = lbNganHang.Text;
-            string sotaikhoan = lbSoTaiKhoan.Text;
-            fmThongTinNhanSu themnhansu = new fmThongTinNhanSu(manhanvien, tennhanvien, gioitinh, ngaysinh, socccd,ngaycap,noicap,trangthai,sodienthoai,gmail,quequan, Noio, nguoilienhe, sodienthoainlh,nganhang,sotaikhoan,img);
-            themnhansu.Text = "Xem và Sửa Thông Tin Nhân Sự";
-            themnhansu.ShowDialog();
-            hienthithongtincoban();
-        }
-
-        private void spbtnXoa_Click(object sender, EventArgs e)
-        {            
-            DialogResult ThongBao = MessageBox.Show("Bạn có chắc chắn xóa không?","Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if (ThongBao == DialogResult.OK)
-            {
-                string tmp = maNV.Trim();
-                DataTable dt = da.CreateTable("DELETE FROM NHANVIEN WHERE MaNV ='" + tmp + "'");
-                hienthithongtincoban();
-            }
-        }
-
         private void btnTim_Click(object sender, EventArgs e)
         {
             DataTable thongtincoban = da.CreateTable("SELECT * FROM NHANVIEN WHERE MaNV LIKE '%"+txtTimKiem.Text+ "%' OR HoTen LIKE N'%" + txtTimKiem.Text + "%' OR GioiTinh LIKE N'%" + txtTimKiem.Text + "%' OR NgaySinh LIKE '%" + txtTimKiem.Text + "%' OR TrangThai LIKE N'%" + txtTimKiem.Text + "%' OR SoDienThoai LIKE '%" + txtTimKiem.Text + "%' OR Gmail LIKE '%" + txtTimKiem.Text + "%'");
@@ -201,13 +156,66 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             txtTimKiem.Clear();
         }
 
-        private void btnGmail_Click(object sender, EventArgs e)
+        private void spbtnThemNhanSu_Click(object sender, EventArgs e)
+        {
+            fmThongTinNhanSu themnhansu = new fmThongTinNhanSu();
+            themnhansu.Text = "Thêm Thông Tin Nhân Sự";
+            themnhansu.ShowDialog();
+            hienthithongtincoban();
+        }
+
+        private void spbtnXemVaSuaNhanSu_Click(object sender, EventArgs e)
+        {
+            string manhanvien = lbMaNV.Text;
+            string tennhanvien = lbHoTen.Text;
+            string gioitinh = lbGioiTinh.Text;
+            string ngaysinh = lbNgaySinh.Text;
+            string socccd = lbSoCCCD.Text;
+            string ngaycap = lbNgayCap.Text;
+            string noicap = lbNoiCap.Text;
+            string trangthai = lbTrangThai.Text;
+            string sodienthoai = lbSoDienThoai.Text;
+            string gmail = lbGmail.Text;
+            string quequan = lbQueQuan.Text;
+            string Noio = lbNoiO.Text;
+            string nguoilienhe = lbNguoiLienHe.Text;
+            string sodienthoainlh = lbSoDienThoaiNLH.Text;
+            string nganhang = lbNganHang.Text;
+            string sotaikhoan = lbSoTaiKhoan.Text;
+            fmThongTinNhanSu themnhansu = new fmThongTinNhanSu(manhanvien, tennhanvien, gioitinh, ngaysinh, socccd, ngaycap, noicap, trangthai, sodienthoai, gmail, quequan, Noio, nguoilienhe, sodienthoainlh, nganhang, sotaikhoan, img);
+            themnhansu.Text = "Xem và Sửa Thông Tin Nhân Sự";
+            themnhansu.ShowDialog();
+            hienthithongtincoban();
+        }
+
+        private void spbtnXoa_Click_1(object sender, EventArgs e)
+        {
+            DialogResult ThongBao = MessageBox.Show("Bạn có chắc chắn xóa không?", "Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (ThongBao == DialogResult.OK)
+            {
+                string tmp = maNV.Trim();
+                DataTable dt = da.CreateTable("DELETE FROM NHANVIEN WHERE MaNV ='" + tmp + "'");
+                hienthithongtincoban();
+            }
+        }
+
+        private void btnGmail_Click_1(object sender, EventArgs e)
         {
             string gmail = lbGmail.Text;
             fmGuiGmail guimail = new fmGuiGmail(gmail);
             guimail.Text = "Gửi Gmail";
             guimail.ShowDialog();
             hienthithongtincoban();
+        }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

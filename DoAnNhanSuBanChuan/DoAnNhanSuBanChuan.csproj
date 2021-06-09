@@ -118,6 +118,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyNhanSuBKTDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyNhanSuBKTDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyNhanSuBKTDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TongQuan\ThietLap\TaoNguoiDungHeThong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +292,17 @@
     </None>
     <None Include="QuanLyNhanSuBKTDataSet.xss">
       <DependentUpon>QuanLyNhanSuBKTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNhanSuBKTDataSet1.xsc">
+      <DependentUpon>QuanLyNhanSuBKTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNhanSuBKTDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyNhanSuBKTDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyNhanSuBKTDataSet1.xss">
+      <DependentUpon>QuanLyNhanSuBKTDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup />

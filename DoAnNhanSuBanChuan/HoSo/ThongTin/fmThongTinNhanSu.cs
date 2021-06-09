@@ -20,6 +20,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
     public partial class fmThongTinNhanSu : Form
     {
         Data_Access tsx = new Data_Access();
+
         public fmThongTinNhanSu(string manhanvien, string tennhanvien, string gioitinh, string ngaysinh, string socccd, string ngaycap, string noicap, string trangthai, string sodienthoai, string gmail, string quequan, string Noio, string nguoilienhe, string sodienthoainlh, string nganhang, string sotaikhoan, Image img) :this()
         {
 
@@ -86,7 +87,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             }
 
         }
-
+      
         public bool kiemtranhap()
         {
             if (string.IsNullOrWhiteSpace(txtMaNhanVien.Text))
@@ -228,7 +229,19 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
                 }
             }
             return true;
-        }  // kiểm tra textbox điền và đúng chưa.
+        }  
+        public bool kiemtranhap2()
+        {
+            thongtinnhaptextbox();
+            DataTable kiemtra1 = tsx.CreateTable("select * from NHANVIEN;");
+            for (int i = 0; i < kiemtra1.Rows.Count; i++)
+                if (MaNV == kiemtra1.Rows[i]["MaNV"].ToString())
+                {
+                    MessageBox.Show("Mã nhân viên này đã được dùng, mời chọn mã khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            return true;
+        }
 
         private void fmThongTinNhanSu_Load(object sender, EventArgs e)
         {
@@ -583,18 +596,6 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             NganHang = txtNganHang.Text.Trim();
 
             SoTaiKhoan = txtSoTaiKhoan.Text.Trim();
-        }
-        public bool kiemtranhap2()
-        {
-            thongtinnhaptextbox();
-            DataTable kiemtra1 = tsx.CreateTable("select * from NHANVIEN;");
-            for (int i = 0; i < kiemtra1.Rows.Count; i++)
-                if (MaNV == kiemtra1.Rows[i]["MaNV"].ToString())
-                {
-                    MessageBox.Show("Mã nhân viên này đã được dùng, mời chọn mã khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
-            return true;
         }
         public void themthongtinnhanvien()
         {

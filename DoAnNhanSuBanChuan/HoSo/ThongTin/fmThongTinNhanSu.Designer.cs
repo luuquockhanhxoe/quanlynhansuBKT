@@ -191,6 +191,8 @@
             this.btnDongY = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnxoaaaa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.cbSuaHV = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.repositoryItemGridLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.gcChungChiNhanVien = new DevExpress.XtraGrid.GridControl();
             this.gvChungChiNhanVien = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -280,6 +282,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDongY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnxoaaaa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbSuaHV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcChungChiNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvChungChiNhanVien)).BeginInit();
@@ -747,7 +751,8 @@
             this.cbSuaHV,
             this.btnSuaHV,
             this.cbNamTotNghiep,
-            this.cbXepLoai});
+            this.cbXepLoai,
+            this.repositoryItemGridLookUpEdit1});
             this.gcTrinhDoHocVan.Size = new System.Drawing.Size(742, 190);
             this.gcTrinhDoHocVan.TabIndex = 0;
             this.gcTrinhDoHocVan.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -945,6 +950,23 @@
             // 
             this.cbSuaHV.AutoHeight = false;
             this.cbSuaHV.Name = "cbSuaHV";
+            // 
+            // repositoryItemGridLookUpEdit1
+            // 
+            this.repositoryItemGridLookUpEdit1.AutoHeight = false;
+            this.repositoryItemGridLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemGridLookUpEdit1.DisplayMember = "MaHV";
+            this.repositoryItemGridLookUpEdit1.Name = "repositoryItemGridLookUpEdit1";
+            this.repositoryItemGridLookUpEdit1.PopupView = this.repositoryItemGridLookUpEdit1View;
+            this.repositoryItemGridLookUpEdit1.ValueMember = "TrinhDo";
+            // 
+            // repositoryItemGridLookUpEdit1View
+            // 
+            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
+            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
             // tabPage5
             // 
@@ -1703,6 +1725,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDongY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnxoaaaa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbSuaHV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcChungChiNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvChungChiNhanVien)).EndInit();
@@ -1881,5 +1905,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSuaCV;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox cbNamTotNghiep;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox cbXepLoai;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItemGridLookUpEdit1;
+        private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
     }
 }

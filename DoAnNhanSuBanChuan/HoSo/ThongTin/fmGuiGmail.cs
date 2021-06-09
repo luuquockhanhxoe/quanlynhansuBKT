@@ -11,11 +11,13 @@ using System.Threading; //text, xử lý đa luồng
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAnNhanSuBanChuan.DataAccess;
 //https://www.google.com/settings/u/1/security/lesssecureapps
 namespace DoAnNhanSuBanChuan.HoSo.ThongTin
 {
     public partial class fmGuiGmail : Form
     {
+        Data_Access guimailnv = new Data_Access();
         Attachment attach = null;
         public fmGuiGmail(string gmail) :this()
         {
@@ -24,7 +26,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
 
         public fmGuiGmail()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
 
         void GuiMail(string tudau, string toidau, string chude, string thuviet, Attachment file = null)
@@ -45,25 +47,47 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
 
         private void btnGui_Click(object sender, EventArgs e)
         {
-            ////de khong bi do
-            Thread thread = new Thread(() =>
+            if (txtTenDangNhap.Text.Length == 0 || txtMatKhau.Text.Length == 0)
             {
-                attach = null;
-                try
-                {
-                    FileInfo file = new FileInfo(txtFileKem.Text);
-                    attach = new Attachment(txtFileKem.Text);
-                }
-                catch { }
-                GuiMail(txtTenDangNhap.Text, txtDen.Text, txtNoiDung.Text, txtMessage.Text, attach);
-                MessageBox.Show("Đã gửi mail cho nhân viên!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Yêu cầu đăng nhập!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-                    );
-            thread.Start();
+            else if(txtDen.Text.Length == 0)
+            {
+                MessageBox.Show("Yêu cầu điền gmail người nhận!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (txtNoiDung.Text.Length == 0)
+            {
+                MessageBox.Show("Yêu cầu thêm chủ đề vào Gmail!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (txtMessage.Text.Length == 0)
+            {
+                MessageBox.Show("Thư trống, vui lòng thêm thông tin", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {////de khong bi do
+                Thread thread = new Thread(() =>
+                {
+                    attach = null;
+                    try
+                    {
+                        FileInfo file = new FileInfo(txtFileKem.Text);
+                        attach = new Attachment(txtFileKem.Text);
+                    }
+                    catch { }
+                    //pbHienThiTai.Minimum = 0;
+                    //pbHienThiTai.Maximum = ;
+                    for (int i = 0; i< (txtDen.Lines.Length)-1; i++)                  
+                    {
+                        GuiMail(txtTenDangNhap.Text, txtDen.Lines[i], txtNoiDung.Text, txtMessage.Text, attach);
+                        //pbHienThiTai.Value = i;
+                    }
+                    MessageBox.Show("Đã gửi mail cho nhân viên!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                           );
+                thread.Start();
+            }
         }
-
-
-
+     
         private void btnKemFile_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -75,9 +99,13 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
 
         private void cbHien_CheckedChanged(object sender, EventArgs e)
         {
-            if(cbHien.Checked == true)
+            if (cbHien.Checked == true)
             {
                 txtMatKhau.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtMatKhau.UseSystemPasswordChar = true;
             }
         }
 
@@ -88,6 +116,23 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             if (ThongBao == DialogResult.OK)
             {
                 this.Close();
+            }
+        }
+
+        private void cbGuiToanBo_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbGuiToanBo.Checked == true)
+            {
+                txtDen.Clear();
+                DataTable danhsachgmail = guimailnv.CreateTable("SELECT Gmail FROM NHANVIEN");
+                for (int i = 0; i < danhsachgmail.Rows.Count; i++)
+                {
+                    txtDen.Text += danhsachgmail.Rows[i]["Gmail"].ToString() + "\n";                    
+                }
+            }
+            else
+            {
+                txtDen.Clear();
             }
         }
     }

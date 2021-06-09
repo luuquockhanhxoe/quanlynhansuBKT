@@ -51,7 +51,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             txtSoTaiKhoan.Text = sotaikhoan;
             
             pbAnhChanDung.Image = img;
-
+     
             DataTable hienthihocvan = tsx.CreateTable("SELECT * FROM HOCVANNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
             gcTrinhDoHocVan.DataSource = hienthihocvan;
 
@@ -69,12 +69,56 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
 
             DataTable thongtinbaohiem = tsx.CreateTable("SELECT * FROM BAOHIEMNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
             gcBaoHiemNhanVien.DataSource = thongtinbaohiem;
-        
         }
 
+        public void hienthitrengridcontrol()
+        {
+            DataTable hocvan = tsx.CreateTable("SELECT * FROM HOCVAN");
+            cbHocVan.DataSource = hocvan;
+            cbHocVan.ValueMember = "MaHV";
+            cbHocVan.DisplayMember = "MaHV";
+            cbHocVan.NullText = "Chọn mã học vấn";
+            colMaHV.ColumnEdit = cbHocVan;
+
+            DataTable chungchi = tsx.CreateTable("SELECT * FROM CHUNGCHI");
+            cbChungChi.DataSource = chungchi;
+            cbChungChi.ValueMember = "MaCC";
+            cbChungChi.DisplayMember = "MaCC";
+            cbChungChi.NullText = "Chọn mã chứng chỉ";
+            clMaCC.ColumnEdit = cbChungChi;
+
+            DataTable phongban = tsx.CreateTable("SELECT * FROM PHONGBAN");
+            cbPB.DataSource = phongban;
+            cbPB.ValueMember = "MaPB";
+            cbPB.DisplayMember = "MaPB";
+            cbPB.NullText = "Chọn mã phòng ban";
+            clMaPB.ColumnEdit = cbPB;
+
+            DataTable chucvu = tsx.CreateTable("SELECT * FROM CHUCVU");
+            cbMaCV.DataSource = chucvu;
+            cbMaCV.ValueMember = "MaCV";
+            cbMaCV.DisplayMember = "MaCV";
+            cbMaCV.NullText = "Chọn mã chức vụ";
+            clMaCV.ColumnEdit = cbMaCV;
+
+            DataTable phucap = tsx.CreateTable("SELECT * FROM PHUCAP");
+            cbMaPC.DataSource = phucap;
+            cbMaPC.ValueMember = "MaPC";
+            cbMaPC.DisplayMember = "MaPC";
+            cbMaPC.NullText = "Chọn mã phụ cấp";
+            clMaPC.ColumnEdit = cbMaPC;
+
+            DataTable baohiem = tsx.CreateTable("SELECT * FROM BAOHIEM");
+            cbBH.DataSource = baohiem;
+            cbBH.ValueMember = "MaBH";
+            cbBH.DisplayMember = "MaBH";
+            cbBH.NullText = "Chọn mã bảo hiểm";
+            clMaBH.ColumnEdit = cbBH;
+        }
         public fmThongTinNhanSu()
         {
             InitializeComponent();
+            hienthitrengridcontrol();
         }
 
         private void smbtnHuyBoThongTinNhanSu_Click(object sender, EventArgs e)

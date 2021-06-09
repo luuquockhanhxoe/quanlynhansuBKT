@@ -14,26 +14,17 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
     public partial class fmThongTinHopDong : Form
     {
         Data_Access hd = new Data_Access();
-        public fmThongTinHopDong(string mahopdong, string NgaykyHD, string loaihopdong, string thoihanhd, string solaodong, string bacluong, string hesoluong, string chedolamviec, string hinhthuctraluong, string manhanvien) : this()
-        {
-            txtMaHD.Text = mahopdong;
-            txtMaHD.ReadOnly = true;
-            cbMaNV.Text = manhanvien;
-            cbMaNV.Enabled = false;
-            dtpNgayKy.Text = NgaykyHD;
-            cbLoaiHD.Text = loaihopdong;
-            cbThoiHan.Text = thoihanhd;
-            cbBacLuong.Text = bacluong;
-            cbHeSoLuong.Text = hesoluong;
-            cbCheDoLamViec.Text = chedolamviec;
-            cbHinhThucTraLuong.Text = hinhthuctraluong;
-            txtSoLaoDong.Text = solaodong;
-        }
-
         public fmThongTinHopDong()
         {
             InitializeComponent();
+            hienthithongtin();
+        }
+        public void hienthithongtin()
+        {
             dulieuchon();
+            DataTable thongtinhopdong = hd.CreateTable("SELECT * FROM HOPDONG");
+            gcHopDong.DataSource = thongtinhopdong;
+            ganketdulieu();
         }
         public void dulieuchon()
         {
@@ -44,7 +35,19 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             cbBacLuong.DataSource = dulieuvaocommbobox1;
             cbBacLuong.DisplayMember = "BacLuong";
         }
-
+        public void thongtinnhap()
+        {
+            MaHD = txtMaHD.Text.Trim();
+            MaNV = cbMaNV.Text.Trim();
+            NgayKyHD = dtpNgayKy.Text.Trim();
+            LoaiHD = cbLoaiHD.Text.Trim();
+            ThoiHan = cbThoiHan.Text.Trim();
+            BacLuong = cbBacLuong.Text.Trim();
+            HeSoLuong = cbHeSoLuong.Text.Trim();
+            CheDoLamViec = cbCheDoLamViec.Text.Trim();
+            HinhThucTraLuong = cbHinhThucTraLuong.Text.Trim();
+            SoLaoDong = txtSoLaoDong.Text.Trim();
+        }
         public bool kiemtranhap()
         {
             if (string.IsNullOrWhiteSpace(txtMaHD.Text))
@@ -96,7 +99,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
                 return false;
             }
             return true;
-        }
+        } // kiểm tra textbox
         public bool kiemtranhap2()
         {
             thongtinnhap();
@@ -114,7 +117,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
                     return false;
                 }
             return true;
-        }
+        } // kiểm tra trùng mã hợp đồng và mã nhân viên đã tạo chưa?
         private void smbtnHuyBoThongTinHopDong_Click(object sender, EventArgs e)
         {
             DialogResult ThongBaoHuy = MessageBox.Show("Bạn có muốn hủy bỏ không?", "Thông báo"
@@ -124,88 +127,96 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
                 this.Close();
             }
         }
+  
 
-        private void fmThongTinHopDong_Load(object sender, EventArgs e)
+        string MaHD, MaNV, NgayKyHD, LoaiHD, ThoiHan, BacLuong, HeSoLuong, CheDoLamViec, HinhThucTraLuong, SoLaoDong;
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
         {
-
+            hienthithongtin();
+            txtTimKiem.Clear();
         }
 
-        private void smbtnChapNhanThongTinNhanSu_Click(object sender, EventArgs e)
+        private void txtTimKiem_KeyDown(object sender, KeyEventArgs e)
         {
-          if (kiemtranhap() == true)
+            if (e.KeyCode == Keys.Enter)
             {
-                if (txtMaHD.ReadOnly == false)
-                {
-                    if (kiemtranhap2() == true)
-                    {
-                        themthongtinhopdong();
-                    }
-                    }
-                else
-                {
-                    suathongtinhopdong();
-                }
+                btnTim.PerformClick();
             }
         }
 
-        private void spbtnLamMoi_Click(object sender, EventArgs e)
+        private void btnTim_Click(object sender, EventArgs e)
         {
-            txtMaHD.Clear();
-            cbMaNV.Text = "";
-            dtpNgayKy.Text = "";
-            cbLoaiHD.Text = "";
-            cbThoiHan.Text = "";
-            cbBacLuong.Text = "";
-            cbHeSoLuong.Text = "";
-            cbCheDoLamViec.Text = "";
-            cbHinhThucTraLuong.Text = "";
-            txtSoLaoDong.Clear();
-        }
-        string MaHD, MaNV, NgayKyHD, LoaiHD, ThoiHan, BacLuong, HeSoLuong, CheDoLamViec, HinhThucTraLuong, SoLaoDong;
-
-        private void cbLoaiHD_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbLoaiHD.Text == "HĐLĐ Không xác định thời hạn")
+            DataTable thongtinhd = hd.CreateTable("SELECT * FROM HOPDONG WHERE MaNV LIKE '%" + txtTimKiem.Text + "%' OR MaHD LIKE N'%" + txtTimKiem.Text + "%' OR NgayKyHD LIKE N'%" + txtTimKiem.Text + "%' OR LoaiHD LIKE N'%" + txtTimKiem.Text + "%' OR ThoiHanHD LIKE N'%" + txtTimKiem.Text + "%' OR SoLaoDong LIKE N'%" + txtTimKiem.Text + "%' OR BacLuong LIKE '%" + txtTimKiem.Text + "%' OR HeSoLuong LIKE N'%" + txtTimKiem.Text + "%' OR CheDoLamViec LIKE N'%" + txtTimKiem.Text + "%' OR HinhThucTraLuong LIKE N'%" + txtTimKiem.Text + "%'");
+            if (thongtinhd.Rows.Count == 0)
             {
-                cbThoiHan.Items.Add("Vô Thời Hạn");
-                cbThoiHan.Text = "Vô Thời Hạn";
-                cbThoiHan.Enabled = false;
-                lbthang.Text = "";
+                DialogResult ThongBao = MessageBox.Show("Không tìm thấy dữ liệu!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             }
             else
             {
-                cbThoiHan.Enabled = true;
-                cbThoiHan.Items.Remove("Vô Thời Hạn");
-                cbThoiHan.Text = "";
-                lbthang.Text = "THÁNG";
+                gcHopDong.DataSource = thongtinhd;
+                ganketdulieu();
             }
         }
-        public void thongtinnhap()
+
+        private void cbLoaiHD_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MaHD = txtMaHD.Text.Trim();
-            MaNV = cbMaNV.Text.Trim();
-            NgayKyHD = dtpNgayKy.Text.Trim();
-            LoaiHD = cbLoaiHD.Text.Trim();
-            ThoiHan = cbThoiHan.Text.Trim();
-            BacLuong = cbBacLuong.Text.Trim();
-            HeSoLuong = cbHeSoLuong.Text.Trim();
-            CheDoLamViec = cbCheDoLamViec.Text.Trim();
-            HinhThucTraLuong = cbHinhThucTraLuong.Text.Trim();
-            SoLaoDong = txtSoLaoDong.Text.Trim();
+            if(cbLoaiHD.Text == "HĐLĐ Không xác định thời hạn")
+            {
+                cbThoiHan.Text = "Vô Thời Hạn";
+            }
+            else
+            {
+                cbThoiHan.DataBindings.Clear();
+                cbThoiHan.DataBindings.Add("text", gcHopDong.DataSource, "ThoiHanHD");
+            }
         }
-        public void themthongtinhopdong()
+
+        private void btnSuaHopDong_Click(object sender, EventArgs e)
         {
+            kiemtranhap();
             thongtinnhap();
-            DataTable dt = hd.CreateTable("INSERT INTO HOPDONG VALUES ('" + MaHD + "','" + NgayKyHD + "',N'" + LoaiHD + "',N'" + ThoiHan + "',N'" + SoLaoDong + "','" + BacLuong + "','" + HeSoLuong + "',N'" + CheDoLamViec + "',N'" + HinhThucTraLuong + "', '" + MaNV + "')");
-            MessageBox.Show("Đã thêm hợp đồng "+ MaHD +" cho nhân viên có mã " + MaNV + " thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
-        }
-        public void suathongtinhopdong()
-        {
-            thongtinnhap();
-            DataTable dt = hd.CreateTable("UPDATE HOPDONG SET MaHD = '" + MaHD + "',NgayKyHD='" + NgayKyHD + "',LoaiHD = N'" + LoaiHD + "',ThoiHanHD = N'" + ThoiHan + "',SoLaoDong =  '" + SoLaoDong + "',BacLuong = N'" + BacLuong + "', HeSoLuong = N'" + HeSoLuong + "',CheDoLamViec = N'" + CheDoLamViec + "',HinhThucTraLuong = N'" + HinhThucTraLuong + "',MaNV = '" + MaNV + "' WHERE MaHD = '" + MaHD + "' ");          
+            DataTable dt = hd.CreateTable("UPDATE HOPDONG SET MaHD = '" + MaHD + "',NgayKyHD='" + NgayKyHD + "',LoaiHD = N'" + LoaiHD + "',ThoiHanHD = N'" + ThoiHan + "',SoLaoDong =  '" + SoLaoDong + "',BacLuong = N'" + BacLuong + "', HeSoLuong = N'" + HeSoLuong + "',CheDoLamViec = N'" + CheDoLamViec + "',HinhThucTraLuong = N'" + HinhThucTraLuong + "',MaNV = '" + MaNV + "' WHERE MaHD = '" + MaHD + "' ");
             MessageBox.Show("Đã sửa hợp đồng " + MaHD + " có mã " + MaNV + " thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
+            hienthithongtin();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if (kiemtranhap() == true)
+            {
+                if (kiemtranhap2() == true)
+                {
+                    thongtinnhap();
+                    DataTable dt = hd.CreateTable("INSERT INTO HOPDONG VALUES ('" + MaHD + "','" + NgayKyHD + "',N'" + LoaiHD + "',N'" + ThoiHan + "',N'" + SoLaoDong + "','" + BacLuong + "','" + HeSoLuong + "',N'" + CheDoLamViec + "',N'" + HinhThucTraLuong + "', '" + MaNV + "')");
+                    MessageBox.Show("Đã thêm hợp đồng " + MaHD + " cho nhân viên có mã " + MaNV + " thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    hienthithongtin();
+                }
+            }
+            
+        }
+        public void ganketdulieu()
+        {
+            txtMaHD.DataBindings.Clear();
+            txtMaHD.DataBindings.Add("text", gcHopDong.DataSource, "MaHD");
+            cbMaNV.DataBindings.Clear();
+            cbMaNV.DataBindings.Add("text", gcHopDong.DataSource, "MaNV");
+            dtpNgayKy.DataBindings.Clear();
+            dtpNgayKy.DataBindings.Add("text", gcHopDong.DataSource, "NgayKyHD");
+            cbHeSoLuong.DataBindings.Clear();
+            cbHeSoLuong.DataBindings.Add("text", gcHopDong.DataSource, "HeSoLuong");
+            cbBacLuong.DataBindings.Clear();
+            cbBacLuong.DataBindings.Add("text", gcHopDong.DataSource, "BacLuong");
+            txtSoLaoDong.DataBindings.Clear();
+            txtSoLaoDong.DataBindings.Add("text", gcHopDong.DataSource, "SoLaoDong");
+            cbLoaiHD.DataBindings.Clear();
+            cbLoaiHD.DataBindings.Add("text", gcHopDong.DataSource, "LoaiHD");
+            cbCheDoLamViec.DataBindings.Clear();
+            cbCheDoLamViec.DataBindings.Add("text", gcHopDong.DataSource, "CheDoLamViec");
+            cbHinhThucTraLuong.DataBindings.Clear();
+            cbHinhThucTraLuong.DataBindings.Add("text", gcHopDong.DataSource, "HinhThucTraLuong");
+            cbThoiHan.DataBindings.Clear();
+            cbThoiHan.DataBindings.Add("text", gcHopDong.DataSource, "ThoiHanHD");
         }
     }
 }

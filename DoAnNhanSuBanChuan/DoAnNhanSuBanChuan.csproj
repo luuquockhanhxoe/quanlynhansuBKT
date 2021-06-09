@@ -101,12 +101,6 @@
     <Compile Include="HoSo\ThongTin\fmThongTinNhanSu.Designer.cs">
       <DependentUpon>fmThongTinNhanSu.cs</DependentUpon>
     </Compile>
-    <Compile Include="HoSo\ThongTin\ucThongTinHopDong.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HoSo\ThongTin\ucThongTinHopDong.Designer.cs">
-      <DependentUpon>ucThongTinHopDong.cs</DependentUpon>
-    </Compile>
     <Compile Include="HoSo\ThongTin\ucThongTinNhanSu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -215,9 +209,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HoSo\ThongTin\fmThongTinNhanSu.resx">
       <DependentUpon>fmThongTinNhanSu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HoSo\ThongTin\ucThongTinHopDong.resx">
-      <DependentUpon>ucThongTinHopDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HoSo\ThongTin\ucThongTinNhanSu.resx">
       <DependentUpon>ucThongTinNhanSu.cs</DependentUpon>

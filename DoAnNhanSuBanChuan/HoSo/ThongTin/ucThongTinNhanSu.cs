@@ -217,5 +217,13 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         {
 
         }
+
+        private void btnHopDong_Click(object sender, EventArgs e)
+        {
+            fmThongTinHopDong hopdong = new fmThongTinHopDong();
+            hopdong.Text = "Thông Tin Hợp Đồng";
+            hopdong.ShowDialog();
+            hienthithongtincoban();
+        }
     }
 }

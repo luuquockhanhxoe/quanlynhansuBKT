@@ -47,7 +47,7 @@ namespace DoAnNhanSuBanChuan
             pnControl.Dock = DockStyle.Fill;
             grControl.Text = "Thông Tin Hợp Đồng";
             pnControl.Controls.Clear();
-            HoSo.ThongTin.ucThongTinHopDong ucThongTinHopDong = new HoSo.ThongTin.ucThongTinHopDong();
+            HoSo.ThongTin.fmThongTinHopDong ucThongTinHopDong = new HoSo.ThongTin.fmThongTinHopDong();
             ucThongTinHopDong.Dock = DockStyle.Fill;
             pnControl.Controls.Add(ucThongTinHopDong);
         }

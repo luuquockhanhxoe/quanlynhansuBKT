@@ -159,8 +159,8 @@ namespace DoAnNhanSuBanChuan
             // 
             this.btnThongTinLienQuan.Caption = "Thông Tin Liên Quan";
             this.btnThongTinLienQuan.Id = 35;
-            this.btnThongTinLienQuan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
-            this.btnThongTinLienQuan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
+            this.btnThongTinLienQuan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTinLienQuan.ImageOptions.Image")));
+            this.btnThongTinLienQuan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThongTinLienQuan.ImageOptions.LargeImage")));
             this.btnThongTinLienQuan.Name = "btnThongTinLienQuan";
             this.btnThongTinLienQuan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThongTinLienQuan_ItemClick);
             // 
@@ -442,7 +442,6 @@ namespace DoAnNhanSuBanChuan
             // ribbonPageGroup10
             // 
             this.ribbonPageGroup10.ItemLinks.Add(this.btnThongTinNhanSu);
-            this.ribbonPageGroup10.ItemLinks.Add(this.btnHopDong);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             this.ribbonPageGroup10.Text = "Thông Tin";
             // 

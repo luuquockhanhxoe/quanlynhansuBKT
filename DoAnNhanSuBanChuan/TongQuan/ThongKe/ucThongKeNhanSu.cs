@@ -70,13 +70,23 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         }
         public void thongkenhansutheogioitinh()
         {
-            chartNamNu.Titles.Add("SỐ LƯỢNG NHÂN VIÊN THEO TRẠNG THÁI LÀM VIỆC");
+            chartNamNu.Titles.Add("SỐ LƯỢNG NHÂN VIÊN THEO GIỚI TÍNH");
             DataTable chartgioitinh = thongke.CreateTable("SELECT GioiTinh, count(*) AS Tongns FROM NHANVIEN GROUP by GioiTinh");
             chartNamNu.DataSource = chartgioitinh;
             chartNamNu.Series["srNamNu"].XValueMember = "GioiTinh";
             chartNamNu.Series["srNamNu"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartNamNu.Series["srNamNu"].YValueMembers = "Tongns";
             chartNamNu.Series["srNamNu"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int64;
+        }
+        public void thongkenhansutheotuoi()
+        {
+            chartNhanSu.Titles.Add("SỐ LƯỢNG NHÂN VIÊN THEO ĐỘ TUỔI");
+            DataTable chartdotuoi = thongke.CreateTable("SELECT YEAR(GETDATE()) - YEAR(NgaySinh) AS 'Tuoi' , COUNT(*) as tongsotuoi FROM NHANVIEN GROUP by NgaySinh");
+            chartNhanSu.DataSource = chartdotuoi;
+            chartNhanSu.Series["srTuoi"].XValueMember = "Tuoi";
+            chartNhanSu.Series["srTuoi"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartNhanSu.Series["srTuoi"].YValueMembers = "tongsotuoi";
+            chartNhanSu.Series["srTuoi"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int64;
         }
         private void btnPhongBan_Click(object sender, EventArgs e)
         {
@@ -86,6 +96,11 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         private void btnTrangThai_Click(object sender, EventArgs e)
         {
             thongkenhansutheotrangthai();
+        }
+
+        private void btnTuoi_Click(object sender, EventArgs e)
+        {
+            thongkenhansutheotuoi();
         }
     }
 }

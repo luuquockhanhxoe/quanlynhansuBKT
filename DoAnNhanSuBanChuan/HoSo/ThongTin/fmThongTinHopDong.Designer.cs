@@ -35,7 +35,6 @@
             this.cbBacLuong = new System.Windows.Forms.ComboBox();
             this.cbHeSoLuong = new System.Windows.Forms.ComboBox();
             this.smbtnHuyBoThongTinHopDong = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSuaHopDong = new DevExpress.XtraEditors.SimpleButton();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -69,6 +68,7 @@
             this.btnLamMoi = new DevExpress.XtraEditors.SimpleButton();
             this.btnTim = new DevExpress.XtraEditors.SimpleButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.cbHienThi = new System.Windows.Forms.CheckBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcHopDong)).BeginInit();
@@ -144,22 +144,12 @@
             // smbtnHuyBoThongTinHopDong
             // 
             this.smbtnHuyBoThongTinHopDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("smbtnHuyBoThongTinHopDong.ImageOptions.Image")));
-            this.smbtnHuyBoThongTinHopDong.Location = new System.Drawing.Point(873, 369);
+            this.smbtnHuyBoThongTinHopDong.Location = new System.Drawing.Point(867, 369);
             this.smbtnHuyBoThongTinHopDong.Name = "smbtnHuyBoThongTinHopDong";
             this.smbtnHuyBoThongTinHopDong.Size = new System.Drawing.Size(79, 38);
             this.smbtnHuyBoThongTinHopDong.TabIndex = 227;
             this.smbtnHuyBoThongTinHopDong.Text = "Hủy bỏ";
             this.smbtnHuyBoThongTinHopDong.Click += new System.EventHandler(this.smbtnHuyBoThongTinHopDong_Click);
-            // 
-            // btnSuaHopDong
-            // 
-            this.btnSuaHopDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaHopDong.ImageOptions.Image")));
-            this.btnSuaHopDong.Location = new System.Drawing.Point(88, 136);
-            this.btnSuaHopDong.Name = "btnSuaHopDong";
-            this.btnSuaHopDong.Size = new System.Drawing.Size(64, 38);
-            this.btnSuaHopDong.TabIndex = 226;
-            this.btnSuaHopDong.Text = "Sửa";
-            this.btnSuaHopDong.Click += new System.EventHandler(this.btnSuaHopDong_Click);
             // 
             // label18
             // 
@@ -278,7 +268,7 @@
             this.groupBox2.Size = new System.Drawing.Size(937, 118);
             this.groupBox2.TabIndex = 241;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "THÔNG TIN HỢP ĐỒNG";
+            this.groupBox2.Text = "NHẬP THÔNG TIN";
             // 
             // cbThoiHan
             // 
@@ -345,11 +335,11 @@
             // btnThem
             // 
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(9, 136);
+            this.btnThem.Location = new System.Drawing.Point(850, 142);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(73, 38);
+            this.btnThem.Size = new System.Drawing.Size(96, 38);
             this.btnThem.TabIndex = 242;
-            this.btnThem.Text = "Thêm";
+            this.btnThem.Text = "Chấp nhận";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox1
@@ -474,7 +464,7 @@
             // btnLamMoi
             // 
             this.btnLamMoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.ImageOptions.Image")));
-            this.btnLamMoi.Location = new System.Drawing.Point(880, 147);
+            this.btnLamMoi.Location = new System.Drawing.Point(219, 147);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(72, 27);
             this.btnLamMoi.TabIndex = 246;
@@ -484,7 +474,7 @@
             // btnTim
             // 
             this.btnTim.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTim.ImageOptions.Image")));
-            this.btnTim.Location = new System.Drawing.Point(830, 147);
+            this.btnTim.Location = new System.Drawing.Point(169, 147);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(44, 27);
             this.btnTim.TabIndex = 245;
@@ -493,25 +483,36 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(670, 147);
+            this.txtTimKiem.Location = new System.Drawing.Point(9, 147);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(149, 27);
             this.txtTimKiem.TabIndex = 244;
             this.txtTimKiem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyDown);
             // 
+            // cbHienThi
+            // 
+            this.cbHienThi.AutoSize = true;
+            this.cbHienThi.Location = new System.Drawing.Point(297, 157);
+            this.cbHienThi.Name = "cbHienThi";
+            this.cbHienThi.Size = new System.Drawing.Size(154, 17);
+            this.cbHienThi.TabIndex = 247;
+            this.cbHienThi.Text = "Hiện thị dữ liệu trên textbox";
+            this.cbHienThi.UseVisualStyleBackColor = true;
+            this.cbHienThi.CheckedChanged += new System.EventHandler(this.cbHienThi_CheckedChanged);
+            // 
             // fmThongTinHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 416);
+            this.Controls.Add(this.cbHienThi);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.smbtnHuyBoThongTinHopDong);
-            this.Controls.Add(this.btnSuaHopDong);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -535,7 +536,6 @@
         private System.Windows.Forms.ComboBox cbBacLuong;
         private System.Windows.Forms.ComboBox cbHeSoLuong;
         private DevExpress.XtraEditors.SimpleButton smbtnHuyBoThongTinHopDong;
-        private DevExpress.XtraEditors.SimpleButton btnSuaHopDong;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label14;
@@ -569,5 +569,6 @@
         private DevExpress.XtraEditors.SimpleButton btnLamMoi;
         private DevExpress.XtraEditors.SimpleButton btnTim;
         private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.CheckBox cbHienThi;
     }
 }

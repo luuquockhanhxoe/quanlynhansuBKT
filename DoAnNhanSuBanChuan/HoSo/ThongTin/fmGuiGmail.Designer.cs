@@ -46,9 +46,6 @@
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
             this.cbGuiToanBo = new System.Windows.Forms.CheckBox();
-            this.pbHienThiTai = new System.Windows.Forms.ProgressBar();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lbhien = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -203,39 +200,11 @@
             this.cbGuiToanBo.UseVisualStyleBackColor = true;
             this.cbGuiToanBo.CheckedChanged += new System.EventHandler(this.cbGuiToanBo_CheckedChanged);
             // 
-            // pbHienThiTai
-            // 
-            this.pbHienThiTai.Location = new System.Drawing.Point(315, 385);
-            this.pbHienThiTai.Name = "pbHienThiTai";
-            this.pbHienThiTai.Size = new System.Drawing.Size(186, 23);
-            this.pbHienThiTai.TabIndex = 24;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(504, 390);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "100%";
-            // 
-            // lbhien
-            // 
-            this.lbhien.AutoSize = true;
-            this.lbhien.Location = new System.Drawing.Point(448, 126);
-            this.lbhien.Name = "lbhien";
-            this.lbhien.Size = new System.Drawing.Size(53, 13);
-            this.lbhien.TabIndex = 26;
-            this.lbhien.Text = "Nội dung:";
-            // 
             // fmGuiGmail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 420);
-            this.Controls.Add(this.lbhien);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.pbHienThiTai);
             this.Controls.Add(this.cbGuiToanBo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbHien);
@@ -282,8 +251,5 @@
         private DevExpress.XtraEditors.SimpleButton btnThoat;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox cbGuiToanBo;
-        private System.Windows.Forms.ProgressBar pbHienThiTai;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbhien;
     }
 }

@@ -74,12 +74,9 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
                         attach = new Attachment(txtFileKem.Text);
                     }
                     catch { }
-                    //pbHienThiTai.Minimum = 0;
-                    //pbHienThiTai.Maximum = ;
                     for (int i = 0; i< (txtDen.Lines.Length)-1; i++)                  
                     {
                         GuiMail(txtTenDangNhap.Text, txtDen.Lines[i], txtNoiDung.Text, txtMessage.Text, attach);
-                        //pbHienThiTai.Value = i;
                     }
                     MessageBox.Show("Đã gửi mail cho nhân viên!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

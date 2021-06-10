@@ -366,8 +366,8 @@
             // 
             // btnHopDong
             // 
-            this.btnHopDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.btnHopDong.Location = new System.Drawing.Point(503, 4);
+            this.btnHopDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHopDong.ImageOptions.Image")));
+            this.btnHopDong.Location = new System.Drawing.Point(440, 5);
             this.btnHopDong.Name = "btnHopDong";
             this.btnHopDong.Size = new System.Drawing.Size(95, 37);
             this.btnHopDong.StyleController = this.layoutControl1;
@@ -378,7 +378,7 @@
             // spbtnThemNhanSu
             // 
             this.spbtnThemNhanSu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnThemNhanSu.ImageOptions.Image")));
-            this.spbtnThemNhanSu.Location = new System.Drawing.Point(2, 3);
+            this.spbtnThemNhanSu.Location = new System.Drawing.Point(0, 3);
             this.spbtnThemNhanSu.Name = "spbtnThemNhanSu";
             this.spbtnThemNhanSu.Size = new System.Drawing.Size(73, 38);
             this.spbtnThemNhanSu.StyleController = this.layoutControl1;
@@ -389,7 +389,7 @@
             // simpleButton8
             // 
             this.simpleButton8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton8.ImageOptions.Image")));
-            this.simpleButton8.Location = new System.Drawing.Point(440, 4);
+            this.simpleButton8.Location = new System.Drawing.Point(541, 4);
             this.simpleButton8.Name = "simpleButton8";
             this.simpleButton8.Size = new System.Drawing.Size(57, 38);
             this.simpleButton8.StyleController = this.layoutControl1;

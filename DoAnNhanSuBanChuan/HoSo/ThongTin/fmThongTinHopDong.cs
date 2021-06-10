@@ -24,7 +24,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             dulieuchon();
             DataTable thongtinhopdong = hd.CreateTable("SELECT * FROM HOPDONG");
             gcHopDong.DataSource = thongtinhopdong;
-            ganketdulieu();
+            xoatextbox();
         }
         public void dulieuchon()
         {
@@ -130,18 +130,49 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
   
 
         string MaHD, MaNV, NgayKyHD, LoaiHD, ThoiHan, BacLuong, HeSoLuong, CheDoLamViec, HinhThucTraLuong, SoLaoDong;
-
+        private void cbHienThi_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbHienThi.Checked == false)
+            {
+                hienthithongtin();
+                txtMaHD.ReadOnly = false;
+            }
+            else
+            {
+                txtMaHD.ReadOnly = true;
+                ganketdulieu();
+            }
+        }
+        public void xoatextbox()
+        {
+            txtMaHD.Clear();
+            cbMaNV.Text = "";
+            dtpNgayKy.Text = "";
+            cbLoaiHD.Text = "";
+            cbThoiHan.Text = "";
+            cbBacLuong.Text = "";
+            cbHeSoLuong.Text = "";
+            cbCheDoLamViec.Text = "";
+            cbHinhThucTraLuong.Text = "";
+            txtTimKiem.Clear();
+        }
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             hienthithongtin();
-            txtTimKiem.Clear();
+            xoatextbox();
         }
 
         private void txtTimKiem_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnTim.PerformClick();
+                if (kiemtranhap() == true)
+                {
+                    thongtinnhap();
+                    DataTable dt = hd.CreateTable("UPDATE HOPDONG SET MaHD = '" + MaHD + "',NgayKyHD='" + NgayKyHD + "',LoaiHD = N'" + LoaiHD + "',ThoiHanHD = N'" + ThoiHan + "',SoLaoDong =  '" + SoLaoDong + "',BacLuong = N'" + BacLuong + "', HeSoLuong = N'" + HeSoLuong + "',CheDoLamViec = N'" + CheDoLamViec + "',HinhThucTraLuong = N'" + HinhThucTraLuong + "',MaNV = '" + MaNV + "' WHERE MaHD = '" + MaHD + "' ");
+                    MessageBox.Show("Đã sửa hợp đồng " + MaHD + " có mã " + MaNV + " thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    hienthithongtin();
+                }
             }
         }
 
@@ -155,7 +186,6 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             else
             {
                 gcHopDong.DataSource = thongtinhd;
-                ganketdulieu();
             }
         }
 
@@ -171,29 +201,26 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
                 cbThoiHan.DataBindings.Add("text", gcHopDong.DataSource, "ThoiHanHD");
             }
         }
-
-        private void btnSuaHopDong_Click(object sender, EventArgs e)
-        {
-            kiemtranhap();
-            thongtinnhap();
-            DataTable dt = hd.CreateTable("UPDATE HOPDONG SET MaHD = '" + MaHD + "',NgayKyHD='" + NgayKyHD + "',LoaiHD = N'" + LoaiHD + "',ThoiHanHD = N'" + ThoiHan + "',SoLaoDong =  '" + SoLaoDong + "',BacLuong = N'" + BacLuong + "', HeSoLuong = N'" + HeSoLuong + "',CheDoLamViec = N'" + CheDoLamViec + "',HinhThucTraLuong = N'" + HinhThucTraLuong + "',MaNV = '" + MaNV + "' WHERE MaHD = '" + MaHD + "' ");
-            MessageBox.Show("Đã sửa hợp đồng " + MaHD + " có mã " + MaNV + " thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            hienthithongtin();
-        }
-
         private void btnThem_Click(object sender, EventArgs e)
         {
             if (kiemtranhap() == true)
             {
+                if(txtMaHD.ReadOnly == true)
+                {
+                    thongtinnhap();
+                    DataTable dt = hd.CreateTable("UPDATE HOPDONG SET MaHD = '" + MaHD + "',NgayKyHD='" + NgayKyHD + "',LoaiHD = N'" + LoaiHD + "',ThoiHanHD = N'" + ThoiHan + "',SoLaoDong =  '" + SoLaoDong + "',BacLuong = N'" + BacLuong + "', HeSoLuong = N'" + HeSoLuong + "',CheDoLamViec = N'" + CheDoLamViec + "',HinhThucTraLuong = N'" + HinhThucTraLuong + "',MaNV = '" + MaNV + "' WHERE MaHD = '" + MaHD + "' ");
+                    MessageBox.Show("Đã sửa hợp đồng " + MaHD + " có mã " + MaNV + " thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    hienthithongtin();
+                }
+                else
                 if (kiemtranhap2() == true)
                 {
                     thongtinnhap();
-                    DataTable dt = hd.CreateTable("INSERT INTO HOPDONG VALUES ('" + MaHD + "','" + NgayKyHD + "',N'" + LoaiHD + "',N'" + ThoiHan + "',N'" + SoLaoDong + "','" + BacLuong + "','" + HeSoLuong + "',N'" + CheDoLamViec + "',N'" + HinhThucTraLuong + "', '" + MaNV + "')");
+                    DataTable them = hd.CreateTable("INSERT INTO HOPDONG VALUES ('" + MaHD + "','" + NgayKyHD + "',N'" + LoaiHD + "',N'" + ThoiHan + "',N'" + SoLaoDong + "','" + BacLuong + "','" + HeSoLuong + "',N'" + CheDoLamViec + "',N'" + HinhThucTraLuong + "', '" + MaNV + "')");
                     MessageBox.Show("Đã thêm hợp đồng " + MaHD + " cho nhân viên có mã " + MaNV + " thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     hienthithongtin();
                 }
             }
-            
         }
         public void ganketdulieu()
         {

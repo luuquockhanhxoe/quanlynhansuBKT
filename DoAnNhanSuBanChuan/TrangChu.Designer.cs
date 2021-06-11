@@ -441,6 +441,7 @@ namespace DoAnNhanSuBanChuan
             // 
             // ribbonPageGroup10
             // 
+            this.ribbonPageGroup10.AllowTextClipping = false;
             this.ribbonPageGroup10.ItemLinks.Add(this.btnThongTinNhanSu);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             this.ribbonPageGroup10.Text = "Thông Tin";

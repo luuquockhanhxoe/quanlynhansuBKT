@@ -19,7 +19,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         Data_Access da = new Data_Access();
         void hienthithongtincoban()
         {
-            DataTable thongtincoban = da.CreateTable("SELECT MaNV,HoTen,GioiTinh,FORMAT (getdate(), 'dd/MM/yyyy ') AS NgaySinh,SoCCCD,FORMAT (getdate(), 'dd/MM/yyyy ') AS NgayCap,NoiCap,TrangThai,SoDienThoai,Gmail,QueQuan,NoiO,NguoiLienHe,SoDienThoaiNLH, NganHang, SoTaiKhoan, AnhChanDung FROM NHANVIEN");
+            DataTable thongtincoban = da.CreateTable("SELECT MaNV,HoTen,GioiTinh,NgaySinh,SoCCCD,NgayCap,NoiCap,TrangThai,SoDienThoai,Gmail,QueQuan,NoiO,NguoiLienHe,SoDienThoaiNLH, NganHang, SoTaiKhoan, AnhChanDung FROM NHANVIEN");
             gcHienThiThongTin.DataSource = thongtincoban;
             ganketdulieu();
         }

@@ -21,7 +21,7 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
             thongkenhansutheohocvan();
             thongkenhansutheoloaihopdong();
             thongkenhansutheogioitinh();
-
+            thongkenhansutheobiendong();
         }
         public void hienthitongsonhanvien()
         {
@@ -60,7 +60,7 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         }
         public void thongkenhansutheoloaihopdong()
         {
-            chartNhanSuHDLD.Titles.Add("SỐ LƯỢNG NHÂN VIÊN THEO TRẠNG THÁI LÀM VIỆC");
+            chartNhanSuHDLD.Titles.Add("SỐ LƯỢNG NHÂN VIÊN THEO HỢP ĐỒNG LAO ĐỘNG");
             DataTable charthopdong = thongke.CreateTable("SELECT LoaiHD, count(*) AS Tonghd FROM HOPDONG GROUP by LoaiHD");
             chartNhanSuHDLD.DataSource = charthopdong;
             chartNhanSuHDLD.Series["srHopDongLaoDong"].XValueMember = "LoaiHD";
@@ -70,13 +70,13 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         }
         public void thongkenhansutheogioitinh()
         {
-            chartNamNu.Titles.Add("SỐ LƯỢNG NHÂN VIÊN THEO GIỚI TÍNH");
+            ChartGioiTinh.Titles.Add("SỐ LƯỢNG NHÂN VIÊN THEO GIỚI TÍNH");
             DataTable chartgioitinh = thongke.CreateTable("SELECT GioiTinh, count(*) AS Tongns FROM NHANVIEN GROUP by GioiTinh");
-            chartNamNu.DataSource = chartgioitinh;
-            chartNamNu.Series["srNamNu"].XValueMember = "GioiTinh";
-            chartNamNu.Series["srNamNu"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            chartNamNu.Series["srNamNu"].YValueMembers = "Tongns";
-            chartNamNu.Series["srNamNu"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int64;
+            ChartGioiTinh.DataSource = chartgioitinh;
+            ChartGioiTinh.Series["srNamNu"].XValueMember = "GioiTinh";
+            ChartGioiTinh.Series["srNamNu"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            ChartGioiTinh.Series["srNamNu"].YValueMembers = "Tongns";
+            ChartGioiTinh.Series["srNamNu"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int64;
         }
         public void thongkenhansutheotuoi()
         {
@@ -87,6 +87,16 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
             chartNhanSu.Series["srTuoi"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartNhanSu.Series["srTuoi"].YValueMembers = "tongsotuoi";
             chartNhanSu.Series["srTuoi"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int64;
+        }
+        public void thongkenhansutheobiendong()
+        {
+            chartBienDongNhanSu.Titles.Add("BIẾN ĐỘNG NHÂN SỰ QUA TỪNG NĂM");
+            DataTable charbiendong = thongke.CreateTable("SELECT YEAR(NgayKyHD) AS 'NamVao',COUNT(*) as TongSoNguoiVaoTrongNam FROM HOPDONG GROUP BY NgayKyHD");
+            chartBienDongNhanSu.DataSource = charbiendong;
+            chartBienDongNhanSu.Series["srBienDongNhanSu"].XValueMember = "NamVao";
+            chartBienDongNhanSu.Series["srBienDongNhanSu"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartBienDongNhanSu.Series["srBienDongNhanSu"].YValueMembers = "TongSoNguoiVaoTrongNam";
+            chartBienDongNhanSu.Series["srBienDongNhanSu"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int64;
         }
         private void btnPhongBan_Click(object sender, EventArgs e)
         {

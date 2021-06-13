@@ -40,6 +40,7 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         }
         public void thongkenhansutheophongban()
         {
+           
             chartNhanSu.Titles.Add("SỐ LƯỢNG NHÂN VIÊN THEO PHÒNG BAN");
             DataTable charphongban = thongke.CreateTable("SELECT A.TenPB,B.Tongsonguoi FROM PHONGBAN A RIGHT JOIN (SELECT MaPB, count(*) AS Tongsonguoi FROM PHONGBANCHUCVUNHANVIEN GROUP by MaPB) B ON A.MaPB = B.MaPB");
             chartNhanSu.DataSource = charphongban;
@@ -50,6 +51,7 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         }
         public void thongkenhansutheotrangthai()
         {
+            
             chartNhanSu.Titles.Add("SỐ LƯỢNG NHÂN VIÊN THEO TRẠNG THÁI LÀM VIỆC");
             DataTable chahrttrangthai = thongke.CreateTable("SELECT TrangThai, count(*) AS Tongsonguoi FROM NHANVIEN GROUP by TrangThai");
             chartNhanSu.DataSource = chahrttrangthai;
@@ -80,6 +82,7 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         }
         public void thongkenhansutheotuoi()
         {
+            
             chartNhanSu.Titles.Add("SỐ LƯỢNG NHÂN VIÊN THEO ĐỘ TUỔI");
             DataTable chartdotuoi = thongke.CreateTable("SELECT YEAR(GETDATE()) - YEAR(NgaySinh) AS 'Tuoi' , COUNT(*) as tongsotuoi FROM NHANVIEN GROUP by NgaySinh");
             chartNhanSu.DataSource = chartdotuoi;

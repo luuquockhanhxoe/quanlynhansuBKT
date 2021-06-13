@@ -1,6 +1,6 @@
-﻿namespace DoAnNhanSuBanChuan.ChamCong.NhapThongTin
+﻿namespace DoAnNhanSuBanChuan.ChamCong.ChiXemChamCongTongHop
 {
-    partial class ucNhapThongTinChamCong
+    partial class ucChamCongTongHop
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,27 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucNhapThongTinChamCong));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucChamCongTongHop));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.gcThongTinChamCong = new DevExpress.XtraGrid.GridControl();
+            this.gcChamCongTongHop = new DevExpress.XtraGrid.GridControl();
             this.gvChamCong = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cbThongTinDiLam = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cbSoGioLamThem = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbMaNV = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
+            this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
+            this.btnIn = new DevExpress.XtraEditors.SimpleButton();
+            this.btnBaoCao = new DevExpress.XtraEditors.SimpleButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtpNgayHomNay = new System.Windows.Forms.DateTimePicker();
-            this.btnLamMoi = new DevExpress.XtraEditors.SimpleButton();
-            this.btnTim = new DevExpress.XtraEditors.SimpleButton();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btnXem = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcThongTinChamCong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcChamCongTongHop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvChamCong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbThongTinDiLam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbSoGioLamThem)).BeginInit();
@@ -64,44 +67,43 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(951, 530);
+            this.panel1.Size = new System.Drawing.Size(830, 491);
             this.panel1.TabIndex = 0;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.gcThongTinChamCong);
+            this.panel3.Controls.Add(this.gcChamCongTongHop);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 62);
+            this.panel3.Location = new System.Drawing.Point(0, 70);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(951, 468);
+            this.panel3.Size = new System.Drawing.Size(830, 421);
             this.panel3.TabIndex = 1;
             // 
-            // gcThongTinChamCong
+            // gcChamCongTongHop
             // 
-            this.gcThongTinChamCong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcThongTinChamCong.Location = new System.Drawing.Point(0, 0);
-            this.gcThongTinChamCong.MainView = this.gvChamCong;
-            this.gcThongTinChamCong.Name = "gcThongTinChamCong";
-            this.gcThongTinChamCong.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gcChamCongTongHop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcChamCongTongHop.Location = new System.Drawing.Point(0, 0);
+            this.gcChamCongTongHop.MainView = this.gvChamCong;
+            this.gcChamCongTongHop.Name = "gcChamCongTongHop";
+            this.gcChamCongTongHop.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemDateEdit1,
             this.cbThongTinDiLam,
             this.cbSoGioLamThem});
-            this.gcThongTinChamCong.Size = new System.Drawing.Size(951, 468);
-            this.gcThongTinChamCong.TabIndex = 0;
-            this.gcThongTinChamCong.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gcChamCongTongHop.Size = new System.Drawing.Size(830, 421);
+            this.gcChamCongTongHop.TabIndex = 1;
+            this.gcChamCongTongHop.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvChamCong});
             // 
             // gvChamCong
             // 
             this.gvChamCong.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
-            this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4});
-            this.gvChamCong.GridControl = this.gcThongTinChamCong;
+            this.gvChamCong.GridControl = this.gcChamCongTongHop;
             this.gvChamCong.Name = "gvChamCong";
+            this.gvChamCong.OptionsBehavior.Editable = false;
             this.gvChamCong.OptionsView.ShowGroupPanel = false;
-            this.gvChamCong.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvChamCong_CellValueChanged);
             // 
             // gridColumn1
             // 
@@ -111,27 +113,11 @@
             this.gridColumn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn1.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn1.Caption = "Mã nhân viên";
-            this.gridColumn1.FieldName = "MaNV";
+            this.gridColumn1.Caption = "Ngày đi làm";
+            this.gridColumn1.FieldName = "NgayDiLam";
             this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn2.AppearanceCell.Options.UseFont = true;
-            this.gridColumn2.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn2.Caption = "Họ và tên";
-            this.gridColumn2.FieldName = "HoTen";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.OptionsColumn.ReadOnly = true;
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
             // 
             // gridColumn3
             // 
@@ -146,7 +132,7 @@
             this.gridColumn3.FieldName = "ThongTinDiLam";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.VisibleIndex = 1;
             // 
             // cbThongTinDiLam
             // 
@@ -178,7 +164,7 @@
             this.gridColumn4.FieldName = "SoGioLamThem";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.VisibleIndex = 2;
             // 
             // cbSoGioLamThem
             // 
@@ -206,74 +192,110 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.cbMaNV);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.dtpDenNgay);
+            this.panel2.Controls.Add(this.dtpTuNgay);
+            this.panel2.Controls.Add(this.btnIn);
+            this.panel2.Controls.Add(this.btnBaoCao);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.dtpNgayHomNay);
-            this.panel2.Controls.Add(this.btnLamMoi);
-            this.panel2.Controls.Add(this.btnTim);
-            this.panel2.Controls.Add(this.txtTimKiem);
+            this.panel2.Controls.Add(this.btnXem);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(951, 62);
+            this.panel2.Size = new System.Drawing.Size(830, 70);
             this.panel2.TabIndex = 0;
+            // 
+            // cbMaNV
+            // 
+            this.cbMaNV.FormattingEnabled = true;
+            this.cbMaNV.Location = new System.Drawing.Point(102, 9);
+            this.cbMaNV.Name = "cbMaNV";
+            this.cbMaNV.Size = new System.Drawing.Size(94, 21);
+            this.cbMaNV.TabIndex = 169;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(202, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 168;
+            this.label3.Text = "Đến ngày:";
+            // 
+            // dtpDenNgay
+            // 
+            this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDenNgay.Location = new System.Drawing.Point(266, 35);
+            this.dtpDenNgay.Name = "dtpDenNgay";
+            this.dtpDenNgay.Size = new System.Drawing.Size(94, 21);
+            this.dtpDenNgay.TabIndex = 167;
+            // 
+            // dtpTuNgay
+            // 
+            this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTuNgay.Location = new System.Drawing.Point(102, 36);
+            this.dtpTuNgay.Name = "dtpTuNgay";
+            this.dtpTuNgay.Size = new System.Drawing.Size(94, 21);
+            this.dtpTuNgay.TabIndex = 166;
+            // 
+            // btnIn
+            // 
+            this.btnIn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.ImageOptions.Image")));
+            this.btnIn.Location = new System.Drawing.Point(546, 17);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(57, 40);
+            this.btnIn.TabIndex = 165;
+            this.btnIn.Text = "In ";
+            // 
+            // btnBaoCao
+            // 
+            this.btnBaoCao.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBaoCao.ImageOptions.Image")));
+            this.btnBaoCao.Location = new System.Drawing.Point(458, 17);
+            this.btnBaoCao.Name = "btnBaoCao";
+            this.btnBaoCao.Size = new System.Drawing.Size(82, 40);
+            this.btnBaoCao.TabIndex = 164;
+            this.btnBaoCao.Text = "Báo cáo";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 149;
+            this.label2.Text = "Từ ngày:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(453, 22);
+            this.label1.Location = new System.Drawing.Point(21, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 147;
-            this.label1.Text = "Ngày:";
+            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.TabIndex = 148;
+            this.label1.Text = "Mã nhân viên:";
             // 
-            // dtpNgayHomNay
+            // btnXem
             // 
-            this.dtpNgayHomNay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayHomNay.Location = new System.Drawing.Point(494, 19);
-            this.dtpNgayHomNay.Name = "dtpNgayHomNay";
-            this.dtpNgayHomNay.Size = new System.Drawing.Size(98, 20);
-            this.dtpNgayHomNay.TabIndex = 146;
+            this.btnXem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXem.ImageOptions.Image")));
+            this.btnXem.Location = new System.Drawing.Point(385, 17);
+            this.btnXem.Name = "btnXem";
+            this.btnXem.Size = new System.Drawing.Size(67, 40);
+            this.btnXem.TabIndex = 146;
+            this.btnXem.Text = "Xem";
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.ImageOptions.Image")));
-            this.btnLamMoi.Location = new System.Drawing.Point(212, 15);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(72, 27);
-            this.btnLamMoi.TabIndex = 145;
-            this.btnLamMoi.Text = "Làm mới";
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
-            // 
-            // btnTim
-            // 
-            this.btnTim.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTim.ImageOptions.Image")));
-            this.btnTim.Location = new System.Drawing.Point(161, 15);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(44, 27);
-            this.btnTim.TabIndex = 144;
-            this.btnTim.Text = "Tìm";
-            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(1, 15);
-            this.txtTimKiem.Multiline = true;
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(149, 27);
-            this.txtTimKiem.TabIndex = 143;
-            this.txtTimKiem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyDown);
-            // 
-            // ucNhapThongTinChamCong
+            // ucChamCongTongHop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Name = "ucNhapThongTinChamCong";
-            this.Size = new System.Drawing.Size(951, 530);
-            this.Load += new System.EventHandler(this.ucNhapThongTinChamCong_Load);
+            this.Name = "ucChamCongTongHop";
+            this.Size = new System.Drawing.Size(830, 491);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gcThongTinChamCong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcChamCongTongHop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvChamCong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbThongTinDiLam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbSoGioLamThem)).EndInit();
@@ -290,19 +312,22 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private DevExpress.XtraEditors.SimpleButton btnLamMoi;
-        private DevExpress.XtraEditors.SimpleButton btnTim;
-        private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.DateTimePicker dtpNgayHomNay;
-        private System.Windows.Forms.Label label1;
-        private DevExpress.XtraGrid.GridControl gcThongTinChamCong;
+        private DevExpress.XtraGrid.GridControl gcChamCongTongHop;
         private DevExpress.XtraGrid.Views.Grid.GridView gvChamCong;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox cbThongTinDiLam;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox cbSoGioLamThem;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.SimpleButton btnXem;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraEditors.SimpleButton btnIn;
+        private DevExpress.XtraEditors.SimpleButton btnBaoCao;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtpDenNgay;
+        private System.Windows.Forms.DateTimePicker dtpTuNgay;
+        private System.Windows.Forms.ComboBox cbMaNV;
     }
 }

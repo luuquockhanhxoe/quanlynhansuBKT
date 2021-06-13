@@ -23,7 +23,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
 
         public fmThongTinNhanSu(string manhanvien, string tennhanvien, string gioitinh, string ngaysinh, string socccd, string ngaycap, string noicap, string trangthai, string sodienthoai, string gmail, string quequan, string Noio, string nguoilienhe, string sodienthoainlh, string nganhang, string sotaikhoan, Image img) :this()
         {
-
+            tbThongTinCuThe.Enabled = true;
             txtMaNhanVien.Text = manhanvien;
             txtMaNhanVien.ReadOnly = true;
             //txtMaNhanVien.BackColor = System.Drawing.SystemColors.Window;
@@ -119,17 +119,12 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         {
             InitializeComponent();
             hienthitrengridcontrol();
+            tbThongTinCuThe.Enabled = false;
         }
 
         private void smbtnHuyBoThongTinNhanSu_Click(object sender, EventArgs e)
         {
-            DialogResult ThongBao = MessageBox.Show("Bạn có muốn hủy bỏ không?",
-                "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (ThongBao == DialogResult.OK)
-            {
-                this.Close();
-            }
-
+            this.Close();
         }
       
         public bool kiemtranhap()
@@ -567,6 +562,17 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         }
 
         string MaHV, MaNoiDaoTao, ChuyenNganh, NamTotNghiep, IdPBCVNV, IdHV, IdQTCT, IdCC, IdPC,IdBH, XepLoai,MaPB,MaCV,GhiChu,NgayNhamChuc,MaCC,DonViCap,NgayCapCC,MaPC,NgayBatDau,MaBH,Loai, NgayBatDauBH,TuNgay,DenNgay, TenCongTy;
+
+        private void fmThongTinNhanSu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult ThongBao = MessageBox.Show("Bạn có muốn thoát không?",
+                "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (ThongBao == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+        }
+
         public void ttHocVan_Load()
         {
             MaHV = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "MaHV").ToString();
@@ -658,17 +664,13 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             byte[] anhluu = chuyendoianhsangdangbyte(pbAnhChanDung.Image);
             DataTable dt = tsx.CreateTable("INSERT INTO NHANVIEN VALUES ('" + MaNV + "',N'" + HoTen + "',N'" + GioiTinh + "','" + NgaySinh + "', '" + SoCCCD + "', N'" + NgayCap + "', N'" + NoiCap + "',N'" + TrangThai + "', '" + SoDienThoai + "', '" + Gmail + "', N'" + QueQuan + "', N'" + NoiO + "',N'" + NguoiLienHe + "','" + SoDienThoaiNLH + "',N'" + NganHang + "', '" + SoTaiKhoan + "',@anhluu)",anhluu);           
             MessageBox.Show("Đã thêm nhân viên có mã " + MaNV + " thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
-
     }   
         public void suathongtinnhanvien()
         {
             thongtinnhaptextbox();
             byte[] anhluu = chuyendoianhsangdangbyte(pbAnhChanDung.Image);
             DataTable dt = tsx.CreateTable("UPDATE NHANVIEN SET MaNV = '" + MaNV + "',HoTen= N'" + HoTen + "',GioiTinh = N'" + GioiTinh + "',NgaySinh = '" + NgaySinh + "',SoCCCD =  '" + SoCCCD + "',NgayCap = N'" + NgayCap + "', NoiCap = N'" + NoiCap + "',TrangThai = N'" + TrangThai + "',SoDienThoai = '" + SoDienThoai + "',Gmail = '" + Gmail + "',QueQuan = N'" + QueQuan + "',NoiO = N'" + NoiO + "',AnhChanDung =@anhluu,NguoiLienHe = N'" + NguoiLienHe + "',SoDienThoaiNLH = '" + SoDienThoaiNLH + "',NganHang = N'" + NganHang + "',SoTaiKhoan = '" + SoTaiKhoan + "' WHERE MaNV = '" + MaNV + "' ",anhluu);
-            MessageBox.Show("Đã sửa nhân viên có mã " + MaNV + " thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
-            
+            MessageBox.Show("Đã sửa nhân viên có mã " + MaNV + " thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);            
         }
 
         public byte[] chuyendoianhsangdangbyte(System.Drawing.Image anh)

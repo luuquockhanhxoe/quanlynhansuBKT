@@ -170,7 +170,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gcThongTinCuThe = new System.Windows.Forms.TabControl();
+            this.tbThongTinCuThe = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.gcTrinhDoHocVan = new DevExpress.XtraGrid.GridControl();
             this.gvHocVanNhanVien = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -292,7 +292,7 @@
             this.gbThongTinChung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
-            this.gcThongTinCuThe.SuspendLayout();
+            this.tbThongTinCuThe.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcTrinhDoHocVan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvHocVanNhanVien)).BeginInit();
@@ -475,11 +475,11 @@
             // smbtnHuyBoThongTinNhanSu
             // 
             this.smbtnHuyBoThongTinNhanSu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("smbtnHuyBoThongTinNhanSu.ImageOptions.Image")));
-            this.smbtnHuyBoThongTinNhanSu.Location = new System.Drawing.Point(590, 500);
+            this.smbtnHuyBoThongTinNhanSu.Location = new System.Drawing.Point(686, 500);
             this.smbtnHuyBoThongTinNhanSu.Name = "smbtnHuyBoThongTinNhanSu";
             this.smbtnHuyBoThongTinNhanSu.Size = new System.Drawing.Size(79, 38);
             this.smbtnHuyBoThongTinNhanSu.TabIndex = 127;
-            this.smbtnHuyBoThongTinNhanSu.Text = "Hủy bỏ";
+            this.smbtnHuyBoThongTinNhanSu.Text = "Thoát";
             this.smbtnHuyBoThongTinNhanSu.Click += new System.EventHandler(this.smbtnHuyBoThongTinNhanSu_Click);
             // 
             // cbNam
@@ -746,19 +746,19 @@
             // 
             this.gridView6.Name = "gridView6";
             // 
-            // gcThongTinCuThe
+            // tbThongTinCuThe
             // 
-            this.gcThongTinCuThe.Controls.Add(this.tabPage3);
-            this.gcThongTinCuThe.Controls.Add(this.tabPage5);
-            this.gcThongTinCuThe.Controls.Add(this.tabPage6);
-            this.gcThongTinCuThe.Controls.Add(this.tabPage1);
-            this.gcThongTinCuThe.Controls.Add(this.tabPage2);
-            this.gcThongTinCuThe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcThongTinCuThe.Location = new System.Drawing.Point(3, 16);
-            this.gcThongTinCuThe.Name = "gcThongTinCuThe";
-            this.gcThongTinCuThe.SelectedIndex = 0;
-            this.gcThongTinCuThe.Size = new System.Drawing.Size(750, 216);
-            this.gcThongTinCuThe.TabIndex = 16;
+            this.tbThongTinCuThe.Controls.Add(this.tabPage3);
+            this.tbThongTinCuThe.Controls.Add(this.tabPage5);
+            this.tbThongTinCuThe.Controls.Add(this.tabPage6);
+            this.tbThongTinCuThe.Controls.Add(this.tabPage1);
+            this.tbThongTinCuThe.Controls.Add(this.tabPage2);
+            this.tbThongTinCuThe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbThongTinCuThe.Location = new System.Drawing.Point(3, 16);
+            this.tbThongTinCuThe.Name = "tbThongTinCuThe";
+            this.tbThongTinCuThe.SelectedIndex = 0;
+            this.tbThongTinCuThe.Size = new System.Drawing.Size(750, 216);
+            this.tbThongTinCuThe.TabIndex = 16;
             // 
             // tabPage3
             // 
@@ -812,6 +812,12 @@
             // 
             // gvMaHV
             // 
+            this.gvMaHV.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvMaHV.AppearanceCell.Options.UseFont = true;
+            this.gvMaHV.AppearanceCell.Options.UseTextOptions = true;
+            this.gvMaHV.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gvMaHV.AppearanceHeader.Options.UseTextOptions = true;
+            this.gvMaHV.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gvMaHV.Caption = "Mã học vấn";
             this.gvMaHV.ColumnEdit = this.cbHocVan;
             this.gvMaHV.FieldName = "MaHV";
@@ -865,6 +871,12 @@
             // 
             // gvNoiDaoTao
             // 
+            this.gvNoiDaoTao.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvNoiDaoTao.AppearanceCell.Options.UseFont = true;
+            this.gvNoiDaoTao.AppearanceCell.Options.UseTextOptions = true;
+            this.gvNoiDaoTao.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gvNoiDaoTao.AppearanceHeader.Options.UseTextOptions = true;
+            this.gvNoiDaoTao.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gvNoiDaoTao.Caption = "Mã trường";
             this.gvNoiDaoTao.FieldName = "MaNoiDaoTao";
             this.gvNoiDaoTao.MaxWidth = 80;
@@ -874,6 +886,12 @@
             // 
             // gridColumn10
             // 
+            this.gridColumn10.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn10.AppearanceCell.Options.UseFont = true;
+            this.gridColumn10.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn10.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn10.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn10.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn10.Caption = "Chuyên ngành";
             this.gridColumn10.ColumnEdit = this.repositoryItemComboBox1;
             this.gridColumn10.FieldName = "ChuyenNganh";
@@ -914,6 +932,12 @@
             // 
             // gvNamTotNghiep
             // 
+            this.gvNamTotNghiep.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvNamTotNghiep.AppearanceCell.Options.UseFont = true;
+            this.gvNamTotNghiep.AppearanceCell.Options.UseTextOptions = true;
+            this.gvNamTotNghiep.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gvNamTotNghiep.AppearanceHeader.Options.UseTextOptions = true;
+            this.gvNamTotNghiep.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gvNamTotNghiep.Caption = "Năm tốt nghiệp";
             this.gvNamTotNghiep.ColumnEdit = this.cbNamTotNghiep;
             this.gvNamTotNghiep.FieldName = "NamTotNghiep";
@@ -958,10 +982,16 @@
             // 
             // gvXepLoai
             // 
+            this.gvXepLoai.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvXepLoai.AppearanceCell.Options.UseFont = true;
+            this.gvXepLoai.AppearanceCell.Options.UseTextOptions = true;
+            this.gvXepLoai.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gvXepLoai.AppearanceHeader.Options.UseTextOptions = true;
+            this.gvXepLoai.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gvXepLoai.Caption = "Xếp loại";
             this.gvXepLoai.ColumnEdit = this.cbXepLoai;
             this.gvXepLoai.FieldName = "XepLoai";
-            this.gvXepLoai.MaxWidth = 60;
+            this.gvXepLoai.MaxWidth = 80;
             this.gvXepLoai.Name = "gvXepLoai";
             this.gvXepLoai.Visible = true;
             this.gvXepLoai.VisibleIndex = 4;
@@ -981,6 +1011,12 @@
             // 
             // gridColumn16
             // 
+            this.gridColumn16.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn16.AppearanceCell.Options.UseFont = true;
+            this.gridColumn16.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn16.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn16.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn16.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn16.Caption = "Thêm";
             this.gridColumn16.ColumnEdit = this.btnDongYHV;
             this.gridColumn16.MaxWidth = 50;
@@ -1000,6 +1036,12 @@
             // 
             // gridColumn17
             // 
+            this.gridColumn17.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn17.AppearanceCell.Options.UseFont = true;
+            this.gridColumn17.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn17.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn17.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn17.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn17.Caption = "Sửa";
             this.gridColumn17.ColumnEdit = this.btnSuaHV;
             this.gridColumn17.MaxWidth = 50;
@@ -1019,6 +1061,12 @@
             // 
             // gridColumn5
             // 
+            this.gridColumn5.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn5.AppearanceCell.Options.UseFont = true;
+            this.gridColumn5.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn5.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn5.Caption = "Xóa";
             this.gridColumn5.ColumnEdit = this.btnXoaHocVan;
             this.gridColumn5.MaxWidth = 50;
@@ -1110,6 +1158,12 @@
             // 
             // c
             // 
+            this.c.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c.AppearanceCell.Options.UseFont = true;
+            this.c.AppearanceCell.Options.UseTextOptions = true;
+            this.c.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.c.AppearanceHeader.Options.UseTextOptions = true;
+            this.c.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.c.Caption = "Mã chứng chỉ";
             this.c.ColumnEdit = this.cbChungChi;
             this.c.FieldName = "MaCC";
@@ -1160,6 +1214,12 @@
             // 
             // b
             // 
+            this.b.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b.AppearanceCell.Options.UseFont = true;
+            this.b.AppearanceCell.Options.UseTextOptions = true;
+            this.b.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.b.AppearanceHeader.Options.UseTextOptions = true;
+            this.b.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.b.Caption = "Đơn vị cấp";
             this.b.FieldName = "DonViCap";
             this.b.Name = "b";
@@ -1168,6 +1228,12 @@
             // 
             // aa
             // 
+            this.aa.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aa.AppearanceCell.Options.UseFont = true;
+            this.aa.AppearanceCell.Options.UseTextOptions = true;
+            this.aa.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.aa.AppearanceHeader.Options.UseTextOptions = true;
+            this.aa.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.aa.Caption = "Ngày cấp";
             this.aa.FieldName = "NgayCap";
             this.aa.MaxWidth = 120;
@@ -1177,6 +1243,12 @@
             // 
             // gridColumn20
             // 
+            this.gridColumn20.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn20.AppearanceCell.Options.UseFont = true;
+            this.gridColumn20.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn20.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn20.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn20.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn20.Caption = "Loại";
             this.gridColumn20.FieldName = "Loai";
             this.gridColumn20.MaxWidth = 60;
@@ -1187,6 +1259,12 @@
             // 
             // gridColumn19
             // 
+            this.gridColumn19.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn19.AppearanceCell.Options.UseFont = true;
+            this.gridColumn19.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn19.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn19.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn19.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn19.Caption = "Thêm";
             this.gridColumn19.ColumnEdit = this.btnThemCC;
             this.gridColumn19.MaxWidth = 50;
@@ -1206,6 +1284,12 @@
             // 
             // gridColumn18
             // 
+            this.gridColumn18.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn18.AppearanceCell.Options.UseFont = true;
+            this.gridColumn18.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn18.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn18.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn18.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn18.Caption = "Sửa";
             this.gridColumn18.ColumnEdit = this.btnSuaCC;
             this.gridColumn18.MaxWidth = 50;
@@ -1225,6 +1309,12 @@
             // 
             // gridColumn6
             // 
+            this.gridColumn6.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn6.AppearanceCell.Options.UseFont = true;
+            this.gridColumn6.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn6.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn6.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn6.Caption = "Xóa";
             this.gridColumn6.ColumnEdit = this.btnXoaCC;
             this.gridColumn6.MaxWidth = 50;
@@ -1287,6 +1377,12 @@
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn3.AppearanceCell.Options.UseFont = true;
+            this.gridColumn3.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn3.Caption = "Mã phòng ban";
             this.gridColumn3.ColumnEdit = this.cbPB;
             this.gridColumn3.FieldName = "MaPB";
@@ -1337,6 +1433,12 @@
             // 
             // gridColumn2
             // 
+            this.gridColumn2.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn2.AppearanceCell.Options.UseFont = true;
+            this.gridColumn2.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn2.Caption = "Mã chức vụ";
             this.gridColumn2.ColumnEdit = this.cbMaCV;
             this.gridColumn2.FieldName = "MaCV";
@@ -1386,6 +1488,12 @@
             // 
             // gridColumn1
             // 
+            this.gridColumn1.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn1.AppearanceCell.Options.UseFont = true;
+            this.gridColumn1.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn1.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn1.Caption = "Ghi chú";
             this.gridColumn1.FieldName = "GhiChu";
             this.gridColumn1.Name = "gridColumn1";
@@ -1394,6 +1502,12 @@
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn4.AppearanceCell.Options.UseFont = true;
+            this.gridColumn4.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn4.Caption = "Ngày nhận chức vụ";
             this.gridColumn4.FieldName = "NgayNhamChuc";
             this.gridColumn4.MaxWidth = 120;
@@ -1403,6 +1517,12 @@
             // 
             // gridColumn24
             // 
+            this.gridColumn24.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn24.AppearanceCell.Options.UseFont = true;
+            this.gridColumn24.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn24.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn24.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn24.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn24.Caption = "Thêm";
             this.gridColumn24.ColumnEdit = this.btnThemCV;
             this.gridColumn24.MaxWidth = 50;
@@ -1422,6 +1542,12 @@
             // 
             // gridColumn23
             // 
+            this.gridColumn23.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn23.AppearanceCell.Options.UseFont = true;
+            this.gridColumn23.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn23.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn23.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn23.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn23.Caption = "Sửa";
             this.gridColumn23.ColumnEdit = this.btnSuaCV;
             this.gridColumn23.MaxWidth = 50;
@@ -1441,6 +1567,12 @@
             // 
             // gridColumn7
             // 
+            this.gridColumn7.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn7.AppearanceCell.Options.UseFont = true;
+            this.gridColumn7.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn7.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn7.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn7.Caption = "Xóa";
             this.gridColumn7.ColumnEdit = this.btnXoaCV;
             this.gridColumn7.MaxWidth = 50;
@@ -1530,6 +1662,12 @@
             // 
             // bandedGridColumn3
             // 
+            this.bandedGridColumn3.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bandedGridColumn3.AppearanceCell.Options.UseFont = true;
+            this.bandedGridColumn3.AppearanceCell.Options.UseTextOptions = true;
+            this.bandedGridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridColumn3.AppearanceHeader.Options.UseTextOptions = true;
+            this.bandedGridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn3.Caption = "Mã bảo hiểm";
             this.bandedGridColumn3.ColumnEdit = this.cbBH;
             this.bandedGridColumn3.FieldName = "MaBH";
@@ -1580,6 +1718,12 @@
             // 
             // bandedGridColumn4
             // 
+            this.bandedGridColumn4.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bandedGridColumn4.AppearanceCell.Options.UseFont = true;
+            this.bandedGridColumn4.AppearanceCell.Options.UseTextOptions = true;
+            this.bandedGridColumn4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridColumn4.AppearanceHeader.Options.UseTextOptions = true;
+            this.bandedGridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn4.Caption = "Ngày bắt đầu đóng";
             this.bandedGridColumn4.FieldName = "NgayBatDauBH";
             this.bandedGridColumn4.MinWidth = 100;
@@ -1589,6 +1733,12 @@
             // 
             // bandedGridColumn8
             // 
+            this.bandedGridColumn8.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bandedGridColumn8.AppearanceCell.Options.UseFont = true;
+            this.bandedGridColumn8.AppearanceCell.Options.UseTextOptions = true;
+            this.bandedGridColumn8.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridColumn8.AppearanceHeader.Options.UseTextOptions = true;
+            this.bandedGridColumn8.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn8.Caption = "Thêm";
             this.bandedGridColumn8.ColumnEdit = this.btnThemBH;
             this.bandedGridColumn8.MinWidth = 35;
@@ -1606,6 +1756,12 @@
             // 
             // bandedGridColumn7
             // 
+            this.bandedGridColumn7.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bandedGridColumn7.AppearanceCell.Options.UseFont = true;
+            this.bandedGridColumn7.AppearanceCell.Options.UseTextOptions = true;
+            this.bandedGridColumn7.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridColumn7.AppearanceHeader.Options.UseTextOptions = true;
+            this.bandedGridColumn7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn7.Caption = "Sửa";
             this.bandedGridColumn7.ColumnEdit = this.btnSuaBH;
             this.bandedGridColumn7.MinWidth = 35;
@@ -1623,6 +1779,12 @@
             // 
             // bandedGridColumn6
             // 
+            this.bandedGridColumn6.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bandedGridColumn6.AppearanceCell.Options.UseFont = true;
+            this.bandedGridColumn6.AppearanceCell.Options.UseTextOptions = true;
+            this.bandedGridColumn6.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridColumn6.AppearanceHeader.Options.UseTextOptions = true;
+            this.bandedGridColumn6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn6.Caption = "Xóa";
             this.bandedGridColumn6.ColumnEdit = this.btnXoaBH;
             this.bandedGridColumn6.MinWidth = 35;
@@ -1694,6 +1856,12 @@
             // 
             // bandedGridColumn1
             // 
+            this.bandedGridColumn1.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bandedGridColumn1.AppearanceCell.Options.UseFont = true;
+            this.bandedGridColumn1.AppearanceCell.Options.UseTextOptions = true;
+            this.bandedGridColumn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridColumn1.AppearanceHeader.Options.UseTextOptions = true;
+            this.bandedGridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn1.Caption = "Mã phụ cấp";
             this.bandedGridColumn1.ColumnEdit = this.cbMaPC;
             this.bandedGridColumn1.FieldName = "MaPC";
@@ -1744,6 +1912,12 @@
             // 
             // bandedGridColumn2
             // 
+            this.bandedGridColumn2.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bandedGridColumn2.AppearanceCell.Options.UseFont = true;
+            this.bandedGridColumn2.AppearanceCell.Options.UseTextOptions = true;
+            this.bandedGridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridColumn2.AppearanceHeader.Options.UseTextOptions = true;
+            this.bandedGridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn2.Caption = "Ngày bắt đầu";
             this.bandedGridColumn2.FieldName = "NgayBatDau";
             this.bandedGridColumn2.MinWidth = 40;
@@ -1753,6 +1927,12 @@
             // 
             // bandedGridColumn10
             // 
+            this.bandedGridColumn10.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bandedGridColumn10.AppearanceCell.Options.UseFont = true;
+            this.bandedGridColumn10.AppearanceCell.Options.UseTextOptions = true;
+            this.bandedGridColumn10.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridColumn10.AppearanceHeader.Options.UseTextOptions = true;
+            this.bandedGridColumn10.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn10.Caption = "Thêm";
             this.bandedGridColumn10.ColumnEdit = this.btnThemPC;
             this.bandedGridColumn10.MinWidth = 35;
@@ -1770,6 +1950,12 @@
             // 
             // bandedGridColumn9
             // 
+            this.bandedGridColumn9.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bandedGridColumn9.AppearanceCell.Options.UseFont = true;
+            this.bandedGridColumn9.AppearanceCell.Options.UseTextOptions = true;
+            this.bandedGridColumn9.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridColumn9.AppearanceHeader.Options.UseTextOptions = true;
+            this.bandedGridColumn9.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn9.Caption = "Sửa";
             this.bandedGridColumn9.ColumnEdit = this.btnSuaPC;
             this.bandedGridColumn9.MinWidth = 35;
@@ -1787,6 +1973,12 @@
             // 
             // bandedGridColumn5
             // 
+            this.bandedGridColumn5.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bandedGridColumn5.AppearanceCell.Options.UseFont = true;
+            this.bandedGridColumn5.AppearanceCell.Options.UseTextOptions = true;
+            this.bandedGridColumn5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridColumn5.AppearanceHeader.Options.UseTextOptions = true;
+            this.bandedGridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn5.Caption = "Xóa";
             this.bandedGridColumn5.ColumnEdit = this.btnXoaPC;
             this.bandedGridColumn5.MinWidth = 35;
@@ -1896,6 +2088,12 @@
             // 
             // gridColumn14
             // 
+            this.gridColumn14.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn14.AppearanceCell.Options.UseFont = true;
+            this.gridColumn14.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn14.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn14.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn14.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn14.Caption = "Từ ngày";
             this.gridColumn14.FieldName = "TuNgay";
             this.gridColumn14.Name = "gridColumn14";
@@ -1904,6 +2102,12 @@
             // 
             // gridColumn13
             // 
+            this.gridColumn13.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn13.AppearanceCell.Options.UseFont = true;
+            this.gridColumn13.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn13.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn13.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn13.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn13.Caption = "Đến ngày";
             this.gridColumn13.FieldName = "DenNgay";
             this.gridColumn13.Name = "gridColumn13";
@@ -1912,6 +2116,12 @@
             // 
             // gridColumn12
             // 
+            this.gridColumn12.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn12.AppearanceCell.Options.UseFont = true;
+            this.gridColumn12.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn12.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn12.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn12.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn12.Caption = "Tên công ty";
             this.gridColumn12.FieldName = "TenCongTy";
             this.gridColumn12.Name = "gridColumn12";
@@ -1920,6 +2130,12 @@
             // 
             // gridColumn22
             // 
+            this.gridColumn22.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn22.AppearanceCell.Options.UseFont = true;
+            this.gridColumn22.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn22.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn22.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn22.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn22.Caption = "Thêm";
             this.gridColumn22.ColumnEdit = this.btnThemQTCT;
             this.gridColumn22.MaxWidth = 50;
@@ -1939,6 +2155,12 @@
             // 
             // gridColumn21
             // 
+            this.gridColumn21.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn21.AppearanceCell.Options.UseFont = true;
+            this.gridColumn21.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn21.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn21.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn21.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn21.Caption = "Sửa";
             this.gridColumn21.ColumnEdit = this.btnSuaQTCT;
             this.gridColumn21.MaxWidth = 50;
@@ -1958,6 +2180,12 @@
             // 
             // gridColumn15
             // 
+            this.gridColumn15.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn15.AppearanceCell.Options.UseFont = true;
+            this.gridColumn15.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn15.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn15.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn15.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn15.Caption = "Xóa";
             this.gridColumn15.ColumnEdit = this.btnXoaQTCT;
             this.gridColumn15.MaxWidth = 50;
@@ -1977,7 +2205,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.gcThongTinCuThe);
+            this.groupBox3.Controls.Add(this.tbThongTinCuThe);
             this.groupBox3.Location = new System.Drawing.Point(12, 259);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(756, 235);
@@ -1996,7 +2224,7 @@
             // spbtnLamMoi
             // 
             this.spbtnLamMoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnLamMoi.ImageOptions.Image")));
-            this.spbtnLamMoi.Location = new System.Drawing.Point(675, 500);
+            this.spbtnLamMoi.Location = new System.Drawing.Point(590, 500);
             this.spbtnLamMoi.Name = "spbtnLamMoi";
             this.spbtnLamMoi.Size = new System.Drawing.Size(93, 38);
             this.spbtnLamMoi.TabIndex = 243;
@@ -2024,13 +2252,14 @@
             this.MinimizeBox = false;
             this.Name = "fmThongTinNhanSu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fmThongTinNhanSu_FormClosing);
             this.Load += new System.EventHandler(this.fmThongTinNhanSu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbAnhChanDung)).EndInit();
             this.gbThongTinChung.ResumeLayout(false);
             this.gbThongTinChung.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
-            this.gcThongTinCuThe.ResumeLayout(false);
+            this.tbThongTinCuThe.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcTrinhDoHocVan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvHocVanNhanVien)).EndInit();
@@ -2140,7 +2369,7 @@
         private System.Windows.Forms.TextBox txtSoDienThoaiNLH;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
-        private System.Windows.Forms.TabControl gcThongTinCuThe;
+        private System.Windows.Forms.TabControl tbThongTinCuThe;
         private System.Windows.Forms.TabPage tabPage3;
         private DevExpress.XtraGrid.GridControl gcTrinhDoHocVan;
         private DevExpress.XtraGrid.Views.Grid.GridView gvHocVanNhanVien;

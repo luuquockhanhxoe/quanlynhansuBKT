@@ -76,6 +76,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChamCong\ChiXemChamCongTongHop\ucChamCongTongHop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChamCong\ChiXemChamCongTongHop\ucChamCongTongHop.Designer.cs">
+      <DependentUpon>ucChamCongTongHop.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChamCong\NhapThongTin\ucNhapThongTinChamCong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     <Compile Include="TuyenDung\XemDanhSach\fmXemDanhSachLichPhongVan.Designer.cs">
       <DependentUpon>fmXemDanhSachLichPhongVan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChamCong\ChiXemChamCongTongHop\ucChamCongTongHop.resx">
+      <DependentUpon>ucChamCongTongHop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChamCong\NhapThongTin\ucNhapThongTinChamCong.resx">
       <DependentUpon>ucNhapThongTinChamCong.cs</DependentUpon>
     </EmbeddedResource>

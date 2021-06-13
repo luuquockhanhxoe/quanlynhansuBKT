@@ -120,16 +120,22 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         } // kiểm tra trùng mã hợp đồng và mã nhân viên đã tạo chưa?
         private void smbtnHuyBoThongTinHopDong_Click(object sender, EventArgs e)
         {
-            DialogResult ThongBaoHuy = MessageBox.Show("Bạn có muốn hủy bỏ không?", "Thông báo"
-                , MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (ThongBaoHuy == DialogResult.OK)
-            {
-                this.Close();
-            }
+            this.Close();
         }
   
 
         string MaHD, MaNV, NgayKyHD, LoaiHD, ThoiHan, BacLuong, HeSoLuong, CheDoLamViec, HinhThucTraLuong, SoLaoDong;
+
+        private void fmThongTinHopDong_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult ThongBao = MessageBox.Show("Bạn có muốn thoát không?",
+               "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (ThongBao == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+        }
+
         private void cbHienThi_CheckedChanged(object sender, EventArgs e)
         {
             if(cbHienThi.Checked == false)

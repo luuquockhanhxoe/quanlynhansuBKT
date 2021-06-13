@@ -411,6 +411,7 @@ namespace DoAnNhanSuBanChuan
             this.btnBangChamCongTongHop.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBangChamCongTongHop.ImageOptions.Image")));
             this.btnBangChamCongTongHop.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnBangChamCongTongHop.ImageOptions.LargeImage")));
             this.btnBangChamCongTongHop.Name = "btnBangChamCongTongHop";
+            this.btnBangChamCongTongHop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBangChamCongTongHop_ItemClick);
             // 
             // barButtonItem3
             // 

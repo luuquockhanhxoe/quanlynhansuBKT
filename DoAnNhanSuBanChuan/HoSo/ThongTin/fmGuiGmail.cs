@@ -108,12 +108,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            DialogResult ThongBao = MessageBox.Show("Bạn có muốn thoát không?",
-                "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (ThongBao == DialogResult.OK)
-            {
-                this.Close();
-            }
+            this.Close();
         }
 
         private void cbGuiToanBo_CheckedChanged(object sender, EventArgs e)
@@ -130,6 +125,16 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             else
             {
                 txtDen.Clear();
+            }
+        }
+
+        private void fmGuiGmail_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult ThongBao = MessageBox.Show("Bạn có muốn thoát không?",
+               "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (ThongBao == DialogResult.Cancel)
+            {
+                e.Cancel = true;
             }
         }
     }

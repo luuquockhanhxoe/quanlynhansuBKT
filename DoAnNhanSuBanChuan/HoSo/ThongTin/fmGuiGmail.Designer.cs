@@ -228,6 +228,7 @@
             this.Name = "fmGuiGmail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmGuiGmail";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fmGuiGmail_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

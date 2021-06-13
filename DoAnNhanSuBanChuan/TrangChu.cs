@@ -124,6 +124,16 @@ namespace DoAnNhanSuBanChuan
             ucthongtinlienquan.Dock = DockStyle.Fill;
             pnControl.Controls.Add(ucthongtinlienquan);
         }
+
+        private void btnBangChamCongTongHop_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            pnControl.Dock = DockStyle.Fill;
+            grControl.Text = "Chấm Công Tổng Hợp";
+            pnControl.Controls.Clear();
+            ChamCong.ChiXemChamCongTongHop.ucChamCongTongHop ucChamCongTongHop = new ChamCong.ChiXemChamCongTongHop.ucChamCongTongHop();
+            ucChamCongTongHop.Dock = DockStyle.Fill;
+            pnControl.Controls.Add(ucChamCongTongHop);
+        }
     }
 }
    

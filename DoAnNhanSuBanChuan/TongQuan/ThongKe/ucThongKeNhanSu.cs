@@ -84,7 +84,7 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         {
             
             chartNhanSu.Titles.Add("SỐ LƯỢNG NHÂN VIÊN THEO ĐỘ TUỔI");
-            DataTable chartdotuoi = thongke.CreateTable("SELECT YEAR(GETDATE()) - YEAR(NgaySinh) AS 'Tuoi' , COUNT(*) as tongsotuoi FROM NHANVIEN GROUP by NgaySinh");
+            DataTable chartdotuoi = thongke.CreateTable("SELECT (YEAR(GETDATE()) - YEAR(NgaySinh)) AS 'Tuoi' , COUNT(*) as tongsotuoi FROM NHANVIEN GROUP by NgaySinh");
             chartNhanSu.DataSource = chartdotuoi;
             chartNhanSu.Series["srTuoi"].XValueMember = "Tuoi";
             chartNhanSu.Series["srTuoi"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
@@ -94,7 +94,7 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         public void thongkenhansutheobiendong()
         {
             chartBienDongNhanSu.Titles.Add("BIẾN ĐỘNG NHÂN SỰ QUA TỪNG NĂM");
-            DataTable charbiendong = thongke.CreateTable("SELECT YEAR(NgayKyHD) AS 'NamVao',COUNT(*) as TongSoNguoiVaoTrongNam FROM HOPDONG GROUP BY NgayKyHD");
+            DataTable charbiendong = thongke.CreateTable("SELECT (YEAR(NgayKyHD)) AS 'NamVao',COUNT(*) as TongSoNguoiVaoTrongNam FROM HOPDONG GROUP BY NgayKyHD");
             chartBienDongNhanSu.DataSource = charbiendong;
             chartBienDongNhanSu.Series["srBienDongNhanSu"].XValueMember = "NamVao";
             chartBienDongNhanSu.Series["srBienDongNhanSu"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;

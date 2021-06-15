@@ -51,7 +51,7 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         }
         public void thongkenhansutheotrangthai()
         {
-            
+            chartNhanSu.DataSource = null;
             chartNhanSu.Titles.Add("SỐ LƯỢNG NHÂN VIÊN THEO TRẠNG THÁI LÀM VIỆC");
             DataTable chahrttrangthai = thongke.CreateTable("SELECT TrangThai, count(*) AS Tongsonguoi FROM NHANVIEN GROUP by TrangThai");
             chartNhanSu.DataSource = chahrttrangthai;

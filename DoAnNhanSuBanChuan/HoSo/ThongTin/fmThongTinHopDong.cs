@@ -172,13 +172,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (kiemtranhap() == true)
-                {
-                    thongtinnhap();
-                    DataTable dt = hd.CreateTable("UPDATE HOPDONG SET MaHD = '" + MaHD + "',NgayKyHD='" + NgayKyHD + "',LoaiHD = N'" + LoaiHD + "',ThoiHanHD = N'" + ThoiHan + "',SoLaoDong =  '" + SoLaoDong + "',BacLuong = N'" + BacLuong + "', HeSoLuong = N'" + HeSoLuong + "',CheDoLamViec = N'" + CheDoLamViec + "',HinhThucTraLuong = N'" + HinhThucTraLuong + "',MaNV = '" + MaNV + "' WHERE MaHD = '" + MaHD + "' ");
-                    MessageBox.Show("Đã sửa hợp đồng " + MaHD + " có mã " + MaNV + " thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    hienthithongtin();
-                }
+                btnTim.PerformClick();
             }
         }
 

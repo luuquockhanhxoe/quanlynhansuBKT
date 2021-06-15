@@ -123,6 +123,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyNhanSuBKTDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TinhLuong\TinhToan\ucTinhToanLuong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TinhLuong\TinhToan\ucTinhToanLuong.Designer.cs">
+      <DependentUpon>ucTinhToanLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="TongQuan\ThietLap\TaoNguoiDungHeThong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,55 +161,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TuyenDung\Tao\fmTaoThongTinTuyenDung.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TuyenDung\Tao\fmTaoThongTinTuyenDung.Designer.cs">
-      <DependentUpon>fmTaoThongTinTuyenDung.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TuyenDung\Tao\ucTaoThongTinTuyenDung.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TuyenDung\Tao\ucTaoThongTinTuyenDung.Designer.cs">
-      <DependentUpon>ucTaoThongTinTuyenDung.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TuyenDung\XemDanhSach.cs" />
-    <Compile Include="TuyenDung\XemDanhSach\fmXemDanhSachUngVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TuyenDung\XemDanhSach\fmXemDanhSachUngVien.Designer.cs">
-      <DependentUpon>fmXemDanhSachUngVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TuyenDung\XemDanhSach\fmXemDanhSachUngVienTrungTuyen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TuyenDung\XemDanhSach\fmXemDanhSachUngVienTrungTuyen.Designer.cs">
-      <DependentUpon>fmXemDanhSachUngVienTrungTuyen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TuyenDung\XemDanhSach\ucXemDanhSachUngVienTrungTuyen.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TuyenDung\XemDanhSach\ucXemDanhSachUngVienTrungTuyen.Designer.cs">
-      <DependentUpon>ucXemDanhSachUngVienTrungTuyen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TuyenDung\XemDanhSach\ucXemDanhSachUngVien.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TuyenDung\XemDanhSach\ucXemDanhSachUngVien.Designer.cs">
-      <DependentUpon>ucXemDanhSachUngVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TuyenDung\XemDanhSach\ucXemDanhSachLichPhongVan.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TuyenDung\XemDanhSach\ucXemDanhSachLichPhongVan.Designer.cs">
-      <DependentUpon>ucXemDanhSachLichPhongVan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TuyenDung\XemDanhSach\fmXemDanhSachLichPhongVan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TuyenDung\XemDanhSach\fmXemDanhSachLichPhongVan.Designer.cs">
-      <DependentUpon>fmXemDanhSachLichPhongVan.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="ChamCong\ChiXemChamCongTongHop\ucChamCongTongHop.resx">
       <DependentUpon>ucChamCongTongHop.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +180,9 @@
       <DependentUpon>ucThongTinNhanSu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="TinhLuong\TinhToan\ucTinhToanLuong.resx">
+      <DependentUpon>ucTinhToanLuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TongQuan\ThietLap\TaoNguoiDungHeThong.resx">
       <DependentUpon>TaoNguoiDungHeThong.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,30 +208,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TuyenDung\Tao\fmTaoThongTinTuyenDung.resx">
-      <DependentUpon>fmTaoThongTinTuyenDung.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TuyenDung\Tao\ucTaoThongTinTuyenDung.resx">
-      <DependentUpon>ucTaoThongTinTuyenDung.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TuyenDung\XemDanhSach\fmXemDanhSachUngVien.resx">
-      <DependentUpon>fmXemDanhSachUngVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TuyenDung\XemDanhSach\fmXemDanhSachUngVienTrungTuyen.resx">
-      <DependentUpon>fmXemDanhSachUngVienTrungTuyen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TuyenDung\XemDanhSach\ucXemDanhSachUngVienTrungTuyen.resx">
-      <DependentUpon>ucXemDanhSachUngVienTrungTuyen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TuyenDung\XemDanhSach\ucXemDanhSachUngVien.resx">
-      <DependentUpon>ucXemDanhSachUngVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TuyenDung\XemDanhSach\ucXemDanhSachLichPhongVan.resx">
-      <DependentUpon>ucXemDanhSachLichPhongVan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TuyenDung\XemDanhSach\fmXemDanhSachLichPhongVan.resx">
-      <DependentUpon>fmXemDanhSachLichPhongVan.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

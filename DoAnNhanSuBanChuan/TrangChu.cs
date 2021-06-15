@@ -1,5 +1,4 @@
-﻿//using DoAnNhanSuBanChuan.TongQuan.ThongKe;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -52,48 +51,7 @@ namespace DoAnNhanSuBanChuan
             pnControl.Controls.Add(ucThongTinHopDong);
         }
 
-        private void btnThongTinTuyenDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            pnControl.Dock = DockStyle.Fill;
-            grControl.Text = "Tạo Thông Tin Tuyển Dụng";
-            pnControl.Controls.Clear();
-            TuyenDung.Tao.ucTaoThongTinTuyenDung ucTaoThongTinTuyenDung = new TuyenDung.Tao.ucTaoThongTinTuyenDung();
-            ucTaoThongTinTuyenDung.Dock = DockStyle.Fill;
-            pnControl.Controls.Add(ucTaoThongTinTuyenDung);
-        }
-
-        private void btnUngVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            pnControl.Dock = DockStyle.Fill;
-            grControl.Text = "Xem Danh Sách Ứng Viên";
-            pnControl.Controls.Clear();
-            TuyenDung.XemDanhSach.ucXemDanhSachUngVien ucXemDanhSachUngVien = new TuyenDung.XemDanhSach.ucXemDanhSachUngVien();
-            ucXemDanhSachUngVien.Dock = DockStyle.Fill;
-            pnControl.Controls.Add(ucXemDanhSachUngVien);
-
-        }
-
-        private void btnLichPhongVan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            pnControl.Dock = DockStyle.Fill;
-            grControl.Text = "Xem Danh Sách Lịch Phỏng Vấn";
-            pnControl.Controls.Clear();
-            TuyenDung.XemDanhSach.ucXemDanhSachLichPhongVan ucXemDanhSachLichPhongVan = new TuyenDung.XemDanhSach.ucXemDanhSachLichPhongVan();
-            ucXemDanhSachLichPhongVan.Dock = DockStyle.Fill;
-            pnControl.Controls.Add(ucXemDanhSachLichPhongVan);
-        }
-
-        private void btnUngVienTrungTuyen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            pnControl.Dock = DockStyle.Fill;
-            grControl.Text = "Xem Dach Sách Ứng Viên Trúng Tuyển";
-            pnControl.Controls.Clear();
-            TuyenDung.XemDanhSach.ucXemDanhSachUngVienTrungTuyen ucXemDanhSachUngVienTrungTuyen = new TuyenDung.XemDanhSach.ucXemDanhSachUngVienTrungTuyen();
-            ucXemDanhSachUngVienTrungTuyen.Dock = DockStyle.Fill;
-            pnControl.Controls.Add(ucXemDanhSachUngVienTrungTuyen);
-        }
-
-      
+         
         private void btnChamCongHangNgay_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             pnControl.Dock = DockStyle.Fill;
@@ -133,6 +91,16 @@ namespace DoAnNhanSuBanChuan
             ChamCong.ChiXemChamCongTongHop.ucChamCongTongHop ucChamCongTongHop = new ChamCong.ChiXemChamCongTongHop.ucChamCongTongHop();
             ucChamCongTongHop.Dock = DockStyle.Fill;
             pnControl.Controls.Add(ucChamCongTongHop);
+        }
+
+        private void btnTinhToanLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            pnControl.Dock = DockStyle.Fill;
+            grControl.Text = "Tính Lương";
+            pnControl.Controls.Clear();
+            TinhLuong.TinhToan.ucTinhToanLuong ucTinhToanLuong = new TinhLuong.TinhToan.ucTinhToanLuong();
+            ucTinhToanLuong.Dock = DockStyle.Fill;
+            pnControl.Controls.Add(ucTinhToanLuong);
         }
     }
 }

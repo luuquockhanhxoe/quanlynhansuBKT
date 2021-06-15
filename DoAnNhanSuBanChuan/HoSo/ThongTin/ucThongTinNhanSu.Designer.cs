@@ -1033,6 +1033,8 @@
             this.gridColumn14.AppearanceCell.Options.UseFont = true;
             this.gridColumn14.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn14.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn14.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn14.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn14.Caption = "Từ ngày";
             this.gridColumn14.FieldName = "TuNgay";
             this.gridColumn14.Name = "gridColumn14";
@@ -1045,6 +1047,8 @@
             this.gridColumn16.AppearanceCell.Options.UseFont = true;
             this.gridColumn16.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn16.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn16.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn16.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn16.Caption = "Đến ngày";
             this.gridColumn16.FieldName = "DenNgay";
             this.gridColumn16.Name = "gridColumn16";
@@ -1057,6 +1061,8 @@
             this.gridColumn18.AppearanceCell.Options.UseFont = true;
             this.gridColumn18.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn18.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn18.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn18.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn18.Caption = "Tên công ty";
             this.gridColumn18.FieldName = "TenCongTy";
             this.gridColumn18.Name = "gridColumn18";

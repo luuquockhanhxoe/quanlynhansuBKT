@@ -69,6 +69,12 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
 
             DataTable thongtinbaohiem = tsx.CreateTable("SELECT * FROM BAOHIEMNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
             gcBaoHiemNhanVien.DataSource = thongtinbaohiem;
+
+            DataTable thongtinkyluat = tsx.CreateTable("SELECT * FROM KYLUATNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
+            gcKyLuatNhanVien.DataSource = thongtinkyluat;
+
+            DataTable thongtinkhenthuong = tsx.CreateTable("SELECT * FROM KHENTHUONGNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
+            gcKhenThuongNhanVien.DataSource = thongtinkhenthuong;
         }
 
         public void hienthitrengridcontrol()
@@ -114,6 +120,21 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             cbBH.DisplayMember = "MaBH";
             cbBH.NullText = "Chọn mã bảo hiểm";
             clMaBH.ColumnEdit = cbBH;
+
+            DataTable khenthuong = tsx.CreateTable("SELECT * FROM KHENTHUONG");
+            cbMaKhenThuong.DataSource = khenthuong;
+            cbMaKhenThuong.ValueMember = "MaKhenThuong";
+            cbMaKhenThuong.DisplayMember = "MaKhenThuong";
+            cbMaKhenThuong.NullText = "Chọn mã khen thưởng";
+            clMaKhenThuong.ColumnEdit = cbMaKhenThuong;
+
+            DataTable kyluat = tsx.CreateTable("SELECT * FROM KYLUAT");
+            cbMaKyLuat.DataSource = kyluat;
+            cbMaKyLuat.ValueMember = "MaKyLuat";
+            cbMaKyLuat.DisplayMember = "MaKyLuat";
+            cbMaKyLuat.NullText = "Chọn mã kỷ luật";
+            clMaKyLuat.ColumnEdit = cbMaKyLuat;
+
         }
         public fmThongTinNhanSu()
         {
@@ -302,9 +323,154 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             btnSuaQTCT.Click += BtnSuaQTCT_Click;
             btnThemCV.Click += BtnThemCV_Click;
             btnSuaCV.Click += BtnSuaCV_Click;
+            btnThemKhenThuong.Click += BtnThemKhenThuong_Click;
+            btnSuaKhenThuong.Click += BtnSuaKhenThuong_Click;
+            btnXoaKhenThuong.Click += BtnXoaKhenThuong_Click;
+            btnThemKyLuat.Click += BtnThemKyLuat_Click;
+            btnSuaKyLuat.Click += BtnSuaKyLuat_Click;
+            btnXoaKyLuat.Click += BtnXoaKyLuat_Click;
+        
+        }
+
+        //KỶ LUẬT
+
+        public void ttkyluat_Load()
+        {
+            MaKyLuat = gvKyLuatNhanVien.GetRowCellValue(gvKyLuatNhanVien.FocusedRowHandle, "MaKyLuat").ToString();
+            NgayKyLuat = gvKyLuatNhanVien.GetRowCellValue(gvKyLuatNhanVien.FocusedRowHandle, "NgayKyLuat").ToString();
+            LyDoKL = gvKyLuatNhanVien.GetRowCellValue(gvKyLuatNhanVien.FocusedRowHandle, "LyDo").ToString();
+            IdKyLuatNV = gvKyLuatNhanVien.GetRowCellValue(gvKyLuatNhanVien.FocusedRowHandle, "IdKyLuatNV").ToString();
+        }
+        public bool kiemtrakl()
+        {
+            ttkyluat_Load();
+            DataTable kiemtrakl = tsx.CreateTable("SELECT * FROM KYLUATNHANVIEN WHERE MaNV = '" + MaNV + "'");
+            for (int i = 0; i < kiemtrakl.Rows.Count; i++)
+                if (MaKyLuat == kiemtrakl.Rows[i]["MaKyLuat"].ToString() && NgayKyLuat == kiemtrakl.Rows[i]["NgayKyLuat"].ToString())
+                {
+                    return false;
+                }
+            return true;
+        }
+        private void BtnXoaKyLuat_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                thongtinnhaptextbox();
+                ttkyluat_Load();
+                DataTable xoakl = tsx.CreateTable("DELETE FROM KYLUATNHANVIEN WHERE MaNV = '" + MaNV + "' AND IdKyLuatNV = '" + IdKyLuatNV + "'");
+                MessageBox.Show("Đã xóa thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataTable thongtinkyluat = tsx.CreateTable("SELECT * FROM KYLUATNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
+                gcKyLuatNhanVien.DataSource = thongtinkyluat;
+            }
+        }
+
+        private void BtnSuaKyLuat_Click(object sender, EventArgs e)
+        {
+            thongtinnhaptextbox();
+            ttkyluat_Load(); 
+            DataTable suakl = tsx.CreateTable("UPDATE KYLUATNHANVIEN SET LyDo =N'" + LyDoKL + "',NgayKyLuat = '" + NgayKyLuat + "',MaKyLuat = '" + MaKyLuat + "' WHERE MaNV = '" + MaNV + "' AND IdKyLuatNV = '" + IdKyLuatNV + "'");
+            MessageBox.Show("Đã sửa thông tin kỷ luật !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            DataTable thongtinkyluat = tsx.CreateTable("SELECT * FROM KYLUATNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
+            gcKyLuatNhanVien.DataSource = thongtinkyluat;
+        }
+
+        private void BtnThemKyLuat_Click(object sender, EventArgs e)
+        {
+            thongtinnhaptextbox();
+            ttkyluat_Load();
+            if (kiemtrakl() == true)
+            {
+                DataTable themkl = tsx.CreateTable("INSERT INTO KYLUATNHANVIEN VALUES('" + MaNV + "', '" + MaKyLuat + "','" + NgayKyLuat + "',N'" + LyDoKL + "')");
+                MessageBox.Show("Đã thêm thông tin kỷ luật !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataTable thongtinkyluat = tsx.CreateTable("SELECT * FROM KYLUATNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
+                gcKyLuatNhanVien.DataSource = thongtinkyluat;
+            }
+            else
+            {
+                MessageBox.Show("Trùng kỷ luật, mời nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //KHEN THƯỞNG
+        public void ttKhenThuong_Load()
+        {
+            MakhenThuong = gvKhenThuongNhanVien.GetRowCellValue(gvKhenThuongNhanVien.FocusedRowHandle, "MaKhenThuong").ToString();
+            NgayKhenThuong = gvKhenThuongNhanVien.GetRowCellValue(gvKhenThuongNhanVien.FocusedRowHandle, "NgayKhenThuong").ToString();
+            LyDo = gvKhenThuongNhanVien.GetRowCellValue(gvKhenThuongNhanVien.FocusedRowHandle, "LyDo").ToString();
+            IdKhenThuongNV = gvKhenThuongNhanVien.GetRowCellValue(gvKhenThuongNhanVien.FocusedRowHandle, "IdKhenThuongNV").ToString();
+        }
+        public bool kiemtrakt()
+        {
+            ttKhenThuong_Load();
+            DataTable kiemtrakt = tsx.CreateTable("SELECT * FROM KHENTHUONGNHANVIEN WHERE MaNV = '" + MaNV + "'");
+            for (int i = 0; i < kiemtrakt.Rows.Count; i++)
+                if (MakhenThuong == kiemtrakt.Rows[i]["MakhenThuong"].ToString() && NgayKhenThuong == kiemtrakt.Rows[i]["NgayKhenThuong"].ToString())
+                {
+                    return false;
+                }
+            return true;
+        }
+        private void BtnXoaKhenThuong_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                thongtinnhaptextbox();
+                ttKhenThuong_Load();
+                DataTable xoakt = tsx.CreateTable("DELETE FROM KHENTHUONGNHANVIEN WHERE MaNV = '" + MaNV + "' AND IdKhenThuongNV = N'" + IdKhenThuongNV + "'");
+                MessageBox.Show("Đã xóa thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataTable thongtinkhenthuong = tsx.CreateTable("SELECT * FROM KHENTHUONGNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
+                gcKhenThuongNhanVien.DataSource = thongtinkhenthuong;
+            }
+        }
+
+        private void BtnSuaKhenThuong_Click(object sender, EventArgs e) 
+        {
+            thongtinnhaptextbox();
+            ttKhenThuong_Load();
+            DataTable suakt = tsx.CreateTable("UPDATE KHENTHUONGNHANVIEN SET LyDo =N'" + LyDo + "',NgayKhenThuong = '" + NgayKhenThuong + "',MaKhenThuong = '" + MakhenThuong + "' WHERE MaNV = '" + MaNV + "' AND IdKhenThuongNV = '" + IdKhenThuongNV + "'");
+            MessageBox.Show("Đã sửa thông tin khen thưởng !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            DataTable thongtinkhenthuong = tsx.CreateTable("SELECT * FROM KHENTHUONGNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
+            gcKhenThuongNhanVien.DataSource = thongtinkhenthuong;
+        }
+
+        private void BtnThemKhenThuong_Click(object sender, EventArgs e)
+        {
+            thongtinnhaptextbox();
+            ttKhenThuong_Load();
+            if (kiemtrakt() == true)
+            {
+                DataTable themkt = tsx.CreateTable("INSERT INTO KHENTHUONGNHANVIEN VALUES('" + MaNV + "','" + MakhenThuong + "','" + NgayKhenThuong + "', N'" + LyDo + "')");
+                MessageBox.Show("Đã thêm thông tin khen thưởng !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataTable thongtinkhenthuong = tsx.CreateTable("SELECT * FROM KHENTHUONGNHANVIEN WHERE MaNV = '" + txtMaNhanVien.Text + "'");
+                gcKhenThuongNhanVien.DataSource = thongtinkhenthuong;
+            }
+            else
+            {
+                MessageBox.Show("Trùng khen thưởng, mời nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }     
         }
 
         //CHỨC VỤ
+        public void ttPhongBan_Load()
+        {
+            MaPB = gvChucVuNhanVien.GetRowCellValue(gvChucVuNhanVien.FocusedRowHandle, "MaPB").ToString();
+            MaCV = gvChucVuNhanVien.GetRowCellValue(gvChucVuNhanVien.FocusedRowHandle, "MaCV").ToString();
+            GhiChu = gvChucVuNhanVien.GetRowCellValue(gvChucVuNhanVien.FocusedRowHandle, "GhiChu").ToString();
+            NgayNhamChuc = gvChucVuNhanVien.GetRowCellValue(gvChucVuNhanVien.FocusedRowHandle, "NgayNhamChuc").ToString();
+            IdPBCVNV = gvChucVuNhanVien.GetRowCellValue(gvChucVuNhanVien.FocusedRowHandle, "IdPBCVNV").ToString();
+        }
+        public bool kiemtravtcv()
+        {
+            ttPhongBan_Load();
+            DataTable kiemtravtcv = tsx.CreateTable("SELECT * FROM PHONGBANCHUCVUNHANVIEN WHERE MaNV = '" + MaNV + "'");
+            for (int i = 0; i < kiemtravtcv.Rows.Count; i++)
+                if (MaPB == kiemtravtcv.Rows[i]["MaPB"].ToString() && MaCV == kiemtravtcv.Rows[i]["MaCV"].ToString())
+                {
+                    return false;
+                }
+            return true;
+        }
         private void BtnSuaCV_Click(object sender, EventArgs e)
         {
             thongtinnhaptextbox();
@@ -344,6 +510,24 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         }
 
         //QUÁ TRÌNH CÔNG TÁC
+        public void ttQuaTrinhCongTac_Load()
+        {
+            TuNgay = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "TuNgay").ToString();
+            DenNgay = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "DenNgay").ToString();
+            TenCongTy = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "TenCongTy").ToString();
+            IdQTCT = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "IdQTCT").ToString();
+        }
+        public bool kiemtraqtct()
+        {
+            ttQuaTrinhCongTac_Load();
+            DataTable kiemtraqtct = tsx.CreateTable("SELECT * FROM QUATRINHCONGTAC WHERE MaNV = '" + MaNV + "'");
+            for (int i = 0; i < kiemtraqtct.Rows.Count; i++)
+                if (TuNgay == kiemtraqtct.Rows[i]["TuNgay"].ToString())
+                {
+                    return false;
+                }
+            return true;
+        }
         private void BtnSuaQTCT_Click(object sender, EventArgs e)
         {
             thongtinnhaptextbox();
@@ -383,6 +567,23 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         }
 
         //BẢO HIỂM
+        public void ttBaoHiem_Load()
+        {
+            MaBH = bgvBaoHiemNhanVien.GetRowCellValue(bgvBaoHiemNhanVien.FocusedRowHandle, "MaBH").ToString();
+            NgayBatDauBH = bgvBaoHiemNhanVien.GetRowCellValue(bgvBaoHiemNhanVien.FocusedRowHandle, "NgayBatDauBH").ToString();
+            IdBH = bgvBaoHiemNhanVien.GetRowCellValue(bgvBaoHiemNhanVien.FocusedRowHandle, "IdBH").ToString();
+        }
+        public bool kiemtrabh()
+        {
+            ttBaoHiem_Load();
+            DataTable kiemtrabh = tsx.CreateTable("SELECT * FROM BAOHIEMNHANVIEN WHERE MaNV = '" + MaNV + "'");
+            for (int i = 0; i < kiemtrabh.Rows.Count; i++)
+                if (MaBH == kiemtrabh.Rows[i]["MaBH"].ToString())
+                {
+                    return false;
+                }
+            return true;
+        }
         private void BtnSuaBH_Click(object sender, EventArgs e)
         {
             thongtinnhaptextbox();
@@ -423,6 +624,23 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         }
 
         //PHỤ CẤP
+        public void ttPhuCap_Load()
+        {
+            MaPC = bgvPhuCapNhanVien.GetRowCellValue(bgvPhuCapNhanVien.FocusedRowHandle, "MaPC").ToString();
+            NgayBatDau = bgvPhuCapNhanVien.GetRowCellValue(bgvPhuCapNhanVien.FocusedRowHandle, "NgayBatDau").ToString();
+            IdPC = bgvPhuCapNhanVien.GetRowCellValue(bgvPhuCapNhanVien.FocusedRowHandle, "IdPC").ToString();
+        }
+        public bool kiemtrapc()
+        {
+            ttPhuCap_Load();
+            DataTable kiemtrapc = tsx.CreateTable("SELECT * FROM PHUCAPNHANVIEN WHERE MaNV = '" + MaNV + "'");
+            for (int i = 0; i < kiemtrapc.Rows.Count; i++)
+                if (MaPC == kiemtrapc.Rows[i]["MaPC"].ToString())
+                {
+                    return false;
+                }
+            return true;
+        }
         private void BtnSuaPC_Click(object sender, EventArgs e)
         {
             thongtinnhaptextbox();
@@ -462,6 +680,25 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         }
 
         // CHỨNG CHỈ
+        public void ttChungChi_Load()
+        {
+            IdCC = gvChungChiNhanVien.GetRowCellValue(gvChungChiNhanVien.FocusedRowHandle, "IdCC").ToString();
+            MaCC = gvChungChiNhanVien.GetRowCellValue(gvChungChiNhanVien.FocusedRowHandle, "MaCC").ToString();
+            DonViCap = gvChungChiNhanVien.GetRowCellValue(gvChungChiNhanVien.FocusedRowHandle, "DonViCap").ToString();
+            NgayCapCC = gvChungChiNhanVien.GetRowCellValue(gvChungChiNhanVien.FocusedRowHandle, "NgayCap").ToString();
+            Loai = gvChungChiNhanVien.GetRowCellValue(gvChungChiNhanVien.FocusedRowHandle, "Loai").ToString();
+        }
+        public bool kiemtracc()
+        {
+            ttChungChi_Load();
+            DataTable kiemtracc = tsx.CreateTable("SELECT * FROM CHUNGCHINHANVIEN WHERE MaNV = '" + MaNV + "'");
+            for (int i = 0; i < kiemtracc.Rows.Count; i++)
+                if (MaCC == kiemtracc.Rows[i]["MaCC"].ToString())
+                {
+                    return false;
+                }
+            return true;
+        }
         private void BtnSuaCC_Click(object sender, EventArgs e)
         {
             thongtinnhaptextbox();
@@ -502,6 +739,26 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         }
 
         //HỌC VẤN
+        public void ttHocVan_Load()
+        {
+            MaHV = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "MaHV").ToString();
+            MaNoiDaoTao = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "MaNoiDaoTao").ToString();
+            ChuyenNganh = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "ChuyenNganh").ToString();
+            NamTotNghiep = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "NamTotNghiep").ToString();
+            XepLoai = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "XepLoai").ToString();
+            IdHV = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "IdHV").ToString();
+        }
+        public bool kiemtrahv()
+        {
+            ttHocVan_Load();
+            DataTable kiemtrahv = tsx.CreateTable("SELECT * FROM HOCVANNHANVIEN WHERE MaNV = '" + MaNV + "'");
+            for (int i = 0; i < kiemtrahv.Rows.Count; i++)
+                if (MaHV == kiemtrahv.Rows[i]["MaHV"].ToString() && MaNoiDaoTao == kiemtrahv.Rows[i]["MaNoiDaoTao"].ToString())
+                {
+                    return false;
+                }
+            return true;
+        }
         private void BtnSuaHV_Click(object sender, EventArgs e)
         {
             thongtinnhaptextbox();
@@ -527,7 +784,6 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
                 MessageBox.Show("Trùng học vấn, mời nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } 
         }
-
         private void BtnXoaHocVan_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
@@ -541,8 +797,10 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             }
         }
 
+
         string MaNV, HoTen, GioiTinh, NgaySinh, SoCCCD, NgayCap, NoiCap, TrangThai, SoDienThoai, Gmail, QueQuan, NoiO, NguoiLienHe, SoDienThoaiNLH, NganHang, SoTaiKhoan;
 
+        string MaHV, MaNoiDaoTao, MakhenThuong, IdKyLuatNV, IdKhenThuongNV, NgayKhenThuong,LyDo,MaKyLuat,NgayKyLuat,LyDoKL, ChuyenNganh, NamTotNghiep, IdPBCVNV, IdHV, IdQTCT, IdCC, IdPC,IdBH, XepLoai,MaPB,MaCV,GhiChu,NgayNhamChuc,MaCC,DonViCap,NgayCapCC,MaPC,NgayBatDau,MaBH,Loai, NgayBatDauBH,TuNgay,DenNgay, TenCongTy;
         private void spbtnLamMoi_Click_1(object sender, EventArgs e)
         {
             txtHoTen.Clear();
@@ -560,9 +818,6 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             txtNganHang.Clear();
             txtSoTaiKhoan.Clear();
         }
-
-        string MaHV, MaNoiDaoTao, ChuyenNganh, NamTotNghiep, IdPBCVNV, IdHV, IdQTCT, IdCC, IdPC,IdBH, XepLoai,MaPB,MaCV,GhiChu,NgayNhamChuc,MaCC,DonViCap,NgayCapCC,MaPC,NgayBatDau,MaBH,Loai, NgayBatDauBH,TuNgay,DenNgay, TenCongTy;
-
         private void fmThongTinNhanSu_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult ThongBao = MessageBox.Show("Bạn có muốn thoát không?",
@@ -571,51 +826,6 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             {
                 e.Cancel = true;
             }
-        }
-
-        public void ttHocVan_Load()
-        {
-            MaHV = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "MaHV").ToString();
-            MaNoiDaoTao = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "MaNoiDaoTao").ToString();
-            ChuyenNganh = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "ChuyenNganh").ToString();
-            NamTotNghiep = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "NamTotNghiep").ToString();
-            XepLoai = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "XepLoai").ToString();
-            IdHV = gvHocVanNhanVien.GetRowCellValue(gvHocVanNhanVien.FocusedRowHandle, "IdHV").ToString();
-        }
-        public void ttChungChi_Load()
-        {
-            IdCC = gvChungChiNhanVien.GetRowCellValue(gvChungChiNhanVien.FocusedRowHandle, "IdCC").ToString();
-            MaCC = gvChungChiNhanVien.GetRowCellValue(gvChungChiNhanVien.FocusedRowHandle, "MaCC").ToString();
-            DonViCap = gvChungChiNhanVien.GetRowCellValue(gvChungChiNhanVien.FocusedRowHandle, "DonViCap").ToString();
-            NgayCapCC = gvChungChiNhanVien.GetRowCellValue(gvChungChiNhanVien.FocusedRowHandle, "NgayCap").ToString();
-            Loai = gvChungChiNhanVien.GetRowCellValue(gvChungChiNhanVien.FocusedRowHandle, "Loai").ToString();
-        }
-        public void ttPhongBan_Load()
-        {
-            MaPB = gvChucVuNhanVien.GetRowCellValue(gvChucVuNhanVien.FocusedRowHandle, "MaPB").ToString();
-            MaCV = gvChucVuNhanVien.GetRowCellValue(gvChucVuNhanVien.FocusedRowHandle, "MaCV").ToString();
-            GhiChu = gvChucVuNhanVien.GetRowCellValue(gvChucVuNhanVien.FocusedRowHandle, "GhiChu").ToString();
-            NgayNhamChuc = gvChucVuNhanVien.GetRowCellValue(gvChucVuNhanVien.FocusedRowHandle, "NgayNhamChuc").ToString();
-            IdPBCVNV = gvChucVuNhanVien.GetRowCellValue(gvChucVuNhanVien.FocusedRowHandle, "IdPBCVNV").ToString();
-        }
-        public void ttPhuCap_Load()
-        {
-            MaPC = bgvPhuCapNhanVien.GetRowCellValue(bgvPhuCapNhanVien.FocusedRowHandle, "MaPC").ToString();
-            NgayBatDau = bgvPhuCapNhanVien.GetRowCellValue(bgvPhuCapNhanVien.FocusedRowHandle, "NgayBatDau").ToString();
-            IdPC = bgvPhuCapNhanVien.GetRowCellValue(bgvPhuCapNhanVien.FocusedRowHandle, "IdPC").ToString();
-        }
-        public void ttBaoHiem_Load()
-        {
-            MaBH = bgvBaoHiemNhanVien.GetRowCellValue(bgvBaoHiemNhanVien.FocusedRowHandle, "MaBH").ToString();
-            NgayBatDauBH = bgvBaoHiemNhanVien.GetRowCellValue(bgvBaoHiemNhanVien.FocusedRowHandle, "NgayBatDauBH").ToString();
-            IdBH = bgvBaoHiemNhanVien.GetRowCellValue(bgvBaoHiemNhanVien.FocusedRowHandle, "IdBH").ToString();
-        }
-        public void ttQuaTrinhCongTac_Load()
-        {
-            TuNgay = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "TuNgay").ToString();
-            DenNgay = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "DenNgay").ToString();
-            TenCongTy = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "TenCongTy").ToString();
-            IdQTCT = gvQuaTrinhCongTac.GetRowCellValue(gvQuaTrinhCongTac.FocusedRowHandle, "IdQTCT").ToString();
         }
 
         public void thongtinnhaptextbox()
@@ -672,13 +882,6 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             DataTable dt = tsx.CreateTable("UPDATE NHANVIEN SET MaNV = '" + MaNV + "',HoTen= N'" + HoTen + "',GioiTinh = N'" + GioiTinh + "',NgaySinh = '" + NgaySinh + "',SoCCCD =  '" + SoCCCD + "',NgayCap = N'" + NgayCap + "', NoiCap = N'" + NoiCap + "',TrangThai = N'" + TrangThai + "',SoDienThoai = '" + SoDienThoai + "',Gmail = '" + Gmail + "',QueQuan = N'" + QueQuan + "',NoiO = N'" + NoiO + "',AnhChanDung =@anhluu,NguoiLienHe = N'" + NguoiLienHe + "',SoDienThoaiNLH = '" + SoDienThoaiNLH + "',NganHang = N'" + NganHang + "',SoTaiKhoan = '" + SoTaiKhoan + "' WHERE MaNV = '" + MaNV + "' ",anhluu);
             MessageBox.Show("Đã sửa nhân viên có mã " + MaNV + " thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);            
         }
-
-        public byte[] chuyendoianhsangdangbyte(System.Drawing.Image anh)
-        {
-            MemoryStream ms = new MemoryStream();
-            anh.Save(ms, anh.RawFormat);
-            return ms.ToArray();
-        }
         private void spbtnChapNhanThongTinNhanSu_Click(object sender, EventArgs e)
         {
             if (kiemtranhap() == true)
@@ -730,73 +933,11 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
                 cbNam.Enabled = true;
             }
         }
-
-        //kiểm tra trùng lặp gridcontrol
-        public bool kiemtrahv()
+        public byte[] chuyendoianhsangdangbyte(System.Drawing.Image anh)
         {
-            ttHocVan_Load();
-            DataTable kiemtrahv = tsx.CreateTable("SELECT * FROM HOCVANNHANVIEN WHERE MaNV = '" + MaNV + "'");
-            for (int i = 0; i < kiemtrahv.Rows.Count; i++)
-                if (MaHV == kiemtrahv.Rows[i]["MaHV"].ToString() && MaNoiDaoTao == kiemtrahv.Rows[i]["MaNoiDaoTao"].ToString())
-                {
-                    return false;
-                }
-            return true;
-        }
-        public bool kiemtracc()
-        {
-            ttChungChi_Load();
-            DataTable kiemtracc = tsx.CreateTable("SELECT * FROM CHUNGCHINHANVIEN WHERE MaNV = '" + MaNV + "'");
-            for (int i = 0; i < kiemtracc.Rows.Count; i++)
-                if (MaCC == kiemtracc.Rows[i]["MaCC"].ToString())
-                {
-                    return false;
-                }
-            return true;
-        }
-        public bool kiemtravtcv()
-        {
-            ttPhongBan_Load();
-            DataTable kiemtravtcv = tsx.CreateTable("SELECT * FROM PHONGBANCHUCVUNHANVIEN WHERE MaNV = '" + MaNV + "'");
-            for (int i = 0; i < kiemtravtcv.Rows.Count; i++)
-                if (MaPB == kiemtravtcv.Rows[i]["MaPB"].ToString() && MaCV == kiemtravtcv.Rows[i]["MaCV"].ToString())
-                {
-                    return false;
-                }
-            return true;
-        }
-        public bool kiemtrapc()
-        {
-            ttPhuCap_Load();
-            DataTable kiemtrapc = tsx.CreateTable("SELECT * FROM PHUCAPNHANVIEN WHERE MaNV = '" + MaNV + "'");
-            for (int i = 0; i < kiemtrapc.Rows.Count; i++)
-                if (MaPC == kiemtrapc.Rows[i]["MaPC"].ToString())
-                {
-                    return false;
-                }
-            return true;
-        }
-        public bool kiemtrabh()
-        {
-            ttBaoHiem_Load();
-            DataTable kiemtrabh = tsx.CreateTable("SELECT * FROM BAOHIEMNHANVIEN WHERE MaNV = '" + MaNV + "'");
-            for (int i = 0; i < kiemtrabh.Rows.Count; i++)
-                if (MaPC == kiemtrabh.Rows[i]["MaBH"].ToString())
-                {
-                    return false;
-                }
-            return true;
-        }
-        public bool kiemtraqtct()
-        {
-            ttQuaTrinhCongTac_Load();
-            DataTable kiemtraqtct = tsx.CreateTable("SELECT * FROM QUATRINHCONGTAC WHERE MaNV = '" + MaNV + "'");
-            for (int i = 0; i < kiemtraqtct.Rows.Count; i++)
-                if (TuNgay == kiemtraqtct.Rows[i]["TuNgay"].ToString())
-                {
-                    return false;
-                }
-            return true;
+            MemoryStream ms = new MemoryStream();
+            anh.Save(ms, anh.RawFormat);
+            return ms.ToArray();
         }
     }
     

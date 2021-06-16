@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -40,15 +37,14 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucThongKeNhanSu));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
-            this.chartNhanSuHDLD = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.ChartGioiTinh = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lbTongNhanVien = new System.Windows.Forms.Label();
@@ -58,15 +54,6 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.chartNhanSuHocVan = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.chartNhanSu = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnTuoi = new DevExpress.XtraEditors.SimpleButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnTrangThai = new DevExpress.XtraEditors.SimpleButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnPhongBan = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -74,11 +61,12 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.charTuoi = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartTrangThai = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartNhanSuHDLD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChartGioiTinh)).BeginInit();
@@ -92,9 +80,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartNhanSuHocVan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartNhanSu)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -102,6 +87,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.charTuoi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTrangThai)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -121,33 +108,12 @@
             // 
             // groupControl5
             // 
-            this.groupControl5.Controls.Add(this.chartNhanSuHDLD);
+            this.groupControl5.Controls.Add(this.charTuoi);
             this.groupControl5.Location = new System.Drawing.Point(763, 12);
             this.groupControl5.Name = "groupControl5";
             this.groupControl5.Size = new System.Drawing.Size(261, 215);
             this.groupControl5.TabIndex = 8;
-            this.groupControl5.Text = "Thống kê nhân sự theo HỢP ĐỒNG LAO ĐỘNG";
-            // 
-            // chartNhanSuHDLD
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chartNhanSuHDLD.ChartAreas.Add(chartArea1);
-            this.chartNhanSuHDLD.Cursor = System.Windows.Forms.Cursors.Default;
-            this.chartNhanSuHDLD.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartNhanSuHDLD.Legends.Add(legend1);
-            this.chartNhanSuHDLD.Location = new System.Drawing.Point(2, 20);
-            this.chartNhanSuHDLD.Name = "chartNhanSuHDLD";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            series1.Legend = "Legend1";
-            series1.LegendText = "Hợp đồng lao động";
-            series1.Name = "srHopDongLaoDong";
-            this.chartNhanSuHDLD.Series.Add(series1);
-            this.chartNhanSuHDLD.Size = new System.Drawing.Size(257, 193);
-            this.chartNhanSuHDLD.TabIndex = 1;
-            this.chartNhanSuHDLD.Text = "chart3";
+            this.groupControl5.Text = "Thống kê nhân sự theo TUỔI";
             // 
             // groupControl4
             // 
@@ -258,120 +224,12 @@
             // 
             this.groupControl1.Appearance.BackColor = System.Drawing.Color.White;
             this.groupControl1.Appearance.Options.UseBackColor = true;
-            this.groupControl1.Controls.Add(this.panel2);
-            this.groupControl1.Controls.Add(this.panel1);
+            this.groupControl1.Controls.Add(this.chartTrangThai);
             this.groupControl1.Location = new System.Drawing.Point(12, 12);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(504, 215);
             this.groupControl1.TabIndex = 4;
-            this.groupControl1.Text = "Thống kê nhân sự theo PHÒNG BAN, TRẠNG THÁI LÀM VIỆC";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.chartNhanSu);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(68, 20);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(434, 193);
-            this.panel2.TabIndex = 1;
-            // 
-            // chartNhanSu
-            // 
-            this.chartNhanSu.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea5.Name = "ChartArea1";
-            this.chartNhanSu.ChartAreas.Add(chartArea5);
-            this.chartNhanSu.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend5.Name = "Legend1";
-            this.chartNhanSu.Legends.Add(legend5);
-            this.chartNhanSu.Location = new System.Drawing.Point(0, 0);
-            this.chartNhanSu.Name = "chartNhanSu";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.LegendText = "Phòng Ban";
-            series5.Name = "srPhongBan";
-            series6.ChartArea = "ChartArea1";
-            series6.Color = System.Drawing.Color.Red;
-            series6.Legend = "Legend1";
-            series6.LegendText = "Trạng Thái";
-            series6.Name = "srTrangThai";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.LegendText = "Tuổi";
-            series7.Name = "srTuoi";
-            this.chartNhanSu.Series.Add(series5);
-            this.chartNhanSu.Series.Add(series6);
-            this.chartNhanSu.Series.Add(series7);
-            this.chartNhanSu.Size = new System.Drawing.Size(434, 193);
-            this.chartNhanSu.TabIndex = 1;
-            this.chartNhanSu.Text = "chart4";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.btnTuoi);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.btnTrangThai);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnPhongBan);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(2, 20);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(66, 193);
-            this.panel1.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 174);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Tuổi";
-            // 
-            // btnTuoi
-            // 
-            this.btnTuoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTuoi.ImageOptions.Image")));
-            this.btnTuoi.Location = new System.Drawing.Point(15, 132);
-            this.btnTuoi.Name = "btnTuoi";
-            this.btnTuoi.Size = new System.Drawing.Size(39, 39);
-            this.btnTuoi.TabIndex = 5;
-            this.btnTuoi.Click += new System.EventHandler(this.btnTuoi_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 114);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Trạng Thái";
-            // 
-            // btnTrangThai
-            // 
-            this.btnTrangThai.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTrangThai.ImageOptions.Image")));
-            this.btnTrangThai.Location = new System.Drawing.Point(15, 72);
-            this.btnTrangThai.Name = "btnTrangThai";
-            this.btnTrangThai.Size = new System.Drawing.Size(39, 39);
-            this.btnTrangThai.TabIndex = 3;
-            this.btnTrangThai.Click += new System.EventHandler(this.btnTrangThai_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Phòng Ban";
-            // 
-            // btnPhongBan
-            // 
-            this.btnPhongBan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPhongBan.ImageOptions.Image")));
-            this.btnPhongBan.Location = new System.Drawing.Point(15, 8);
-            this.btnPhongBan.Name = "btnPhongBan";
-            this.btnPhongBan.Size = new System.Drawing.Size(39, 39);
-            this.btnPhongBan.TabIndex = 1;
-            this.btnPhongBan.Click += new System.EventHandler(this.btnPhongBan_Click);
+            this.groupControl1.Text = "Thống kê nhân sự theo TRẠNG THÁI LÀM VIỆC";
             // 
             // layoutControlGroup1
             // 
@@ -440,6 +298,46 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(508, 254);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // charTuoi
+            // 
+            this.charTuoi.BorderlineColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.charTuoi.ChartAreas.Add(chartArea1);
+            this.charTuoi.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.charTuoi.Legends.Add(legend1);
+            this.charTuoi.Location = new System.Drawing.Point(2, 20);
+            this.charTuoi.Name = "charTuoi";
+            this.charTuoi.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.LegendText = "Tuổi";
+            series1.Name = "srTuoi";
+            this.charTuoi.Series.Add(series1);
+            this.charTuoi.Size = new System.Drawing.Size(257, 193);
+            this.charTuoi.TabIndex = 2;
+            this.charTuoi.Text = "chart4";
+            // 
+            // chartTrangThai
+            // 
+            this.chartTrangThai.BorderlineColor = System.Drawing.Color.Transparent;
+            chartArea5.Name = "ChartArea1";
+            this.chartTrangThai.ChartAreas.Add(chartArea5);
+            this.chartTrangThai.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend5.Name = "Legend1";
+            this.chartTrangThai.Legends.Add(legend5);
+            this.chartTrangThai.Location = new System.Drawing.Point(2, 20);
+            this.chartTrangThai.Name = "chartTrangThai";
+            series5.ChartArea = "ChartArea1";
+            series5.Color = System.Drawing.Color.Red;
+            series5.Legend = "Legend1";
+            series5.LegendText = "Trạng Thái";
+            series5.Name = "srTrangThai";
+            this.chartTrangThai.Series.Add(series5);
+            this.chartTrangThai.Size = new System.Drawing.Size(500, 193);
+            this.chartTrangThai.TabIndex = 1;
+            this.chartTrangThai.Text = "chart4";
+            // 
             // ucThongKeNhanSu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,7 +349,6 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             this.groupControl5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartNhanSuHDLD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
@@ -466,10 +363,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartNhanSuHocVan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartNhanSu)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -477,6 +370,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.charTuoi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTrangThai)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -499,17 +394,9 @@
         private DevExpress.XtraEditors.GroupControl groupControl6;
         private System.Windows.Forms.Label lbTongNhanVien;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartNhanSuHocVan;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartNhanSu;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraEditors.SimpleButton btnPhongBan;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.SimpleButton btnTrangThai;
         private System.Windows.Forms.DataVisualization.Charting.Chart ChartGioiTinh;
-        private System.Windows.Forms.Label label3;
-        private DevExpress.XtraEditors.SimpleButton btnTuoi;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartNhanSuHDLD;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartBienDongNhanSu;
+        private System.Windows.Forms.DataVisualization.Charting.Chart charTuoi;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartTrangThai;
     }
 }

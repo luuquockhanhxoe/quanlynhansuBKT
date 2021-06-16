@@ -82,6 +82,12 @@
     <Compile Include="ChamCong\ChiXemChamCongTongHop\ucChamCongTongHop.Designer.cs">
       <DependentUpon>ucChamCongTongHop.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChamCong\NhapThongTin\fmDangKyLamThem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChamCong\NhapThongTin\fmDangKyLamThem.Designer.cs">
+      <DependentUpon>fmDangKyLamThem.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChamCong\NhapThongTin\ucNhapThongTinChamCong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -129,6 +135,12 @@
     <Compile Include="TinhLuong\TinhToan\ucTinhToanLuong.Designer.cs">
       <DependentUpon>ucTinhToanLuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="TinhLuong\TinhToan\ucTinhToanLuongChoNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TinhLuong\TinhToan\ucTinhToanLuongChoNhanVien.Designer.cs">
+      <DependentUpon>ucTinhToanLuongChoNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="TongQuan\ThietLap\TaoNguoiDungHeThong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +176,9 @@
     <EmbeddedResource Include="ChamCong\ChiXemChamCongTongHop\ucChamCongTongHop.resx">
       <DependentUpon>ucChamCongTongHop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChamCong\NhapThongTin\fmDangKyLamThem.resx">
+      <DependentUpon>fmDangKyLamThem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChamCong\NhapThongTin\ucNhapThongTinChamCong.resx">
       <DependentUpon>ucNhapThongTinChamCong.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +197,9 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="TinhLuong\TinhToan\ucTinhToanLuong.resx">
       <DependentUpon>ucTinhToanLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TinhLuong\TinhToan\ucTinhToanLuongChoNhanVien.resx">
+      <DependentUpon>ucTinhToanLuongChoNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TongQuan\ThietLap\TaoNguoiDungHeThong.resx">
       <DependentUpon>TaoNguoiDungHeThong.cs</DependentUpon>

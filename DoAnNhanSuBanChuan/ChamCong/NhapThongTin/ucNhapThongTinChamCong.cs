@@ -26,7 +26,6 @@ namespace DoAnNhanSuBanChuan.ChamCong.NhapThongTin
             dtpNgayHomNay.Value = DateTime.Today;
             btnDiLam.Click += BtnDiLam_Click;
             btnNghi.Click += BtnNghi_Click;
-            btnLamNuaNgay.Click += BtnLamNuaNgay_Click;
             btnSua.Click += BtnSua_Click;
         }
 
@@ -37,21 +36,6 @@ namespace DoAnNhanSuBanChuan.ChamCong.NhapThongTin
             MessageBox.Show("Đã sửa thông tin chấm công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             hienthithongtinaidachamcong();
         }
-
-        private void BtnLamNuaNgay_Click(object sender, EventArgs e)
-        {
-            if (kiemtratrung() == true)
-            {
-                ttchamconghangngay_Load();
-                DataTable chamcongdilam = chamcong.CreateTable("INSERT INTO CHAMCONGHANGNGAY(MaNV,NgayDiLam,ThongTinDiLam,SoGioLamThem) VALUES('" + MaNV + "','" + dtpNgayHomNay.Text + "','V/2','0')");
-                hienthithongtinaidachamcong();
-            }
-            else
-            {
-                MessageBox.Show("Đã chấm công cho nhân viên này!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }           
-        }
-
         private void BtnNghi_Click(object sender, EventArgs e)
         {
             if (kiemtratrung() == true)
@@ -117,6 +101,14 @@ namespace DoAnNhanSuBanChuan.ChamCong.NhapThongTin
         }
 
         string MaNV,ThongTinDiLam,SoGioLamThem, IdChamCong;
+
+        private void btnLamThemGio_Click(object sender, EventArgs e)
+        {
+            fmDangKyLamThem dangkylamthem = new fmDangKyLamThem();
+            dangkylamthem.ShowDialog();
+            hienthithongtinaidachamcong();
+        }
+
         public void ttchamconghangngay_Load()
         {
             MaNV = gvChamCong.GetRowCellValue(gvChamCong.FocusedRowHandle, "MaNV").ToString();

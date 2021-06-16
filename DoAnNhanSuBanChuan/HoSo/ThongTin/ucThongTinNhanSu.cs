@@ -59,6 +59,12 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             DataTable thongtinkhenthuong = da.CreateTable("SELECT KHENTHUONGNHANVIEN.NgayKhenThuong, KHENTHUONGNHANVIEN.LyDo, KHENTHUONG.TenKhenThuong FROM KHENTHUONGNHANVIEN LEFT JOIN KHENTHUONG ON KHENTHUONGNHANVIEN.MaKhenThuong = KHENTHUONG.MaKhenThuong  WHERE KHENTHUONGNHANVIEN.MaNV = '" + tmp + "'");
             gcKhenThuongNhanVien.DataSource = thongtinkhenthuong;
         }
+        void hienthithongtinthunhap()
+        {
+            string tmp = maNV.Trim();
+            DataTable thongtinthunhap = da.CreateTable("SELECT * FROM TINHLUONGNHANVIEN WHERE MaNV = '" + tmp + "'");
+            gcKhenThuongNhanVien.DataSource = thongtinthunhap;
+        }
         void hienthithongtinphucapbaohiem()
         {
             string tmp = maNV.Trim();
@@ -120,6 +126,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
              hienthithongtinphucapbaohiem();
              hienthithongtinkyluat();
              hienthithongkhenthuong();
+             hienthithongtinthunhap();
 
 
             byte[] getImg = (byte[])grdView.GetRowCellValue(grdView.FocusedRowHandle, "AnhChanDung");

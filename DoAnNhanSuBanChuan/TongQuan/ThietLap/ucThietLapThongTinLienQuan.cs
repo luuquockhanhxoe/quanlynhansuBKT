@@ -138,7 +138,7 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         private void BtnSuaBH_Click(object sender, EventArgs e)
         {
             ttbaohiem_load();
-            DataTable suabh = ttlq.CreateTable("UPDATE BAOHIEM SET MaBH = '" + MaBH + "',TenBaoHiem = N'" + TenBaoHiem + "',SoTien = '" + SoTien + "' WHERE IDBH = '" + IDBH + "' ");
+            DataTable suabh = ttlq.CreateTable("UPDATE BAOHIEM SET MaBH = '" + MaBH + "',TenBaoHiem = N'" + TenBaoHiem + "',SoTien = '" + SoTienBH + "' WHERE IDBH = '" + IDBH + "' ");
             MessageBox.Show("Đã sửa thông tin bảo hiểm !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DataTable hienthibaohiem = ttlq.CreateTable("SELECT * FROM BAOHIEM ");
             gcBaoHiem.DataSource = hienthibaohiem;

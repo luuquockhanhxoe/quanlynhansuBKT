@@ -63,7 +63,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         {
             string tmp = maNV.Trim();
             DataTable thongtinthunhap = da.CreateTable("SELECT * FROM TINHLUONGNHANVIEN WHERE MaNV = '" + tmp + "'");
-            gcKhenThuongNhanVien.DataSource = thongtinthunhap;
+            gcThuNhap.DataSource = thongtinthunhap;
         }
         void hienthithongtinphucapbaohiem()
         {

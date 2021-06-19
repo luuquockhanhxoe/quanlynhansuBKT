@@ -15,35 +15,46 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
     {
         Data_Access taonguoidung = new Data_Access();
 
+        public TaoNguoiDungHeThong(string manhanvien, string hovaten, string nhiemvu, string tentaikhoan, string matkhau) : this()
+        {
+            cbMaNV.Text = manhanvien;
+            cbMaNV.Enabled = false;
+            txtHoTen.Text = hovaten;
+            cbNhiemVu.Text = nhiemvu;
+            txtTenTaiKhoan.Text = tentaikhoan;
+            txtMatKhau.Text = matkhau;
+            txtXacNhanMatKhau.Text = matkhau;
+        }
+
         public TaoNguoiDungHeThong()
         {
             InitializeComponent();
-        }
-
-        private void spbtnHuyBoThongTinNguoiDung_Click(object sender, EventArgs e)
-        {
-            DialogResult thongbaohuy = MessageBox.Show("Bạn có muốn hủy bỏ không?","Thông báo",
-                MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (thongbaohuy == DialogResult.OK)
-            {
-                this.Close();
-            }
-        }
-        private void TaoNguoiDungHeThong_Load(object sender, EventArgs e)
-        {
             dulieuchon();
         }
 
-        public bool kiemtranhap()
+        private void spbtnHuyBoThongTinNguoiDung_Click(object sender, EventArgs e)
+        {        
+            this.Close();
+        }
+        private void TaoNguoiDungHeThong_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        public bool kiemtratrung()
         {
             thongtinnhap();
             DataTable kiemtra = taonguoidung.CreateTable("select * from NGUOIDUNGHETHONG;");
             for (int i = 0; i < kiemtra.Rows.Count; i++)
-            if (MaNV == kiemtra.Rows[i]["MaNV"].ToString())
+                if (MaNV == kiemtra.Rows[i]["MaNV"].ToString())
                 {
                     MessageBox.Show("Mã nhân viên này đã được tạo, mời chọn mã khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
+            return true;
+        }
+        public bool kiemtranhap()
+        {
             if (string.IsNullOrWhiteSpace(txtHoTen.Text))
             {
                 MessageBox.Show("Bạn chưa chọn mã nhân viên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -119,26 +130,35 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
 
         public void suathongtintaikhoan()
         {
-            thongtinnhap();
-            DataTable dt = taonguoidung.CreateTable("UPDATE NGUOIDUNGHETHONG SET NhiemVu = '" + NhiemVu + "',TenTaiKhoan ='" + TenTaiKhoan + "',MatKhau = '" + MatKhau + "' WHERE MaNV = '" + MaNV + "' ");
+            DataTable dt = taonguoidung.CreateTable("UPDATE NGUOIDUNGHETHONG SET NhiemVu = N'" + cbNhiemVu.Text + "',TenTaiKhoan ='" + txtTenTaiKhoan.Text + "',MatKhau = '" + txtMatKhau.Text + "' WHERE MaNV = '" + cbMaNV.Text + "' ");
             MessageBox.Show("Đã sửa tài khoản cho nhân viên có mã " + MaNV + " thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
 
+        private void TaoNguoiDungHeThong_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult ThongBao = MessageBox.Show("Bạn có muốn thoát không?",
+              "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (ThongBao == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+        }
 
         private void spbtnChapNhanThongTinNguoiDung_Click(object sender, EventArgs e)
         {
-            if (kiemtranhap() == true)
-            {
-                if (cbMaNV.Enabled == true)
+            kiemtranhap();
+            if (cbMaNV.Enabled == true)
+              {
+                if(kiemtratrung() == true)
                 {
                     themthongtintaikhoan();
                 }
-                else
-                {
-                    suathongtintaikhoan();
-                }
-            }
+              }
+            else
+              {
+                suathongtintaikhoan();
+              }
         }
 
         public void dulieuchon()

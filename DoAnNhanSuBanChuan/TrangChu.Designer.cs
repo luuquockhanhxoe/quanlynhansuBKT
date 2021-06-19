@@ -30,7 +30,7 @@ namespace DoAnNhanSuBanChuan
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrangChu));
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rbTongQuan = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnNhanSu = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -72,12 +72,12 @@ namespace DoAnNhanSuBanChuan
             this.btnTinhLuong = new DevExpress.XtraBars.BarButtonItem();
             this.btnKTKL = new DevExpress.XtraBars.BarButtonItem();
             this.btnTinhToanLuong = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rbHoSo = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rbChamCong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rbTinhLuong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -93,14 +93,14 @@ namespace DoAnNhanSuBanChuan
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).BeginInit();
             this.SuspendLayout();
             // 
-            // ribbonPage1
+            // rbTongQuan
             // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rbTongQuan.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
             this.ribbonPageGroup2,
             this.ribbonPageGroup12});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Tổng Quan";
+            this.rbTongQuan.Name = "rbTongQuan";
+            this.rbTongQuan.Text = "Tổng Quan";
             // 
             // ribbonPageGroup1
             // 
@@ -237,10 +237,10 @@ namespace DoAnNhanSuBanChuan
             this.ribbonControl1.MaxItemId = 39;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1,
-            this.ribbonPage2,
-            this.ribbonPage4,
-            this.ribbonPage3,
+            this.rbTongQuan,
+            this.rbHoSo,
+            this.rbChamCong,
+            this.rbTinhLuong,
             this.ribbonPage8});
             this.ribbonControl1.Size = new System.Drawing.Size(1049, 143);
             // 
@@ -459,12 +459,12 @@ namespace DoAnNhanSuBanChuan
             this.btnTinhToanLuong.Name = "btnTinhToanLuong";
             this.btnTinhToanLuong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTinhToanLuong_ItemClick);
             // 
-            // ribbonPage2
+            // rbHoSo
             // 
-            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rbHoSo.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup10});
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "Hồ Sơ";
+            this.rbHoSo.Name = "rbHoSo";
+            this.rbHoSo.Text = "Hồ Sơ";
             // 
             // ribbonPageGroup10
             // 
@@ -473,13 +473,13 @@ namespace DoAnNhanSuBanChuan
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             this.ribbonPageGroup10.Text = "Thông Tin";
             // 
-            // ribbonPage4
+            // rbChamCong
             // 
-            this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rbChamCong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup5,
             this.ribbonPageGroup11});
-            this.ribbonPage4.Name = "ribbonPage4";
-            this.ribbonPage4.Text = "Chấm Công";
+            this.rbChamCong.Name = "rbChamCong";
+            this.rbChamCong.Text = "Chấm Công";
             // 
             // ribbonPageGroup5
             // 
@@ -495,12 +495,12 @@ namespace DoAnNhanSuBanChuan
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             this.ribbonPageGroup11.Text = "Chỉ Xem";
             // 
-            // ribbonPage3
+            // rbTinhLuong
             // 
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rbTinhLuong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup3});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "Tính Lương";
+            this.rbTinhLuong.Name = "rbTinhLuong";
+            this.rbTinhLuong.Text = "Tính Lương";
             // 
             // ribbonPageGroup3
             // 
@@ -574,10 +574,12 @@ namespace DoAnNhanSuBanChuan
             this.ClientSize = new System.Drawing.Size(1049, 484);
             this.Controls.Add(this.grControl);
             this.Controls.Add(this.ribbonControl1);
+            this.MaximizeBox = false;
             this.Name = "TrangChu";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TrangChu_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grControl)).EndInit();
             this.grControl.ResumeLayout(false);
@@ -589,11 +591,11 @@ namespace DoAnNhanSuBanChuan
 
         #endregion
 
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rbTongQuan;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rbHoSo;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rbChamCong;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage8;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
@@ -643,7 +645,7 @@ namespace DoAnNhanSuBanChuan
         private DevExpress.XtraBars.BarButtonItem btnThongTinLienQuan;
         private DevExpress.XtraBars.BarButtonItem btnTinhLuong;
         private DevExpress.XtraBars.BarButtonItem btnKTKL;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rbTinhLuong;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.BarButtonItem btnTinhToanLuong;
     }

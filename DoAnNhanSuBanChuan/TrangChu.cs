@@ -12,12 +12,48 @@ namespace DoAnNhanSuBanChuan
 {
     public partial class TrangChu : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        
-       
-        public TrangChu()
+        public TrangChu(string nhiemvu) : this()    
         {
             InitializeComponent();
-            
+            if (nhiemvu == "Quản trị viên.")
+            {
+                btnNhanSu.PerformClick();
+            }
+            if (nhiemvu == "Thiết lập thông tin hồ sơ.")
+            {
+                btnNhanSu.Enabled = false;
+                btnNguoiDungHeThong.Enabled = false;
+                btnThongTinLienQuan.Enabled = false;
+                btnChamCongHangNgay.Enabled = false;
+                btnBangChamCongTongHop.Enabled = false;
+                btnTinhToanLuong.Enabled = false;
+                btnThongTinNhanSu.PerformClick();
+            }
+            if (nhiemvu == "Thiết lập thông tin lương.")
+            {
+                btnNhanSu.Enabled = false;
+                btnNguoiDungHeThong.Enabled = false;
+                btnThongTinLienQuan.Enabled = false;
+                btnThongTinNhanSu.Enabled = false;
+                btnChamCongHangNgay.Enabled = false;
+                btnBangChamCongTongHop.Enabled = false;
+                btnTinhToanLuong.PerformClick();
+                
+            }
+            if (nhiemvu == "Thiết lập thông tin chấm công.")
+            {
+                btnNhanSu.Enabled = false;
+                btnNguoiDungHeThong.Enabled = false;
+                btnThongTinLienQuan.Enabled = false;
+                btnThongTinNhanSu.Enabled = false;
+                btnTinhToanLuong.Enabled = false;
+                btnBangChamCongTongHop.PerformClick();
+            }
+
+        }
+        public TrangChu()
+        { 
+
         }
 
         private void btnNhanSu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -101,6 +137,16 @@ namespace DoAnNhanSuBanChuan
             TinhLuong.TinhToan.ucTinhToanLuong ucTinhToanLuong = new TinhLuong.TinhToan.ucTinhToanLuong();
             ucTinhToanLuong.Dock = DockStyle.Fill;
             pnControl.Controls.Add(ucTinhToanLuong);
+        }
+
+        private void TrangChu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult ThongBao = MessageBox.Show("Bạn có muốn thoát không?",
+              "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (ThongBao == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

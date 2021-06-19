@@ -51,6 +51,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(16, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 13);
@@ -60,6 +61,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(16, 50);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
@@ -107,6 +109,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(12, 287);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
@@ -116,6 +119,7 @@
             // sss
             // 
             this.sss.AutoSize = true;
+            this.sss.BackColor = System.Drawing.Color.Transparent;
             this.sss.Location = new System.Drawing.Point(16, 98);
             this.sss.Name = "sss";
             this.sss.Size = new System.Drawing.Size(30, 13);
@@ -125,6 +129,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Location = new System.Drawing.Point(16, 126);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 13);
@@ -152,12 +157,13 @@
             // cbHien
             // 
             this.cbHien.AutoSize = true;
+            this.cbHien.BackColor = System.Drawing.Color.Transparent;
             this.cbHien.Location = new System.Drawing.Point(299, 49);
             this.cbHien.Name = "cbHien";
             this.cbHien.Size = new System.Drawing.Size(48, 17);
             this.cbHien.TabIndex = 20;
             this.cbHien.Text = "Hiện";
-            this.cbHien.UseVisualStyleBackColor = true;
+            this.cbHien.UseVisualStyleBackColor = false;
             this.cbHien.CheckedChanged += new System.EventHandler(this.cbHien_CheckedChanged);
             // 
             // btnGui
@@ -183,6 +189,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(16, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
@@ -192,18 +199,20 @@
             // cbGuiToanBo
             // 
             this.cbGuiToanBo.AutoSize = true;
+            this.cbGuiToanBo.BackColor = System.Drawing.Color.Transparent;
             this.cbGuiToanBo.Location = new System.Drawing.Point(299, 96);
             this.cbGuiToanBo.Name = "cbGuiToanBo";
             this.cbGuiToanBo.Size = new System.Drawing.Size(131, 17);
             this.cbGuiToanBo.TabIndex = 23;
             this.cbGuiToanBo.Text = "Gửi toàn bộ nhân viên";
-            this.cbGuiToanBo.UseVisualStyleBackColor = true;
+            this.cbGuiToanBo.UseVisualStyleBackColor = false;
             this.cbGuiToanBo.CheckedChanged += new System.EventHandler(this.cbGuiToanBo_CheckedChanged);
             // 
             // fmGuiGmail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(556, 420);
             this.Controls.Add(this.cbGuiToanBo);
             this.Controls.Add(this.label2);

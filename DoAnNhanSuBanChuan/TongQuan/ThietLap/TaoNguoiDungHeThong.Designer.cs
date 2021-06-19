@@ -49,6 +49,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(25, 146);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
@@ -58,6 +59,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(23, 113);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 13);
@@ -67,6 +69,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(23, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
@@ -76,6 +79,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(23, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 13);
@@ -85,6 +89,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(23, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 13);
@@ -106,9 +111,8 @@
             this.cbNhiemVu.Items.AddRange(new object[] {
             "Quản trị viên.",
             "Thiết lập thông tin hồ sơ.",
-            "Thiết lập thông tin tuyển dụng.",
             "Thiết lập thông tin lương.",
-            "Thiết lập thông tin chấm công.  "});
+            "Thiết lập thông tin chấm công."});
             this.cbNhiemVu.Location = new System.Drawing.Point(106, 72);
             this.cbNhiemVu.Name = "cbNhiemVu";
             this.cbNhiemVu.Size = new System.Drawing.Size(189, 21);
@@ -140,6 +144,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Location = new System.Drawing.Point(25, 179);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 13);
@@ -177,18 +182,20 @@
             // cbHien
             // 
             this.cbHien.AutoSize = true;
+            this.cbHien.BackColor = System.Drawing.Color.Transparent;
             this.cbHien.Location = new System.Drawing.Point(301, 142);
             this.cbHien.Name = "cbHien";
             this.cbHien.Size = new System.Drawing.Size(48, 17);
             this.cbHien.TabIndex = 144;
             this.cbHien.Text = "Hiện";
-            this.cbHien.UseVisualStyleBackColor = true;
+            this.cbHien.UseVisualStyleBackColor = false;
             this.cbHien.CheckedChanged += new System.EventHandler(this.cbHien_CheckedChanged);
             // 
             // TaoNguoiDungHeThong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(349, 259);
             this.Controls.Add(this.cbHien);
             this.Controls.Add(this.txtHoTen);
@@ -210,6 +217,7 @@
             this.MinimizeBox = false;
             this.Name = "TaoNguoiDungHeThong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TaoNguoiDungHeThong_FormClosing);
             this.Load += new System.EventHandler(this.TaoNguoiDungHeThong_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

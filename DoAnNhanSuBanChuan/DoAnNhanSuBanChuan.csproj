@@ -95,6 +95,12 @@
       <DependentUpon>ucNhapThongTinChamCong.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\Data_Access.cs" />
+    <Compile Include="DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="HoSo\ThongTin\fmGuiGmail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,12 +140,6 @@
     </Compile>
     <Compile Include="TinhLuong\TinhToan\ucTinhToanLuong.Designer.cs">
       <DependentUpon>ucTinhToanLuong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TinhLuong\TinhToan\ucTinhToanLuongChoNhanVien.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TinhLuong\TinhToan\ucTinhToanLuongChoNhanVien.Designer.cs">
-      <DependentUpon>ucTinhToanLuongChoNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="TongQuan\ThietLap\TaoNguoiDungHeThong.cs">
       <SubType>Form</SubType>
@@ -182,6 +182,9 @@
     <EmbeddedResource Include="ChamCong\NhapThongTin\ucNhapThongTinChamCong.resx">
       <DependentUpon>ucNhapThongTinChamCong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HoSo\ThongTin\fmGuiGmail.resx">
       <DependentUpon>fmGuiGmail.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,9 +200,6 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="TinhLuong\TinhToan\ucTinhToanLuong.resx">
       <DependentUpon>ucTinhToanLuong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TinhLuong\TinhToan\ucTinhToanLuongChoNhanVien.resx">
-      <DependentUpon>ucTinhToanLuongChoNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TongQuan\ThietLap\TaoNguoiDungHeThong.resx">
       <DependentUpon>TaoNguoiDungHeThong.cs</DependentUpon>
@@ -259,7 +259,9 @@
       <DependentUpon>QuanLyNhanSuBKTDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\4c358729.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -243,6 +243,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.cbThoiHan);
             this.groupBox2.Controls.Add(this.cbMaNV);
             this.groupBox2.Controls.Add(this.txtMaHD);
@@ -344,6 +345,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.gcHopDong);
             this.groupBox1.Location = new System.Drawing.Point(9, 180);
             this.groupBox1.Name = "groupBox1";
@@ -553,18 +555,21 @@
             // cbHienThi
             // 
             this.cbHienThi.AutoSize = true;
+            this.cbHienThi.BackColor = System.Drawing.Color.Transparent;
             this.cbHienThi.Location = new System.Drawing.Point(297, 157);
             this.cbHienThi.Name = "cbHienThi";
             this.cbHienThi.Size = new System.Drawing.Size(154, 17);
             this.cbHienThi.TabIndex = 247;
             this.cbHienThi.Text = "Hiện thị dữ liệu trên textbox";
-            this.cbHienThi.UseVisualStyleBackColor = true;
+            this.cbHienThi.UseVisualStyleBackColor = false;
             this.cbHienThi.CheckedChanged += new System.EventHandler(this.cbHienThi_CheckedChanged);
             // 
             // fmThongTinHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 416);
             this.Controls.Add(this.cbHienThi);
             this.Controls.Add(this.btnLamMoi);

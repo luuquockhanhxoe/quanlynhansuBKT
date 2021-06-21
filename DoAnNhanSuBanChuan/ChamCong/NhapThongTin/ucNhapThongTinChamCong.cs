@@ -41,7 +41,7 @@ namespace DoAnNhanSuBanChuan.ChamCong.NhapThongTin
             if (kiemtratrung() == true)
             {
                 ttchamconghangngay_Load();
-                DataTable chamcongdilam = chamcong.CreateTable("INSERT INTO CHAMCONGHANGNGAY(MaNV,NgayDiLam,ThongTinDiLam,SoGioLamThem) VALUES('" + MaNV + "','" + dtpNgayHomNay.Text + "','X','0')");
+                DataTable chamcongdilam = chamcong.CreateTable("INSERT INTO CHAMCONGHANGNGAY(MaNV,NgayDiLam,ThongTinDiLam,SoGioLamThem) VALUES('" + MaNV + "','" + dtpNgayHomNay.Text + "','Nghỉ','0')");
                 hienthithongtinaidachamcong();
             }
             else
@@ -55,7 +55,7 @@ namespace DoAnNhanSuBanChuan.ChamCong.NhapThongTin
             if (kiemtratrung() == true)
             {
                 ttchamconghangngay_Load();
-                DataTable chamcongdilam = chamcong.CreateTable("INSERT INTO CHAMCONGHANGNGAY(MaNV,NgayDiLam,ThongTinDiLam,SoGioLamThem) VALUES('" + MaNV + "','" + dtpNgayHomNay.Text + "','V','0')");
+                DataTable chamcongdilam = chamcong.CreateTable("INSERT INTO CHAMCONGHANGNGAY(MaNV,NgayDiLam,ThongTinDiLam,SoGioLamThem) VALUES('" + MaNV + "','" + dtpNgayHomNay.Text + "','Đi làm','0')");
                 hienthithongtinaidachamcong();
             }
             else

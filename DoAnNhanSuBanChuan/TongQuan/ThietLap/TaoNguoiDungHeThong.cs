@@ -111,7 +111,6 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
             thongtinnhap();
             DataTable dt = taonguoidung.CreateTable("INSERT INTO NGUOIDUNGHETHONG VALUES('" + MaNV+ "',N'" + NhiemVu + "',N'" + TenTaiKhoan + "',N'" + MatKhau + "')");
             MessageBox.Show("Đã thêm tài khoản cho nhân viên có mã "+ MaNV +" thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
         }
 
         private void cbHien_CheckedChanged(object sender, EventArgs e)
@@ -132,7 +131,6 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         {
             DataTable dt = taonguoidung.CreateTable("UPDATE NGUOIDUNGHETHONG SET NhiemVu = N'" + cbNhiemVu.Text + "',TenTaiKhoan ='" + txtTenTaiKhoan.Text + "',MatKhau = '" + txtMatKhau.Text + "' WHERE MaNV = '" + cbMaNV.Text + "' ");
             MessageBox.Show("Đã sửa tài khoản cho nhân viên có mã " + MaNV + " thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
         }
 
         private void TaoNguoiDungHeThong_FormClosing(object sender, FormClosingEventArgs e)

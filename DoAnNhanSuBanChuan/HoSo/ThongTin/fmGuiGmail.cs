@@ -74,9 +74,15 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
                         attach = new Attachment(txtFileKem.Text);
                     }
                     catch { }
-                    for (int i = 0; i< (txtDen.Lines.Length)-1; i++)                  
+                    pbThanhPhanTram.Invoke((MethodInvoker)(() => pbThanhPhanTram.Visible = true));
+                    pbThanhPhanTram.Minimum = 0;
+                    pbThanhPhanTram.Invoke((MethodInvoker)(()=> pbThanhPhanTram.Maximum = txtDen.Lines.Length - 1));
+                    pbThanhPhanTram.Value = 0;
+                    pbThanhPhanTram.Invoke((MethodInvoker)(() => pbThanhPhanTram.Step = 1));                  
+                    for (int i = 0; i < txtDen.Lines.Length -1 ; i++)                  
                     {
                         GuiMail(txtTenDangNhap.Text, txtDen.Lines[i], txtNoiDung.Text, txtMessage.Text, attach);
+                        pbThanhPhanTram.Invoke((MethodInvoker)(() => pbThanhPhanTram.PerformStep()));
                     }
                     MessageBox.Show("Đã gửi mail cho nhân viên!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -84,7 +90,12 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
                 thread.Start();
             }
         }
-     
+
+        private bool CopyFile(string v)
+        {
+            throw new NotImplementedException();
+        }
+
         private void btnKemFile_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();

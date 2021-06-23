@@ -278,6 +278,7 @@
             this.btnBaoCao.Size = new System.Drawing.Size(82, 40);
             this.btnBaoCao.TabIndex = 164;
             this.btnBaoCao.Text = "Báo cáo";
+            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
             // 
             // label2
             // 

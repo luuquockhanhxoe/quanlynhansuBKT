@@ -29,7 +29,7 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
         public TaoNguoiDungHeThong()
         {
             InitializeComponent();
-            dulieuchon();
+            dulieuchon();   
         }
 
         private void spbtnHuyBoThongTinNguoiDung_Click(object sender, EventArgs e)
@@ -161,14 +161,15 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
 
         public void dulieuchon()
         {
-            DataTable dulieuvaocommbobox = taonguoidung.CreateTable("SELECT MaNV, HoTen FROM NHANVIEN");
+            DataTable dulieuvaocommbobox = taonguoidung.CreateTable("SELECT MaNV, HoTen FROM NHANVIEN WHERE TrangThai = N'Đang làm việc'");
             cbMaNV.DataSource = dulieuvaocommbobox;
             cbMaNV.DisplayMember = "MaNV";
             cbMaNV.ValueMember = "HoTen";
+            txtHoTen.Text = cbMaNV.SelectedValue.ToString();
         }
         private void cbMaNV_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtHoTen.Text = cbMaNV.SelectedValue.ToString();            
+            txtHoTen.Text = cbMaNV.SelectedValue.ToString();
         }
     }
 }

@@ -21,10 +21,11 @@ namespace DoAnNhanSuBanChuan.ChamCong.NhapThongTin
         }
         public void hienthicombobox()
         {
-            DataTable hienthi = dangkylamthem.CreateTable("Select DISTINCT CHAMCONGHANGNGAY.MaNV, NHANVIEN.HoTen FROM CHAMCONGHANGNGAY LEFT JOIN NHANVIEN ON CHAMCONGHANGNGAY.MaNV = NHANVIEN.MaNV");
+            DataTable hienthi = dangkylamthem.CreateTable("Select DISTINCT CHAMCONGHANGNGAY.MaNV, NHANVIEN.HoTen FROM CHAMCONGHANGNGAY LEFT JOIN NHANVIEN ON CHAMCONGHANGNGAY.MaNV = NHANVIEN.MaNV WHERE NHANVIEN.TrangThai = N'Đang làm việc'");
             cbMaNV.DataSource = hienthi;
             cbMaNV.DisplayMember = "MaNV";
             cbMaNV.ValueMember = "HoTen";
+            txtHoTen.Text = cbMaNV.SelectedValue.ToString();
         }
 
         public bool kiemtranhap()

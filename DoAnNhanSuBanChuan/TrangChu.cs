@@ -148,6 +148,16 @@ namespace DoAnNhanSuBanChuan
                 e.Cancel = true;
             }
         }
+
+        private void btnSinhNhatNhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            pnControl.Dock = DockStyle.Fill;
+            grControl.Text = "Sinh Nhật Nhân Viên";
+            pnControl.Controls.Clear();
+            TongQuan.DongThoiGian.ucSinhNhatNhanVien ucsinhnhatnhanvien = new TongQuan.DongThoiGian.ucSinhNhatNhanVien();
+            ucsinhnhatnhanvien.Dock = DockStyle.Fill;
+            pnControl.Controls.Add(ucsinhnhatnhanvien);
+        }
     }
 }
    

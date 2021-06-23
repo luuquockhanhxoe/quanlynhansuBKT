@@ -215,22 +215,20 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             hienthithongtincoban();
         }
 
-        private void simpleButton5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void simpleButton8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnHopDong_Click(object sender, EventArgs e)
         {
             fmThongTinHopDong hopdong = new fmThongTinHopDong();
             hopdong.Text = "Thông Tin Hợp Đồng";
             hopdong.ShowDialog();
             hienthithongtincoban();
+        }
+
+        private void btnBaoCao_Click(object sender, EventArgs e)
+        {
+            var r = new rpThongTinNhanVien();
+            DataTable inthongtin = da.CreateTable("SELECT * FROM NHANVIEN");
+            r.DataSource = inthongtin;
+            r.hienthipreview();
         }
     }
 }

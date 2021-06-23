@@ -32,7 +32,7 @@ namespace DoAnNhanSuBanChuan.ChamCong.NhapThongTin
         private void BtnSua_Click(object sender, EventArgs e)
         {
             ttchamcongcuthe_Load();
-            DataTable aidachamcong = chamcong.CreateTable("UPDATE CHAMCONGHANGNGAY SET THONGTINDILAM = '" + ThongTinDiLam + "',SoGioLamThem = '" + SoGioLamThem + "' WHERE IdChamCong = '" + IdChamCong + "'");
+            DataTable aidachamcong = chamcong.CreateTable("UPDATE CHAMCONGHANGNGAY SET THONGTINDILAM = N'" + ThongTinDiLam + "',SoGioLamThem = '" + SoGioLamThem + "' WHERE IdChamCong = '" + IdChamCong + "'");
             MessageBox.Show("Đã sửa thông tin chấm công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             hienthithongtinaidachamcong();
         }
@@ -41,7 +41,7 @@ namespace DoAnNhanSuBanChuan.ChamCong.NhapThongTin
             if (kiemtratrung() == true)
             {
                 ttchamconghangngay_Load();
-                DataTable chamcongdilam = chamcong.CreateTable("INSERT INTO CHAMCONGHANGNGAY(MaNV,NgayDiLam,ThongTinDiLam,SoGioLamThem) VALUES('" + MaNV + "','" + dtpNgayHomNay.Text + "','Nghỉ','0')");
+                DataTable chamcongdilam = chamcong.CreateTable("INSERT INTO CHAMCONGHANGNGAY(MaNV,NgayDiLam,ThongTinDiLam,SoGioLamThem) VALUES('" + MaNV + "','" + dtpNgayHomNay.Text + "',N'Nghỉ','0')");
                 hienthithongtinaidachamcong();
             }
             else
@@ -55,7 +55,7 @@ namespace DoAnNhanSuBanChuan.ChamCong.NhapThongTin
             if (kiemtratrung() == true)
             {
                 ttchamconghangngay_Load();
-                DataTable chamcongdilam = chamcong.CreateTable("INSERT INTO CHAMCONGHANGNGAY(MaNV,NgayDiLam,ThongTinDiLam,SoGioLamThem) VALUES('" + MaNV + "','" + dtpNgayHomNay.Text + "','Đi làm','0')");
+                DataTable chamcongdilam = chamcong.CreateTable("INSERT INTO CHAMCONGHANGNGAY(MaNV,NgayDiLam,ThongTinDiLam,SoGioLamThem) VALUES('" + MaNV + "','" + dtpNgayHomNay.Text + "',N'Đi làm','0')");
                 hienthithongtinaidachamcong();
             }
             else
@@ -66,7 +66,7 @@ namespace DoAnNhanSuBanChuan.ChamCong.NhapThongTin
 
         public void hienthithongtinchamcong()
         {
-            DataTable hienthithongtinchamcong = chamcong.CreateTable("SELECT MaNV, HoTen FROM NHANVIEN ");
+            DataTable hienthithongtinchamcong = chamcong.CreateTable("SELECT MaNV, HoTen FROM NHANVIEN WHERE TrangThai = N'Đang làm việc'");
             gcChamCong.DataSource = hienthithongtinchamcong;
         }
 

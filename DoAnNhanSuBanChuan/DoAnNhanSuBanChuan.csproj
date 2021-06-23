@@ -85,6 +85,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChamCong\ChiXemChamCongTongHop\rpDanhSachNgayCong.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ChamCong\ChiXemChamCongTongHop\rpDanhSachNgayCong.Designer.cs">
+      <DependentUpon>rpDanhSachNgayCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChamCong\ChiXemChamCongTongHop\ucChamCongTongHop.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -128,27 +134,41 @@
     <Compile Include="HoSo\ThongTin\fmThongTinNhanSu.Designer.cs">
       <DependentUpon>fmThongTinNhanSu.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoSo\ThongTin\rpThongTinNhanVien.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HoSo\ThongTin\rpThongTinNhanVien.Designer.cs">
+      <DependentUpon>rpThongTinNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="HoSo\ThongTin\ucThongTinNhanSu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="HoSo\ThongTin\ucThongTinNhanSu.Designer.cs">
       <DependentUpon>ucThongTinNhanSu.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyNhanSuBKTDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyNhanSuBKTDataSet.xsd</DependentUpon>
+    <Compile Include="TinhLuong\TinhToan\rpBangLuong.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="QuanLyNhanSuBKTDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyNhanSuBKTDataSet1.xsd</DependentUpon>
+    <Compile Include="TinhLuong\TinhToan\rpBangLuong.Designer.cs">
+      <DependentUpon>rpBangLuong.cs</DependentUpon>
     </Compile>
     <Compile Include="TinhLuong\TinhToan\ucTinhToanLuong.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="TinhLuong\TinhToan\ucTinhToanLuong.Designer.cs">
       <DependentUpon>ucTinhToanLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TongQuan\DongThoiGian\ucSinhNhatNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TongQuan\DongThoiGian\ucSinhNhatNhanVien.Designer.cs">
+      <DependentUpon>ucSinhNhatNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TongQuan\DongThoiGian\ucSuKienNhiemVu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TongQuan\DongThoiGian\ucSuKienNhiemVu.Designer.cs">
+      <DependentUpon>ucSuKienNhiemVu.cs</DependentUpon>
     </Compile>
     <Compile Include="TongQuan\ThietLap\TaoNguoiDungHeThong.cs">
       <SubType>Form</SubType>
@@ -182,6 +202,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChamCong\ChiXemChamCongTongHop\rpDanhSachNgayCong.resx">
+      <DependentUpon>rpDanhSachNgayCong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChamCong\ChiXemChamCongTongHop\ucChamCongTongHop.resx">
       <DependentUpon>ucChamCongTongHop.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,12 +226,24 @@
     <EmbeddedResource Include="HoSo\ThongTin\fmThongTinNhanSu.resx">
       <DependentUpon>fmThongTinNhanSu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HoSo\ThongTin\rpThongTinNhanVien.resx">
+      <DependentUpon>rpThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HoSo\ThongTin\ucThongTinNhanSu.resx">
       <DependentUpon>ucThongTinNhanSu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="TinhLuong\TinhToan\rpBangLuong.resx">
+      <DependentUpon>rpBangLuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TinhLuong\TinhToan\ucTinhToanLuong.resx">
       <DependentUpon>ucTinhToanLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TongQuan\DongThoiGian\ucSinhNhatNhanVien.resx">
+      <DependentUpon>ucSinhNhatNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TongQuan\DongThoiGian\ucSuKienNhiemVu.resx">
+      <DependentUpon>ucSuKienNhiemVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TongQuan\ThietLap\TaoNguoiDungHeThong.resx">
       <DependentUpon>TaoNguoiDungHeThong.cs</DependentUpon>
@@ -245,28 +280,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QuanLyNhanSuBKTDataSet.xsc">
-      <DependentUpon>QuanLyNhanSuBKTDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyNhanSuBKTDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyNhanSuBKTDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyNhanSuBKTDataSet.xss">
-      <DependentUpon>QuanLyNhanSuBKTDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyNhanSuBKTDataSet1.xsc">
-      <DependentUpon>QuanLyNhanSuBKTDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyNhanSuBKTDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyNhanSuBKTDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyNhanSuBKTDataSet1.xss">
-      <DependentUpon>QuanLyNhanSuBKTDataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\4c358729.png" />

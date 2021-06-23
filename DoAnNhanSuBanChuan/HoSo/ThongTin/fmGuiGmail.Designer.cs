@@ -46,6 +46,8 @@
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
             this.cbGuiToanBo = new System.Windows.Forms.CheckBox();
+            this.pbThanhPhanTram = new System.Windows.Forms.ProgressBar();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
             // 
             // label3
@@ -208,12 +210,31 @@
             this.cbGuiToanBo.UseVisualStyleBackColor = false;
             this.cbGuiToanBo.CheckedChanged += new System.EventHandler(this.cbGuiToanBo_CheckedChanged);
             // 
+            // pbThanhPhanTram
+            // 
+            this.pbThanhPhanTram.Location = new System.Drawing.Point(268, 385);
+            this.pbThanhPhanTram.Name = "pbThanhPhanTram";
+            this.pbThanhPhanTram.Size = new System.Drawing.Size(272, 23);
+            this.pbThanhPhanTram.Step = 1;
+            this.pbThanhPhanTram.TabIndex = 24;
+            this.pbThanhPhanTram.Visible = false;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(435, 118);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 35);
+            this.simpleButton1.TabIndex = 26;
+            this.simpleButton1.Text = "Thoát";
+            // 
             // fmGuiGmail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(556, 420);
+            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.pbThanhPhanTram);
             this.Controls.Add(this.cbGuiToanBo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbHien);
@@ -261,5 +282,7 @@
         private DevExpress.XtraEditors.SimpleButton btnThoat;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox cbGuiToanBo;
+        private System.Windows.Forms.ProgressBar pbThanhPhanTram;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

@@ -452,8 +452,8 @@
             this.cbThongTinLam.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbThongTinLam.Items.AddRange(new object[] {
-            "V",
-            "X"});
+            "Đi làm",
+            "Nghỉ"});
             this.cbThongTinLam.Name = "cbThongTinLam";
             // 
             // gridColumn9

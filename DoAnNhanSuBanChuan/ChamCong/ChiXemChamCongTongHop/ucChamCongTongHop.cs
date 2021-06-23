@@ -32,5 +32,13 @@ namespace DoAnNhanSuBanChuan.ChamCong.ChiXemChamCongTongHop
             DataTable thongtinchamcongtonghop = chamcongtonghop.CreateTable("SELECT NgayDiLam, ThongTinDiLam, SoGioLamThem FROM CHAMCONGHANGNGAY WHERE  NgayDiLam BETWEEN '"+ dtpTuNgay.Text + "' AND '"+ dtpDenNgay.Text + "'  AND MaNV = '"+cbMaNV.Text+"'");
             gcChamCongTongHop.DataSource = thongtinchamcongtonghop;
         }
+
+        private void btnBaoCao_Click(object sender, EventArgs e)
+        {
+            var r = new rpDanhSachNgayCong();
+            DataTable inthongtin = chamcongtonghop.CreateTable("SELECT NgayDiLam, ThongTinDiLam, SoGioLamThem FROM CHAMCONGHANGNGAY WHERE  NgayDiLam BETWEEN '" + dtpTuNgay.Text + "' AND '" + dtpDenNgay.Text + "'  AND MaNV = '" + cbMaNV.Text + "'");
+            r.DataSource = inthongtin;
+            r.hienthipreview();
+        }
     }
 }

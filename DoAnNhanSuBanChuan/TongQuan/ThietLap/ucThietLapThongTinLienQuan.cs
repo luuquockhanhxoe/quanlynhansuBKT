@@ -108,19 +108,19 @@ namespace DoAnNhanSuBanChuan.TongQuan.ThietLap
 
         private void BtnThemLuong_Click(object sender, EventArgs e)
         {
-            ttbacluong_load();
-            DataTable kiemtral = ttlq.CreateTable("SELECT * FROM LUONG ");
-            if (kiemtral.Select("BacLuong ='" + BacLuong + "'").Length == 1 || kiemtral.Select("LuongCoBan = '" + LuongCoBan + "'").Length == 1 )
-            {
-                MessageBox.Show("Trùng thông tin lương!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                DataTable themluong = ttlq.CreateTable("INSERT INTO LUONG VALUES('" + BacLuong + "','" + LuongCoBan + "')");
-                MessageBox.Show("Đã thêm thông tin lương !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DataTable hienthiluong = ttlq.CreateTable("SELECT * FROM LUONG ");
-                gcLuong.DataSource = hienthiluong;
-            }
+                ttbacluong_load();
+                DataTable kiemtral = ttlq.CreateTable("SELECT * FROM LUONG ");
+                if (kiemtral.Select("BacLuong ='" + BacLuong + "'").Length == 1 || kiemtral.Select("LuongCoBan = '" + LuongCoBan + "'").Length == 1)
+                {
+                    MessageBox.Show("Trùng thông tin lương!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    DataTable themluong = ttlq.CreateTable("INSERT INTO LUONG VALUES('" + BacLuong + "','" + LuongCoBan + "')");
+                    MessageBox.Show("Đã thêm thông tin lương !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DataTable hienthiluong = ttlq.CreateTable("SELECT * FROM LUONG ");
+                    gcLuong.DataSource = hienthiluong;
+                }
         }
 
         private void BtnXoaBH_Click(object sender, EventArgs e)

@@ -43,9 +43,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnHopDong = new DevExpress.XtraEditors.SimpleButton();
             this.spbtnThemNhanSu = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
             this.spbtnXemVaSuaNhanSu = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnBaoCao = new DevExpress.XtraEditors.SimpleButton();
             this.spbtnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnGmail = new DevExpress.XtraEditors.SimpleButton();
             this.btnLamMoi = new DevExpress.XtraEditors.SimpleButton();
@@ -380,9 +379,8 @@
             // 
             this.panel3.Controls.Add(this.btnHopDong);
             this.panel3.Controls.Add(this.spbtnThemNhanSu);
-            this.panel3.Controls.Add(this.simpleButton8);
             this.panel3.Controls.Add(this.spbtnXemVaSuaNhanSu);
-            this.panel3.Controls.Add(this.simpleButton5);
+            this.panel3.Controls.Add(this.btnBaoCao);
             this.panel3.Controls.Add(this.spbtnXoa);
             this.panel3.Controls.Add(this.btnGmail);
             this.panel3.Controls.Add(this.btnLamMoi);
@@ -415,17 +413,6 @@
             this.spbtnThemNhanSu.Text = "Thêm ";
             this.spbtnThemNhanSu.Click += new System.EventHandler(this.spbtnThemNhanSu_Click);
             // 
-            // simpleButton8
-            // 
-            this.simpleButton8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton8.ImageOptions.Image")));
-            this.simpleButton8.Location = new System.Drawing.Point(541, 4);
-            this.simpleButton8.Name = "simpleButton8";
-            this.simpleButton8.Size = new System.Drawing.Size(57, 38);
-            this.simpleButton8.StyleController = this.layoutControl1;
-            this.simpleButton8.TabIndex = 163;
-            this.simpleButton8.Text = "In ";
-            this.simpleButton8.Click += new System.EventHandler(this.simpleButton8_Click);
-            // 
             // spbtnXemVaSuaNhanSu
             // 
             this.spbtnXemVaSuaNhanSu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnXemVaSuaNhanSu.ImageOptions.Image")));
@@ -437,16 +424,16 @@
             this.spbtnXemVaSuaNhanSu.Text = "Xem và Sửa";
             this.spbtnXemVaSuaNhanSu.Click += new System.EventHandler(this.spbtnXemVaSuaNhanSu_Click);
             // 
-            // simpleButton5
+            // btnBaoCao
             // 
-            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(352, 4);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(82, 38);
-            this.simpleButton5.StyleController = this.layoutControl1;
-            this.simpleButton5.TabIndex = 162;
-            this.simpleButton5.Text = "Báo cáo";
-            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
+            this.btnBaoCao.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBaoCao.ImageOptions.Image")));
+            this.btnBaoCao.Location = new System.Drawing.Point(352, 4);
+            this.btnBaoCao.Name = "btnBaoCao";
+            this.btnBaoCao.Size = new System.Drawing.Size(82, 38);
+            this.btnBaoCao.StyleController = this.layoutControl1;
+            this.btnBaoCao.TabIndex = 162;
+            this.btnBaoCao.Text = "Báo cáo";
+            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
             // 
             // spbtnXoa
             // 
@@ -462,7 +449,7 @@
             // btnGmail
             // 
             this.btnGmail.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGmail.ImageOptions.Image")));
-            this.btnGmail.Location = new System.Drawing.Point(265, 3);
+            this.btnGmail.Location = new System.Drawing.Point(265, 4);
             this.btnGmail.Name = "btnGmail";
             this.btnGmail.Size = new System.Drawing.Size(81, 38);
             this.btnGmail.StyleController = this.layoutControl1;
@@ -2064,8 +2051,7 @@
         private DevExpress.XtraEditors.SimpleButton btnLamMoi;
         private System.Windows.Forms.ComboBox comboBox1;
         private DevExpress.XtraEditors.SimpleButton spbtnThemNhanSu;
-        private DevExpress.XtraEditors.SimpleButton simpleButton8;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton btnBaoCao;
         private DevExpress.XtraEditors.SimpleButton btnGmail;
         private DevExpress.XtraEditors.SimpleButton spbtnXoa;
         private DevExpress.XtraEditors.SimpleButton spbtnXemVaSuaNhanSu;

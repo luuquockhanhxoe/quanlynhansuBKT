@@ -28,32 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView1 = new DevExpress.XtraCharts.PieSeriesView();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.chartTuoi = new DevExpress.XtraCharts.ChartControl();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.ChartGioiTinh = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lbTongNhanVien = new System.Windows.Forms.Label();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
+            this.chả = new DevExpress.XtraEditors.GroupControl();
             this.chartBienDongNhanSu = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.chartNhanSuHocVan = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartHocVan = new DevExpress.XtraCharts.ChartControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.chartTrangThai = new DevExpress.XtraCharts.ChartControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -61,25 +56,27 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.charTuoi = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartTrangThai = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTuoi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChartGioiTinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
-            this.groupControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chả)).BeginInit();
+            this.chả.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartBienDongNhanSu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartNhanSuHocVan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartHocVan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTrangThai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -87,8 +84,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.charTuoi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartTrangThai)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -108,12 +103,23 @@
             // 
             // groupControl5
             // 
-            this.groupControl5.Controls.Add(this.charTuoi);
+            this.groupControl5.Controls.Add(this.chartTuoi);
             this.groupControl5.Location = new System.Drawing.Point(763, 12);
             this.groupControl5.Name = "groupControl5";
             this.groupControl5.Size = new System.Drawing.Size(261, 215);
             this.groupControl5.TabIndex = 8;
             this.groupControl5.Text = "Thống kê nhân sự theo TUỔI";
+            // 
+            // chartTuoi
+            // 
+            this.chartTuoi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartTuoi.IndicatorsPaletteName = "Green Yellow";
+            this.chartTuoi.Legend.Name = "Default Legend";
+            this.chartTuoi.Location = new System.Drawing.Point(2, 20);
+            this.chartTuoi.Name = "chartTuoi";
+            this.chartTuoi.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.chartTuoi.Size = new System.Drawing.Size(257, 193);
+            this.chartTuoi.TabIndex = 1;
             // 
             // groupControl4
             // 
@@ -127,19 +133,19 @@
             // 
             // ChartGioiTinh
             // 
-            chartArea2.Name = "ChartArea1";
-            this.ChartGioiTinh.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.ChartGioiTinh.ChartAreas.Add(chartArea1);
             this.ChartGioiTinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.ChartGioiTinh.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            this.ChartGioiTinh.Legends.Add(legend1);
             this.ChartGioiTinh.Location = new System.Drawing.Point(2, 20);
             this.ChartGioiTinh.Name = "ChartGioiTinh";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pyramid;
-            series2.Legend = "Legend1";
-            series2.Name = "srNamNu";
-            series2.YValuesPerPoint = 6;
-            this.ChartGioiTinh.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pyramid;
+            series1.Legend = "Legend1";
+            series1.Name = "srNamNu";
+            series1.YValuesPerPoint = 6;
+            this.ChartGioiTinh.Series.Add(series1);
             this.ChartGioiTinh.Size = new System.Drawing.Size(235, 193);
             this.ChartGioiTinh.TabIndex = 2;
             this.ChartGioiTinh.Text = "chart4";
@@ -157,68 +163,64 @@
             // groupControl3
             // 
             this.groupControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.groupControl3.Controls.Add(this.groupControl6);
+            this.groupControl3.Controls.Add(this.chả);
             this.groupControl3.Location = new System.Drawing.Point(520, 231);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(504, 262);
             this.groupControl3.TabIndex = 6;
             this.groupControl3.Text = "Tổng số nhân viên theo hợp đồng lao động";
             // 
-            // groupControl6
+            // chả
             // 
-            this.groupControl6.Controls.Add(this.chartBienDongNhanSu);
-            this.groupControl6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl6.Location = new System.Drawing.Point(0, 0);
-            this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(504, 262);
-            this.groupControl6.TabIndex = 6;
-            this.groupControl6.Text = "BIẾN ĐỘNG NHÂN SỰ";
+            this.chả.Controls.Add(this.chartBienDongNhanSu);
+            this.chả.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chả.Location = new System.Drawing.Point(0, 0);
+            this.chả.Name = "chả";
+            this.chả.Size = new System.Drawing.Size(504, 262);
+            this.chả.TabIndex = 6;
+            this.chả.Text = "BIẾN ĐỘNG NHÂN SỰ";
             // 
             // chartBienDongNhanSu
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartBienDongNhanSu.ChartAreas.Add(chartArea3);
+            chartArea2.Name = "ChartArea1";
+            this.chartBienDongNhanSu.ChartAreas.Add(chartArea2);
             this.chartBienDongNhanSu.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chartBienDongNhanSu.Legends.Add(legend3);
+            legend2.Name = "Legend1";
+            this.chartBienDongNhanSu.Legends.Add(legend2);
             this.chartBienDongNhanSu.Location = new System.Drawing.Point(2, 20);
             this.chartBienDongNhanSu.Name = "chartBienDongNhanSu";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Legend = "Legend1";
-            series3.LegendText = "Số lượng nhân viên";
-            series3.Name = "srBienDongNhanSu";
-            this.chartBienDongNhanSu.Series.Add(series3);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.LegendText = "Số lượng nhân viên";
+            series2.Name = "srBienDongNhanSu";
+            this.chartBienDongNhanSu.Series.Add(series2);
             this.chartBienDongNhanSu.Size = new System.Drawing.Size(500, 240);
             this.chartBienDongNhanSu.TabIndex = 0;
             this.chartBienDongNhanSu.Text = "chart1";
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.chartNhanSuHocVan);
+            this.groupControl2.Controls.Add(this.chartHocVan);
             this.groupControl2.Location = new System.Drawing.Point(12, 231);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(504, 262);
             this.groupControl2.TabIndex = 5;
             this.groupControl2.Text = "Thống kê nhân sự theo TRÌNH ĐỘ HỌC VẤN";
             // 
-            // chartNhanSuHocVan
+            // chartHocVan
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chartNhanSuHocVan.ChartAreas.Add(chartArea4);
-            this.chartNhanSuHocVan.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.chartNhanSuHocVan.Legends.Add(legend4);
-            this.chartNhanSuHocVan.Location = new System.Drawing.Point(2, 20);
-            this.chartNhanSuHocVan.Name = "chartNhanSuHocVan";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series4.Legend = "Legend1";
-            series4.Name = "srNhanSuHocVan";
-            this.chartNhanSuHocVan.Series.Add(series4);
-            this.chartNhanSuHocVan.Size = new System.Drawing.Size(500, 240);
-            this.chartNhanSuHocVan.TabIndex = 0;
-            this.chartNhanSuHocVan.Text = "chart2";
+            this.chartHocVan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartHocVan.IndicatorsPaletteName = "Orange";
+            this.chartHocVan.Legend.Name = "Default Legend";
+            this.chartHocVan.Location = new System.Drawing.Point(2, 20);
+            this.chartHocVan.Name = "chartHocVan";
+            series3.Name = "srtest";
+            series3.View = pieSeriesView1;
+            this.chartHocVan.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series3};
+            this.chartHocVan.Size = new System.Drawing.Size(500, 240);
+            this.chartHocVan.TabIndex = 1;
             // 
             // groupControl1
             // 
@@ -230,6 +232,16 @@
             this.groupControl1.Size = new System.Drawing.Size(504, 215);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Thống kê nhân sự theo TRẠNG THÁI LÀM VIỆC";
+            // 
+            // chartTrangThai
+            // 
+            this.chartTrangThai.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartTrangThai.Legend.Name = "Default Legend";
+            this.chartTrangThai.Location = new System.Drawing.Point(2, 20);
+            this.chartTrangThai.Name = "chartTrangThai";
+            this.chartTrangThai.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.chartTrangThai.Size = new System.Drawing.Size(500, 193);
+            this.chartTrangThai.TabIndex = 0;
             // 
             // layoutControlGroup1
             // 
@@ -298,46 +310,6 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(508, 254);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // charTuoi
-            // 
-            this.charTuoi.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.charTuoi.ChartAreas.Add(chartArea1);
-            this.charTuoi.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.charTuoi.Legends.Add(legend1);
-            this.charTuoi.Location = new System.Drawing.Point(2, 20);
-            this.charTuoi.Name = "charTuoi";
-            this.charTuoi.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.LegendText = "Tuổi";
-            series1.Name = "srTuoi";
-            this.charTuoi.Series.Add(series1);
-            this.charTuoi.Size = new System.Drawing.Size(257, 193);
-            this.charTuoi.TabIndex = 2;
-            this.charTuoi.Text = "chart4";
-            // 
-            // chartTrangThai
-            // 
-            this.chartTrangThai.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea5.Name = "ChartArea1";
-            this.chartTrangThai.ChartAreas.Add(chartArea5);
-            this.chartTrangThai.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend5.Name = "Legend1";
-            this.chartTrangThai.Legends.Add(legend5);
-            this.chartTrangThai.Location = new System.Drawing.Point(2, 20);
-            this.chartTrangThai.Name = "chartTrangThai";
-            series5.ChartArea = "ChartArea1";
-            series5.Color = System.Drawing.Color.Red;
-            series5.Legend = "Legend1";
-            series5.LegendText = "Trạng Thái";
-            series5.Name = "srTrangThai";
-            this.chartTrangThai.Series.Add(series5);
-            this.chartTrangThai.Size = new System.Drawing.Size(500, 193);
-            this.chartTrangThai.TabIndex = 1;
-            this.chartTrangThai.Text = "chart4";
-            // 
             // ucThongKeNhanSu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,20 +321,24 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             this.groupControl5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartTuoi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChartGioiTinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
-            this.groupControl6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chả)).EndInit();
+            this.chả.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartBienDongNhanSu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartNhanSuHocVan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartHocVan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartTrangThai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -370,8 +346,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.charTuoi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartTrangThai)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -391,12 +365,12 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraEditors.GroupControl groupControl6;
+        private DevExpress.XtraEditors.GroupControl chả;
         private System.Windows.Forms.Label lbTongNhanVien;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartNhanSuHocVan;
         private System.Windows.Forms.DataVisualization.Charting.Chart ChartGioiTinh;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartBienDongNhanSu;
-        private System.Windows.Forms.DataVisualization.Charting.Chart charTuoi;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartTrangThai;
+        private DevExpress.XtraCharts.ChartControl chartHocVan;
+        private DevExpress.XtraCharts.ChartControl chartTrangThai;
+        private DevExpress.XtraCharts.ChartControl chartTuoi;
     }
 }

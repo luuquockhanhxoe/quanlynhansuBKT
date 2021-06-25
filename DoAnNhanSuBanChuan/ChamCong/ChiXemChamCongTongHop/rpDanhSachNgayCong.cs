@@ -11,6 +11,7 @@ namespace DoAnNhanSuBanChuan.ChamCong.ChiXemChamCongTongHop
         public rpDanhSachNgayCong()
         {
             InitializeComponent();
+            lbNgayThangNam.Text = string.Format("Hà Nội, ngày {0} tháng {1} năm {2}", DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
         }
         public void hienthipreview()
         {

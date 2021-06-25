@@ -35,10 +35,10 @@ namespace DoAnNhanSuBanChuan
             this.btnNhanSu = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnSinhNhatNhanVien = new DevExpress.XtraBars.BarButtonItem();
-            this.btnSuKienNhiemVu = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnNguoiDungHeThong = new DevExpress.XtraBars.BarButtonItem();
             this.btnThongTinLienQuan = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSuKienNhiemVu = new DevExpress.XtraBars.BarButtonItem();
             this.btnPhongBanLamViec = new DevExpress.XtraBars.BarButtonItem();
             this.btnNguoiDungHeThong1 = new DevExpress.XtraBars.BarButtonItem();
             this.btnPhongBan = new DevExpress.XtraBars.BarButtonItem();
@@ -134,14 +134,6 @@ namespace DoAnNhanSuBanChuan
             this.btnSinhNhatNhanVien.Name = "btnSinhNhatNhanVien";
             this.btnSinhNhatNhanVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSinhNhatNhanVien_ItemClick);
             // 
-            // btnSuKienNhiemVu
-            // 
-            this.btnSuKienNhiemVu.Caption = "Sự Kiện Nhiệm Vụ";
-            this.btnSuKienNhiemVu.Id = 9;
-            this.btnSuKienNhiemVu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSuKienNhiemVu.ImageOptions.Image")));
-            this.btnSuKienNhiemVu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSuKienNhiemVu.ImageOptions.LargeImage")));
-            this.btnSuKienNhiemVu.Name = "btnSuKienNhiemVu";
-            // 
             // ribbonPageGroup12
             // 
             this.ribbonPageGroup12.ItemLinks.Add(this.btnNguoiDungHeThong);
@@ -166,6 +158,14 @@ namespace DoAnNhanSuBanChuan
             this.btnThongTinLienQuan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThongTinLienQuan.ImageOptions.LargeImage")));
             this.btnThongTinLienQuan.Name = "btnThongTinLienQuan";
             this.btnThongTinLienQuan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThongTinLienQuan_ItemClick);
+            // 
+            // btnSuKienNhiemVu
+            // 
+            this.btnSuKienNhiemVu.Caption = "Sự Kiện Nhiệm Vụ";
+            this.btnSuKienNhiemVu.Id = 9;
+            this.btnSuKienNhiemVu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSuKienNhiemVu.ImageOptions.Image")));
+            this.btnSuKienNhiemVu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSuKienNhiemVu.ImageOptions.LargeImage")));
+            this.btnSuKienNhiemVu.Name = "btnSuKienNhiemVu";
             // 
             // btnPhongBanLamViec
             // 
@@ -575,6 +575,7 @@ namespace DoAnNhanSuBanChuan
             this.ClientSize = new System.Drawing.Size(1049, 484);
             this.Controls.Add(this.grControl);
             this.Controls.Add(this.ribbonControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "TrangChu";
             this.Ribbon = this.ribbonControl1;

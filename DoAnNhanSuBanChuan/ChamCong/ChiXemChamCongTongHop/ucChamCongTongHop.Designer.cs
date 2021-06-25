@@ -44,7 +44,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
             this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
-            this.btnIn = new DevExpress.XtraEditors.SimpleButton();
             this.btnBaoCao = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -196,7 +195,6 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.dtpDenNgay);
             this.panel2.Controls.Add(this.dtpTuNgay);
-            this.panel2.Controls.Add(this.btnIn);
             this.panel2.Controls.Add(this.btnBaoCao);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
@@ -239,15 +237,6 @@
             this.dtpTuNgay.Name = "dtpTuNgay";
             this.dtpTuNgay.Size = new System.Drawing.Size(94, 21);
             this.dtpTuNgay.TabIndex = 166;
-            // 
-            // btnIn
-            // 
-            this.btnIn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.ImageOptions.Image")));
-            this.btnIn.Location = new System.Drawing.Point(546, 17);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(57, 40);
-            this.btnIn.TabIndex = 165;
-            this.btnIn.Text = "In ";
             // 
             // btnBaoCao
             // 
@@ -324,7 +313,6 @@
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SimpleButton btnXem;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraEditors.SimpleButton btnIn;
         private DevExpress.XtraEditors.SimpleButton btnBaoCao;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpDenNgay;

@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DoAnNhanSuBanChuan.DataAccess;
-//https://www.google.com/settings/u/1/security/lesssecureapps
+using System.Diagnostics;
 namespace DoAnNhanSuBanChuan.HoSo.ThongTin
 {
     public partial class fmGuiGmail : Form
@@ -23,7 +23,6 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         {
             txtDen.Text = gmail;
         }
-
         public fmGuiGmail()
         {
             InitializeComponent();           
@@ -147,6 +146,11 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
             {
                 e.Cancel = true;
             }
+        }
+
+        private void linkDuongDan_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.google.com/settings/u/1/security/lesssecureapps");
         }
     }
 }

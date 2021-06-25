@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rpThongTinNhanVien));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
-            this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
-            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.table1 = new DevExpress.XtraReports.UI.XRTable();
             this.tableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.tableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -42,10 +39,13 @@
             this.tableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
             this.tableCell13 = new DevExpress.XtraReports.UI.XRTableCell();
             this.tableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.lbNgayThangNam = new DevExpress.XtraReports.UI.XRLabel();
-            this.label3 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.pictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.label2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lbNgayThangNam = new DevExpress.XtraReports.UI.XRLabel();
             this.label1 = new DevExpress.XtraReports.UI.XRLabel();
             this.table2 = new DevExpress.XtraReports.UI.XRTable();
             this.tableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -68,35 +68,6 @@
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // TopMargin
-            // 
-            this.TopMargin.HeightF = 97.75003F;
-            this.TopMargin.Name = "TopMargin";
-            this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.TopMargin.StylePriority.UseTextAlignment = false;
-            this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // BottomMargin
-            // 
-            this.BottomMargin.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.BottomMargin.HeightF = 100F;
-            this.BottomMargin.Name = "BottomMargin";
-            this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.BottomMargin.StylePriority.UseBorders = false;
-            this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // ReportHeader
-            // 
-            this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.pictureBox1,
-            this.label2,
-            this.label3,
-            this.lbNgayThangNam,
-            this.label1,
-            this.table2});
-            this.ReportHeader.HeightF = 287.5F;
-            this.ReportHeader.Name = "ReportHeader";
             // 
             // table1
             // 
@@ -184,17 +155,54 @@
             this.tableCell16.Text = "tableCell16";
             this.tableCell16.Weight = 0.25643894995523542D;
             // 
-            // lbNgayThangNam
+            // TopMargin
             // 
-            this.lbNgayThangNam.Font = new System.Drawing.Font("Times New Roman", 13F);
-            this.lbNgayThangNam.LocationFloat = new DevExpress.Utils.PointFloat(554.2501F, 110F);
-            this.lbNgayThangNam.Name = "lbNgayThangNam";
-            this.lbNgayThangNam.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lbNgayThangNam.SizeF = new System.Drawing.SizeF(413.7498F, 36.29169F);
-            this.lbNgayThangNam.StylePriority.UseFont = false;
-            this.lbNgayThangNam.StylePriority.UseTextAlignment = false;
-            this.lbNgayThangNam.Text = "Ngày Tháng Năm";
-            this.lbNgayThangNam.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.TopMargin.HeightF = 98F;
+            this.TopMargin.Name = "TopMargin";
+            this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.TopMargin.StylePriority.UseTextAlignment = false;
+            this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // BottomMargin
+            // 
+            this.BottomMargin.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.BottomMargin.HeightF = 100F;
+            this.BottomMargin.Name = "BottomMargin";
+            this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.BottomMargin.StylePriority.UseBorders = false;
+            this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // ReportHeader
+            // 
+            this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.pictureBox1,
+            this.label2,
+            this.label3,
+            this.lbNgayThangNam,
+            this.label1,
+            this.table2});
+            this.ReportHeader.HeightF = 287.5F;
+            this.ReportHeader.Name = "ReportHeader";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(9.99999F, 0F);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.SizeF = new System.Drawing.SizeF(138.269F, 79.25002F);
+            this.pictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold);
+            this.label2.LocationFloat = new DevExpress.Utils.PointFloat(319.8262F, 0F);
+            this.label2.Name = "label2";
+            this.label2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.label2.SizeF = new System.Drawing.SizeF(379.1667F, 29.87502F);
+            this.label2.StylePriority.UseFont = false;
+            this.label2.StylePriority.UseTextAlignment = false;
+            this.label2.Text = "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM";
+            this.label2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // label3
             // 
@@ -210,25 +218,17 @@
             this.label3.Text = "Độc lập - Tự do - Hạnh phúc";
             this.label3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
-            // label2
+            // lbNgayThangNam
             // 
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold);
-            this.label2.LocationFloat = new DevExpress.Utils.PointFloat(319.8262F, 0F);
-            this.label2.Name = "label2";
-            this.label2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.label2.SizeF = new System.Drawing.SizeF(379.1667F, 29.87502F);
-            this.label2.StylePriority.UseFont = false;
-            this.label2.StylePriority.UseTextAlignment = false;
-            this.label2.Text = "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM";
-            this.label2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(9.99999F, 0F);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.SizeF = new System.Drawing.SizeF(138.269F, 79.25002F);
-            this.pictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
+            this.lbNgayThangNam.Font = new System.Drawing.Font("Times New Roman", 13F);
+            this.lbNgayThangNam.LocationFloat = new DevExpress.Utils.PointFloat(554.2501F, 110F);
+            this.lbNgayThangNam.Name = "lbNgayThangNam";
+            this.lbNgayThangNam.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lbNgayThangNam.SizeF = new System.Drawing.SizeF(413.7498F, 36.29169F);
+            this.lbNgayThangNam.StylePriority.UseFont = false;
+            this.lbNgayThangNam.StylePriority.UseTextAlignment = false;
+            this.lbNgayThangNam.Text = "Ngày Tháng Năm";
+            this.lbNgayThangNam.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // label1
             // 
@@ -322,7 +322,7 @@
             this.BottomMargin,
             this.ReportHeader});
             this.Landscape = true;
-            this.Margins = new System.Drawing.Printing.Margins(101, 100, 98, 100);
+            this.Margins = new System.Drawing.Printing.Margins(96, 100, 98, 100);
             this.PageHeight = 827;
             this.PageWidth = 1169;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;

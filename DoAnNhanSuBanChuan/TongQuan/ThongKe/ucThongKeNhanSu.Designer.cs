@@ -104,9 +104,9 @@
             // groupControl5
             // 
             this.groupControl5.Controls.Add(this.chartTuoi);
-            this.groupControl5.Location = new System.Drawing.Point(763, 12);
+            this.groupControl5.Location = new System.Drawing.Point(672, 12);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(261, 215);
+            this.groupControl5.Size = new System.Drawing.Size(352, 215);
             this.groupControl5.TabIndex = 8;
             this.groupControl5.Text = "Thống kê nhân sự theo TUỔI";
             // 
@@ -118,14 +118,14 @@
             this.chartTuoi.Location = new System.Drawing.Point(2, 20);
             this.chartTuoi.Name = "chartTuoi";
             this.chartTuoi.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartTuoi.Size = new System.Drawing.Size(257, 193);
+            this.chartTuoi.Size = new System.Drawing.Size(348, 193);
             this.chartTuoi.TabIndex = 1;
             // 
             // groupControl4
             // 
             this.groupControl4.Controls.Add(this.ChartGioiTinh);
             this.groupControl4.Controls.Add(this.lbTongNhanVien);
-            this.groupControl4.Location = new System.Drawing.Point(520, 12);
+            this.groupControl4.Location = new System.Drawing.Point(429, 12);
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.Size = new System.Drawing.Size(239, 215);
             this.groupControl4.TabIndex = 7;
@@ -164,9 +164,9 @@
             // 
             this.groupControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.groupControl3.Controls.Add(this.chả);
-            this.groupControl3.Location = new System.Drawing.Point(520, 231);
+            this.groupControl3.Location = new System.Drawing.Point(429, 231);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(504, 262);
+            this.groupControl3.Size = new System.Drawing.Size(595, 262);
             this.groupControl3.TabIndex = 6;
             this.groupControl3.Text = "Tổng số nhân viên theo hợp đồng lao động";
             // 
@@ -176,7 +176,7 @@
             this.chả.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chả.Location = new System.Drawing.Point(0, 0);
             this.chả.Name = "chả";
-            this.chả.Size = new System.Drawing.Size(504, 262);
+            this.chả.Size = new System.Drawing.Size(595, 262);
             this.chả.TabIndex = 6;
             this.chả.Text = "BIẾN ĐỘNG NHÂN SỰ";
             // 
@@ -195,7 +195,7 @@
             series2.LegendText = "Số lượng nhân viên";
             series2.Name = "srBienDongNhanSu";
             this.chartBienDongNhanSu.Series.Add(series2);
-            this.chartBienDongNhanSu.Size = new System.Drawing.Size(500, 240);
+            this.chartBienDongNhanSu.Size = new System.Drawing.Size(591, 240);
             this.chartBienDongNhanSu.TabIndex = 0;
             this.chartBienDongNhanSu.Text = "chart1";
             // 
@@ -204,7 +204,7 @@
             this.groupControl2.Controls.Add(this.chartHocVan);
             this.groupControl2.Location = new System.Drawing.Point(12, 231);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(504, 262);
+            this.groupControl2.Size = new System.Drawing.Size(413, 262);
             this.groupControl2.TabIndex = 5;
             this.groupControl2.Text = "Thống kê nhân sự theo TRÌNH ĐỘ HỌC VẤN";
             // 
@@ -219,7 +219,7 @@
             series3.View = pieSeriesView1;
             this.chartHocVan.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series3};
-            this.chartHocVan.Size = new System.Drawing.Size(500, 240);
+            this.chartHocVan.Size = new System.Drawing.Size(409, 240);
             this.chartHocVan.TabIndex = 1;
             // 
             // groupControl1
@@ -229,7 +229,7 @@
             this.groupControl1.Controls.Add(this.chartTrangThai);
             this.groupControl1.Location = new System.Drawing.Point(12, 12);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(504, 215);
+            this.groupControl1.Size = new System.Drawing.Size(413, 215);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Thống kê nhân sự theo TRẠNG THÁI LÀM VIỆC";
             // 
@@ -240,7 +240,7 @@
             this.chartTrangThai.Location = new System.Drawing.Point(2, 20);
             this.chartTrangThai.Name = "chartTrangThai";
             this.chartTrangThai.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartTrangThai.Size = new System.Drawing.Size(500, 193);
+            this.chartTrangThai.Size = new System.Drawing.Size(409, 193);
             this.chartTrangThai.TabIndex = 0;
             // 
             // layoutControlGroup1
@@ -262,7 +262,7 @@
             this.layoutControlItem1.Control = this.groupControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(508, 219);
+            this.layoutControlItem1.Size = new System.Drawing.Size(417, 219);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -271,23 +271,23 @@
             this.layoutControlItem2.Control = this.groupControl2;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 219);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(508, 266);
+            this.layoutControlItem2.Size = new System.Drawing.Size(417, 266);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.groupControl3;
-            this.layoutControlItem3.Location = new System.Drawing.Point(508, 219);
+            this.layoutControlItem3.Location = new System.Drawing.Point(417, 219);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(508, 266);
+            this.layoutControlItem3.Size = new System.Drawing.Size(599, 266);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.groupControl4;
-            this.layoutControlItem4.Location = new System.Drawing.Point(508, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(417, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(243, 219);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -296,9 +296,9 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.groupControl5;
-            this.layoutControlItem5.Location = new System.Drawing.Point(751, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(660, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(265, 219);
+            this.layoutControlItem5.Size = new System.Drawing.Size(356, 219);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 

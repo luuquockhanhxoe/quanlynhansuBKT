@@ -47,13 +47,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbGuiToanBo = new System.Windows.Forms.CheckBox();
             this.pbThanhPhanTram = new System.Windows.Forms.ProgressBar();
+            this.label7 = new System.Windows.Forms.Label();
+            this.linkDuongDan = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(16, 21);
+            this.label3.Location = new System.Drawing.Point(16, 37);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 3;
@@ -63,7 +65,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(16, 50);
+            this.label5.Location = new System.Drawing.Point(16, 66);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 4;
@@ -71,14 +73,14 @@
             // 
             // txtTenDangNhap
             // 
-            this.txtTenDangNhap.Location = new System.Drawing.Point(107, 14);
+            this.txtTenDangNhap.Location = new System.Drawing.Point(107, 30);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.Size = new System.Drawing.Size(186, 20);
             this.txtTenDangNhap.TabIndex = 5;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(107, 43);
+            this.txtMatKhau.Location = new System.Drawing.Point(107, 59);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(186, 20);
             this.txtMatKhau.TabIndex = 6;
@@ -86,7 +88,7 @@
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(107, 176);
+            this.txtMessage.Location = new System.Drawing.Point(107, 192);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Size = new System.Drawing.Size(433, 197);
@@ -94,14 +96,14 @@
             // 
             // txtNoiDung
             // 
-            this.txtNoiDung.Location = new System.Drawing.Point(107, 118);
+            this.txtNoiDung.Location = new System.Drawing.Point(107, 134);
             this.txtNoiDung.Name = "txtNoiDung";
             this.txtNoiDung.Size = new System.Drawing.Size(186, 20);
             this.txtNoiDung.TabIndex = 13;
             // 
             // txtDen
             // 
-            this.txtDen.Location = new System.Drawing.Point(107, 69);
+            this.txtDen.Location = new System.Drawing.Point(107, 85);
             this.txtDen.Multiline = true;
             this.txtDen.Name = "txtDen";
             this.txtDen.Size = new System.Drawing.Size(186, 42);
@@ -111,7 +113,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(12, 287);
+            this.label1.Location = new System.Drawing.Point(16, 305);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 11;
@@ -121,7 +123,7 @@
             // 
             this.sss.AutoSize = true;
             this.sss.BackColor = System.Drawing.Color.Transparent;
-            this.sss.Location = new System.Drawing.Point(16, 98);
+            this.sss.Location = new System.Drawing.Point(16, 114);
             this.sss.Name = "sss";
             this.sss.Size = new System.Drawing.Size(30, 13);
             this.sss.TabIndex = 10;
@@ -131,7 +133,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(16, 126);
+            this.label6.Location = new System.Drawing.Point(16, 142);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 13);
             this.label6.TabIndex = 14;
@@ -139,7 +141,7 @@
             // 
             // txtFileKem
             // 
-            this.txtFileKem.Location = new System.Drawing.Point(107, 148);
+            this.txtFileKem.Location = new System.Drawing.Point(107, 164);
             this.txtFileKem.Name = "txtFileKem";
             this.txtFileKem.ReadOnly = true;
             this.txtFileKem.Size = new System.Drawing.Size(186, 20);
@@ -148,7 +150,7 @@
             // btnKemFile
             // 
             this.btnKemFile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKemFile.ImageOptions.Image")));
-            this.btnKemFile.Location = new System.Drawing.Point(299, 150);
+            this.btnKemFile.Location = new System.Drawing.Point(299, 166);
             this.btnKemFile.Name = "btnKemFile";
             this.btnKemFile.Size = new System.Drawing.Size(54, 20);
             this.btnKemFile.TabIndex = 17;
@@ -159,7 +161,7 @@
             // 
             this.cbHien.AutoSize = true;
             this.cbHien.BackColor = System.Drawing.Color.Transparent;
-            this.cbHien.Location = new System.Drawing.Point(299, 49);
+            this.cbHien.Location = new System.Drawing.Point(299, 65);
             this.cbHien.Name = "cbHien";
             this.cbHien.Size = new System.Drawing.Size(48, 17);
             this.cbHien.TabIndex = 20;
@@ -170,7 +172,7 @@
             // btnGui
             // 
             this.btnGui.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGui.ImageOptions.Image")));
-            this.btnGui.Location = new System.Drawing.Point(107, 379);
+            this.btnGui.Location = new System.Drawing.Point(107, 395);
             this.btnGui.Name = "btnGui";
             this.btnGui.Size = new System.Drawing.Size(62, 35);
             this.btnGui.TabIndex = 8;
@@ -180,7 +182,7 @@
             // btnThoat
             // 
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(175, 379);
+            this.btnThoat.Location = new System.Drawing.Point(175, 395);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 35);
             this.btnThoat.TabIndex = 9;
@@ -191,7 +193,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(16, 156);
+            this.label2.Location = new System.Drawing.Point(16, 172);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 22;
@@ -201,7 +203,7 @@
             // 
             this.cbGuiToanBo.AutoSize = true;
             this.cbGuiToanBo.BackColor = System.Drawing.Color.Transparent;
-            this.cbGuiToanBo.Location = new System.Drawing.Point(299, 96);
+            this.cbGuiToanBo.Location = new System.Drawing.Point(299, 112);
             this.cbGuiToanBo.Name = "cbGuiToanBo";
             this.cbGuiToanBo.Size = new System.Drawing.Size(131, 17);
             this.cbGuiToanBo.TabIndex = 23;
@@ -211,19 +213,44 @@
             // 
             // pbThanhPhanTram
             // 
-            this.pbThanhPhanTram.Location = new System.Drawing.Point(268, 385);
+            this.pbThanhPhanTram.Location = new System.Drawing.Point(268, 401);
             this.pbThanhPhanTram.Name = "pbThanhPhanTram";
             this.pbThanhPhanTram.Size = new System.Drawing.Size(272, 23);
             this.pbThanhPhanTram.Step = 1;
             this.pbThanhPhanTram.TabIndex = 24;
             this.pbThanhPhanTram.Visible = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Location = new System.Drawing.Point(16, 11);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 13);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Bật chế độ tại:";
+            // 
+            // linkDuongDan
+            // 
+            this.linkDuongDan.AutoSize = true;
+            this.linkDuongDan.ForeColor = System.Drawing.Color.Transparent;
+            this.linkDuongDan.LinkColor = System.Drawing.Color.Black;
+            this.linkDuongDan.Location = new System.Drawing.Point(104, 11);
+            this.linkDuongDan.Name = "linkDuongDan";
+            this.linkDuongDan.Size = new System.Drawing.Size(127, 13);
+            this.linkDuongDan.TabIndex = 28;
+            this.linkDuongDan.TabStop = true;
+            this.linkDuongDan.Text = "Nhấp vào đây để mở link";
+            this.linkDuongDan.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkDuongDan_LinkClicked);
+            // 
             // fmGuiGmail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(556, 420);
+            this.ClientSize = new System.Drawing.Size(556, 434);
+            this.Controls.Add(this.linkDuongDan);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.pbThanhPhanTram);
             this.Controls.Add(this.cbGuiToanBo);
             this.Controls.Add(this.label2);
@@ -274,5 +301,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox cbGuiToanBo;
         private System.Windows.Forms.ProgressBar pbThanhPhanTram;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.LinkLabel linkDuongDan;
     }
 }

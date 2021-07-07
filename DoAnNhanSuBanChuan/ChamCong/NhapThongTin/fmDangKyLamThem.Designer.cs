@@ -78,8 +78,9 @@
             // 
             // dtpThoiGian
             // 
+            this.dtpThoiGian.CustomFormat = "dd/MM/yyyy";
             this.dtpThoiGian.Enabled = false;
-            this.dtpThoiGian.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpThoiGian.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpThoiGian.Location = new System.Drawing.Point(105, 77);
             this.dtpThoiGian.Name = "dtpThoiGian";
             this.dtpThoiGian.Size = new System.Drawing.Size(100, 20);

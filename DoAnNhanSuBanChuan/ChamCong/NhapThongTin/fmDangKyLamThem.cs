@@ -46,7 +46,7 @@ namespace DoAnNhanSuBanChuan.ChamCong.NhapThongTin
         {
             if (kiemtranhap() == true)
             {
-                DataTable dangky = dangkylamthem.CreateTable("UPDATE CHAMCONGHANGNGAY SET SoGioLamThem = '" + cbSoGioDangKy.Text + "' WHERE MaNV = '"+cbMaNV.Text+"' AND NgayDiLam = '"+dtpThoiGian.Text+"' ");
+                DataTable dangky = dangkylamthem.CreateTable("UPDATE CHAMCONGHANGNGAY SET SoGioLamThem = '" + cbSoGioDangKy.Text + "' WHERE MaNV = '"+cbMaNV.Text+"' AND NgayDiLam = '"+dtpThoiGian.Value+"' ");
                 MessageBox.Show("Đã đăng ký làm thêm giờ cho nhân viên mã " + cbMaNV.Text + "!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

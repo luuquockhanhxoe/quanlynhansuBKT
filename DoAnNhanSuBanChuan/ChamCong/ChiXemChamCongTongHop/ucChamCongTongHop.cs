@@ -29,14 +29,14 @@ namespace DoAnNhanSuBanChuan.ChamCong.ChiXemChamCongTongHop
 
         private void btnXem_Click(object sender, EventArgs e)
         {
-            DataTable thongtinchamcongtonghop = chamcongtonghop.CreateTable("SELECT NgayDiLam, ThongTinDiLam, SoGioLamThem FROM CHAMCONGHANGNGAY WHERE  NgayDiLam BETWEEN '"+ dtpTuNgay.Text + "' AND '"+ dtpDenNgay.Text + "'  AND MaNV = '"+cbMaNV.Text+"'");
+            DataTable thongtinchamcongtonghop = chamcongtonghop.CreateTable("SELECT CONVERT(nvarchar, NgayDiLam,103) as NgayDiLam, ThongTinDiLam, SoGioLamThem FROM CHAMCONGHANGNGAY WHERE  NgayDiLam BETWEEN '" + dtpTuNgay.Value + "' AND '"+ dtpDenNgay.Value + "'  AND MaNV = '"+cbMaNV.Text+"'");
             gcChamCongTongHop.DataSource = thongtinchamcongtonghop;
         }
 
         private void btnBaoCao_Click(object sender, EventArgs e)
         {
             var r = new rpDanhSachNgayCong();
-            DataTable inthongtin = chamcongtonghop.CreateTable("SELECT NgayDiLam, ThongTinDiLam, SoGioLamThem FROM CHAMCONGHANGNGAY WHERE  NgayDiLam BETWEEN '" + dtpTuNgay.Text + "' AND '" + dtpDenNgay.Text + "'  AND MaNV = '" + cbMaNV.Text + "'");
+            DataTable inthongtin = chamcongtonghop.CreateTable("SELECT CONVERT(varchar,NgayDiLam,103) as NgayDiLam, ThongTinDiLam, SoGioLamThem FROM CHAMCONGHANGNGAY WHERE  NgayDiLam BETWEEN '" + dtpTuNgay.Value + "' AND '" + dtpDenNgay.Value + "'  AND MaNV = '" + cbMaNV.Text + "'");
             r.DataSource = inthongtin;
             r.hienthipreview();
         }

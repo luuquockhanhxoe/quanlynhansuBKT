@@ -19,7 +19,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         Data_Access da = new Data_Access();
         void hienthithongtincoban()
         {
-            DataTable thongtincoban = da.CreateTable("SELECT MaNV,HoTen,GioiTinh,NgaySinh,SoCCCD,NgayCap,NoiCap,TrangThai,SoDienThoai,Gmail,QueQuan,NoiO,NguoiLienHe,SoDienThoaiNLH, NganHang, SoTaiKhoan, AnhChanDung FROM NHANVIEN");
+            DataTable thongtincoban = da.CreateTable("SELECT MaNV,HoTen,GioiTinh,CONVERT(varchar,NgaySinh,103) as NgaySinh,SoCCCD,CONVERT(varchar,NgayCap,103) as NgayCap,NoiCap,TrangThai,SoDienThoai,Gmail,QueQuan,NoiO,NguoiLienHe,SoDienThoaiNLH, NganHang, SoTaiKhoan, AnhChanDung FROM NHANVIEN");
             gcHienThiThongTin.DataSource = thongtincoban;
             ganketdulieu();
         }
@@ -62,7 +62,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         void hienthithongtinthunhap()
         {
             string tmp = maNV.Trim();
-            DataTable thongtinthunhap = da.CreateTable("SELECT * FROM TINHLUONGNHANVIEN WHERE MaNV = '" + tmp + "'");
+            DataTable thongtinthunhap = da.CreateTable("SELECT * FROM TIENLUONGNHANVIEN WHERE MaNV = '" + tmp + "'");
             gcThuNhap.DataSource = thongtinthunhap;
         }
         void hienthithongtinphucapbaohiem()
@@ -143,7 +143,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
                 DialogResult ThongBao = MessageBox.Show("Không tìm thấy dữ liệu!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             }
             else
-            {
+            {            
                 gcHienThiThongTin.DataSource = thongtincoban;
                 ganketdulieu();
             }

@@ -12,44 +12,24 @@ namespace DoAnNhanSuBanChuan
 {
     public partial class TrangChu : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public TrangChu(string nhiemvu) : this()    
+        public TrangChu(string nhiemvu) : this()
         {
             InitializeComponent();
-            if (nhiemvu == "Quản trị viên.")
+            if (nhiemvu == "Quản trị viên." || nhiemvu == "XEM BÁO CÁO - THỐNG KÊ")
             {
                 btnNhanSu.PerformClick();
             }
-            if (nhiemvu == "Thiết lập thông tin hồ sơ.")
+            if (nhiemvu == "Nhân viên.")
             {
                 btnNhanSu.Enabled = false;
+                btnSinhNhatNhanVien.Enabled = false;
                 btnNguoiDungHeThong.Enabled = false;
                 btnThongTinLienQuan.Enabled = false;
                 btnChamCongHangNgay.Enabled = false;
-                btnBangChamCongTongHop.Enabled = false;
-                btnTinhToanLuong.Enabled = false;
-                btnThongTinNhanSu.PerformClick();
-            }
-            if (nhiemvu == "Thiết lập thông tin lương.")
-            {
-                btnNhanSu.Enabled = false;
-                btnNguoiDungHeThong.Enabled = false;
-                btnThongTinLienQuan.Enabled = false;
-                btnThongTinNhanSu.Enabled = false;
-                btnChamCongHangNgay.Enabled = false;
-                btnBangChamCongTongHop.Enabled = false;
-                btnTinhToanLuong.PerformClick();
-                
-            }
-            if (nhiemvu == "Thiết lập thông tin chấm công.")
-            {
-                btnNhanSu.Enabled = false;
-                btnNguoiDungHeThong.Enabled = false;
-                btnThongTinLienQuan.Enabled = false;
-                btnThongTinNhanSu.Enabled = false;
-                btnTinhToanLuong.Enabled = false;
                 btnBangChamCongTongHop.PerformClick();
+                btnTinhToanLuong.Enabled = false;
+                btnThongTinNhanSu.Enabled = false;
             }
-
         }
         public TrangChu()
         { 

@@ -178,8 +178,9 @@
             // 
             // dtpNgayHomNay
             // 
+            this.dtpNgayHomNay.CustomFormat = "dd/MM/yyyy";
             this.dtpNgayHomNay.Enabled = false;
-            this.dtpNgayHomNay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayHomNay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgayHomNay.Location = new System.Drawing.Point(480, 10);
             this.dtpNgayHomNay.Name = "dtpNgayHomNay";
             this.dtpNgayHomNay.Size = new System.Drawing.Size(98, 20);

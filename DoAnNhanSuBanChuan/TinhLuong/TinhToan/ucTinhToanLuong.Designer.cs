@@ -245,7 +245,8 @@
             // 
             // dtpDenNgay
             // 
-            this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDenNgay.CustomFormat = "dd/MM/yyyy";
+            this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDenNgay.Location = new System.Drawing.Point(102, 37);
             this.dtpDenNgay.Name = "dtpDenNgay";
             this.dtpDenNgay.Size = new System.Drawing.Size(94, 21);
@@ -253,7 +254,8 @@
             // 
             // dtpTuNgay
             // 
-            this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTuNgay.CustomFormat = "dd/MM/yyyy";
+            this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpTuNgay.Location = new System.Drawing.Point(102, 10);
             this.dtpTuNgay.Name = "dtpTuNgay";
             this.dtpTuNgay.Size = new System.Drawing.Size(94, 21);
@@ -419,7 +421,8 @@
             // 
             // dtpNgayNhan
             // 
-            this.dtpNgayNhan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayNhan.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayNhan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgayNhan.Location = new System.Drawing.Point(107, 76);
             this.dtpNgayNhan.Name = "dtpNgayNhan";
             this.dtpNgayNhan.Size = new System.Drawing.Size(102, 21);

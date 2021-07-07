@@ -30,6 +30,12 @@ namespace DoAnNhanSuBanChuan
                     nhiemvu = thongtindangnhap.Rows[i]["NhiemVu"].ToString();
                     return true;
                 }
+            if(txtTenTaiKhoan.Text == "bangiamdoc" && txtMatKhau.Text == "bangiamdoc")
+            {
+                hovaten = "BAN GIÁM ĐỐC";
+                nhiemvu = "XEM BÁO CÁO - THỐNG KÊ";
+                return true;
+            }
             return false;
         }
         public bool kiemtrathongtin()

@@ -110,9 +110,8 @@
             this.cbNhiemVu.FormattingEnabled = true;
             this.cbNhiemVu.Items.AddRange(new object[] {
             "Quản trị viên.",
-            "Thiết lập thông tin hồ sơ.",
-            "Thiết lập thông tin lương.",
-            "Thiết lập thông tin chấm công."});
+            "Ban giám đốc.",
+            "Nhân viên."});
             this.cbNhiemVu.Location = new System.Drawing.Point(106, 72);
             this.cbNhiemVu.Name = "cbNhiemVu";
             this.cbNhiemVu.Size = new System.Drawing.Size(189, 21);

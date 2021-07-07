@@ -21,7 +21,7 @@ namespace DoAnNhanSuBanChuan.TongQuan.DongThoiGian
         }
         public void hienthisinhnhat()
         {
-            DataTable hienthisinhnhatnhanvien = sinhnhat.CreateTable("SELECT * FROM NHANVIEN WHERE (MONTH(GETDATE()) - MONTH(NgaySinh)) = 0");
+            DataTable hienthisinhnhatnhanvien = sinhnhat.CreateTable("SELECT NHANVIEN.MaNV, NHANVIEN.HoTen, NHANVIEN.GioiTinh, CONVERT(varchar, NHANVIEN.NgaySinh, 103) as NgaySinh , PHONGBAN.TenPB, NHANVIEN.SoDienThoai FROM NHANVIEN LEFT JOIN PHONGBANCHUCVUNHANVIEN ON NHANVIEN.MaNV = PHONGBANCHUCVUNHANVIEN.MaNV LEFT JOIN PHONGBAN ON PHONGBANCHUCVUNHANVIEN.MaPB = PHONGBAN.MaPB WHERE (MONTH(GETDATE()) - MONTH(NgaySinh)) = 0");
             gcSinhNhatNhanVien.DataSource = hienthisinhnhatnhanvien;
         }
     }

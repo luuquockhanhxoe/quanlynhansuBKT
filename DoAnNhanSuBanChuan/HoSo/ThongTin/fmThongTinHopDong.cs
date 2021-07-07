@@ -39,7 +39,7 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
         {
             MaHD = txtMaHD.Text.Trim();
             MaNV = cbMaNV.Text.Trim();
-            NgayKyHD = dtpNgayKy.Text.Trim();
+            NgayKyHD = dtpNgayKy.Value.ToString();
             LoaiHD = cbLoaiHD.Text.Trim();
             ThoiHan = cbThoiHan.Text.Trim();
             BacLuong = cbBacLuong.Text.Trim();
@@ -125,6 +125,14 @@ namespace DoAnNhanSuBanChuan.HoSo.ThongTin
   
 
         string MaHD, MaNV, NgayKyHD, LoaiHD, ThoiHan, BacLuong, HeSoLuong, CheDoLamViec, HinhThucTraLuong, SoLaoDong;
+
+        private void btnBaoCao_Click(object sender, EventArgs e)
+        {
+            var r = new rpBaoCaoHopDong();
+            DataTable inthongtin = hd.CreateTable("SELECT NHANVIEN.HoTen, HOPDONG.MaHD, HOPDONG.MaNV, CONVERT(varchar,HOPDONG.NgayKyHD,103) as NgayKyHD, HOPDONG.LoaiHD, HOPDONG.ThoiHanHD, HOPDONG.SoLaoDong, HOPDONG.BacLuong, HOPDONG.HeSoLuong, HOPDONG.CheDoLamViec, HOPDONG.HinhThucTraLuong FROM HOPDONG LEFT JOIN NHANVIEN ON HOPDONG.MaNV = NHANVIEN.MaNV");
+            r.DataSource = inthongtin;
+            r.hienthipreview();
+        }
 
         private void fmThongTinHopDong_FormClosing(object sender, FormClosingEventArgs e)
         {

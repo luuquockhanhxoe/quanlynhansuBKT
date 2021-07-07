@@ -134,6 +134,12 @@
     <Compile Include="HoSo\ThongTin\fmThongTinNhanSu.Designer.cs">
       <DependentUpon>fmThongTinNhanSu.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoSo\ThongTin\rpBaoCaoHopDong.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HoSo\ThongTin\rpBaoCaoHopDong.Designer.cs">
+      <DependentUpon>rpBaoCaoHopDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="HoSo\ThongTin\rpThongTinNhanVien.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -163,12 +169,6 @@
     </Compile>
     <Compile Include="TongQuan\DongThoiGian\ucSinhNhatNhanVien.Designer.cs">
       <DependentUpon>ucSinhNhatNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TongQuan\DongThoiGian\ucSuKienNhiemVu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TongQuan\DongThoiGian\ucSuKienNhiemVu.Designer.cs">
-      <DependentUpon>ucSuKienNhiemVu.cs</DependentUpon>
     </Compile>
     <Compile Include="TongQuan\ThietLap\TaoNguoiDungHeThong.cs">
       <SubType>Form</SubType>
@@ -226,6 +226,9 @@
     <EmbeddedResource Include="HoSo\ThongTin\fmThongTinNhanSu.resx">
       <DependentUpon>fmThongTinNhanSu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HoSo\ThongTin\rpBaoCaoHopDong.resx">
+      <DependentUpon>rpBaoCaoHopDong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HoSo\ThongTin\rpThongTinNhanVien.resx">
       <DependentUpon>rpThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,9 +244,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TongQuan\DongThoiGian\ucSinhNhatNhanVien.resx">
       <DependentUpon>ucSinhNhatNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TongQuan\DongThoiGian\ucSuKienNhiemVu.resx">
-      <DependentUpon>ucSuKienNhiemVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TongQuan\ThietLap\TaoNguoiDungHeThong.resx">
       <DependentUpon>TaoNguoiDungHeThong.cs</DependentUpon>

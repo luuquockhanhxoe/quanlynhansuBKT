@@ -69,6 +69,7 @@
             this.btnTim = new DevExpress.XtraEditors.SimpleButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.cbHienThi = new System.Windows.Forms.CheckBox();
+            this.btnBaoCao = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcHopDong)).BeginInit();
@@ -77,7 +78,8 @@
             // 
             // dtpNgayKy
             // 
-            this.dtpNgayKy.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayKy.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayKy.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgayKy.Location = new System.Drawing.Point(108, 86);
             this.dtpNgayKy.Name = "dtpNgayKy";
             this.dtpNgayKy.Size = new System.Drawing.Size(163, 20);
@@ -564,6 +566,16 @@
             this.cbHienThi.UseVisualStyleBackColor = false;
             this.cbHienThi.CheckedChanged += new System.EventHandler(this.cbHienThi_CheckedChanged);
             // 
+            // btnBaoCao
+            // 
+            this.btnBaoCao.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBaoCao.ImageOptions.Image")));
+            this.btnBaoCao.Location = new System.Drawing.Point(762, 142);
+            this.btnBaoCao.Name = "btnBaoCao";
+            this.btnBaoCao.Size = new System.Drawing.Size(82, 38);
+            this.btnBaoCao.TabIndex = 248;
+            this.btnBaoCao.Text = "Báo cáo";
+            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
+            // 
             // fmThongTinHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -571,6 +583,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 416);
+            this.Controls.Add(this.btnBaoCao);
             this.Controls.Add(this.cbHienThi);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.btnTim);
@@ -637,5 +650,6 @@
         private DevExpress.XtraEditors.SimpleButton btnTim;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.CheckBox cbHienThi;
+        private DevExpress.XtraEditors.SimpleButton btnBaoCao;
     }
 }

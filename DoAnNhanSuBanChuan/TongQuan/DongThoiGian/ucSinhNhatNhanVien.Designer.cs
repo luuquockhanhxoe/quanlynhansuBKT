@@ -37,18 +37,19 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcSinhNhatNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSinhNhatNhanVien)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,6 +89,7 @@
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
+            this.gridColumn6,
             this.gridColumn5});
             this.gvSinhNhatNhanVien.GridControl = this.gcSinhNhatNhanVien;
             this.gvSinhNhatNhanVien.Name = "gvSinhNhatNhanVien";
@@ -150,17 +152,6 @@
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.pictureBox9);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(987, 47);
-            this.panel3.TabIndex = 166;
-            // 
             // gridColumn5
             // 
             this.gridColumn5.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -173,27 +164,18 @@
             this.gridColumn5.FieldName = "SoDienThoai";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.VisibleIndex = 5;
             // 
-            // pictureBox3
+            // panel3
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(733, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(62, 47);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(238, 0);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(62, 47);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 9;
-            this.pictureBox9.TabStop = false;
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.pictureBox9);
+            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(987, 47);
+            this.panel3.TabIndex = 166;
             // 
             // label3
             // 
@@ -206,6 +188,40 @@
             this.label3.Size = new System.Drawing.Size(384, 33);
             this.label3.TabIndex = 149;
             this.label3.Text = "SINH NHẬT TRONG THÁNG";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(238, 0);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(62, 47);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 9;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(733, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(62, 47);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn6.AppearanceCell.Options.UseFont = true;
+            this.gridColumn6.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn6.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn6.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn6.Caption = "Tên Phòng Ban";
+            this.gridColumn6.FieldName = "TenPB";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 4;
             // 
             // ucSinhNhatNhanVien
             // 
@@ -220,8 +236,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvSinhNhatNhanVien)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -241,5 +257,6 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
     }
 }
